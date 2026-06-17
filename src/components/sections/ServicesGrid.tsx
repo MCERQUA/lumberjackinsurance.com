@@ -35,7 +35,7 @@ export function ServicesGrid() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {SERVICES.map((service, i) => {
             const Icon = ICONS[service.icon as keyof typeof ICONS] ?? ShieldCheck;
-            const isFeatured = service.featured;
+            const isFeatured = service.slug === "loggers-workers-comp";
             return (
               <FadeIn key={service.slug} delay={(i % 3) * 0.05}>
                 <Link

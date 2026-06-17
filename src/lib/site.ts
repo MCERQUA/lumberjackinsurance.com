@@ -48,7 +48,6 @@ export const SERVICES = [
       "Logging is one of America's deadliest jobs. We write workers' comp for logging class codes (2702, 2710, 2712) — chainsaw, felling, cable/yarding, skidder, and sawmill crews — with EMOD strategy that keeps your experience mod from sinking the business.",
     icon: "HardHat",
     keywords: ["loggers workers comp", "logging workers compensation", "logger workers comp class code", "logging EMOD", "timber workers comp"],
-    featured: true,
   },
   {
     slug: "logging-truck-insurance",
