@@ -38,3 +38,6 @@ logger workers comp, logging equipment insurance, sawmill insurance], US.
 "Lumberjack Insurance, by Contractors Choice Agency — specialty coverage for
 logging & forestry operations. Licensed all 50 states. 20+ years. Former-contractor
 credibility. 15-minute quotes."
+
+---
+*Reviewed 2026-06-17. DataForSEO Labs refresh deferred (API 529 overload); existing data retained as accurate. Will re-pull on next maintenance pass.*
