@@ -132,7 +132,6 @@ export const SERVICE_DETAIL: Record<string, ServiceDetail> = {
       },
       {
         q: "What's the difference between bobtail and non-trucking liability?",
-        body: "",
         a: "Bobtail covers you when you're driving the truck without a trailer (often after dispatch, returning empty). Non-trucking liability is broader — it covers personal-use driving when you're not under dispatch. If you're leased to a carrier, your carrier's policy covers you under load; you need bobtail or non-trucking for everything else. We'll quote the right one for your lease setup.",
       },
       {
@@ -196,7 +195,6 @@ export const SERVICE_DETAIL: Record<string, ServiceDetail> = {
       },
       {
         q: "My lender requires them as loss payee — can you do that?",
-        body: "",
         a: "Yes. We list the bank, captive finance arm, or leasing company as loss payee on the schedule at bind and provide the evidence of insurance (ACORD 28) they require. If equipment is added or financed later, we update the schedule and reissue the evidence the same day.",
       },
       {
@@ -323,7 +321,6 @@ export const SERVICE_DETAIL: Record<string, ServiceDetail> = {
       },
       {
         q: "Can you bundle sawmill coverage with my logging operation?",
-        body: "",
         a: "Yes — and we usually recommend it. If you harvest timber and mill it, bundling logging workers' comp (2702), sawmill workers' comp (2710), logging equipment, mill property, and a coordinated GL/CPL program gives you one renewal date, one broker, and no gaps between the woods and the mill.",
       },
     ],
