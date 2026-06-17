@@ -2,7 +2,7 @@ import type { Config } from "tailwindcss";
 
 const config: Config = {
   darkMode: "class",
-  content: ["./src/**/*.{ts,tsx,mdx}"],
+  content: ["./src/**/*.{ts,tsx,md,mdx}", "./mdx-components.tsx"],
   theme: {
     extend: {
       colors: {
@@ -14,6 +14,7 @@ const config: Config = {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          dark: "hsl(var(--primary-dark))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -22,6 +23,7 @@ const config: Config = {
         accent: {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
+          light: "hsl(var(--accent-light))",
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
@@ -35,36 +37,37 @@ const config: Config = {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
         },
-        // granular brand ramp — light "rugged forest" identity
+        // granular brand ramp — light "rugged forest" identity (hunter green)
         forest: {
-          50: "#f0f5f1",
-          100: "#dbe8df",
-          200: "#b6d0bf",
-          300: "#8ab294",
-          400: "#5a8e69",
-          500: "#3a7149",
-          600: "#2a5a38",
-          700: "#214a30",
-          800: "#1b3a26",
-          900: "#14291c",
+          50: "#f0f6f1",
+          100: "#dcecdf",
+          200: "#bbd9c2",
+          300: "#8fc1a0",
+          400: "#5a9c72",
+          500: "#2f7a4c",
+          600: "#1f6138",
+          700: "#14532d", // primary hunter green
+          800: "#0f3f22",
+          900: "#0a2d18",
         },
-        timber: {
-          50: "#fbf4ea",
-          100: "#f4e3c9",
-          200: "#e9c794",
-          300: "#dca85f",
-          400: "#cf8f3c",
-          500: "#b8682a",
-          600: "#9c5220",
-          700: "#7c3f1d",
-          800: "#5f3019",
-          900: "#452314",
+        // rust / timber copper accent ramp
+        rust: {
+          50: "#fbf3ef",
+          100: "#f6e2d8",
+          200: "#ecc3ad",
+          300: "#e0a07c",
+          400: "#d27d4f",
+          500: "#b85f2e",
+          600: "#9a3412", // accent rust
+          700: "#7c2a10",
+          800: "#5e2010",
+          900: "#431809",
         },
         paper: {
-          DEFAULT: "#faf8f2",
-          warm: "#f3efe4",
-          sand: "#ede8db",
-          ink: "#1a201b",
+          DEFAULT: "#faf8f4",
+          warm: "#f4f0e7",
+          sand: "#ebe6d8",
+          ink: "#1f2a22",
         },
       },
       fontFamily: {
@@ -78,8 +81,8 @@ const config: Config = {
         sm: "calc(var(--radius) - 8px)",
       },
       boxShadow: {
-        card: "0 1px 2px rgba(20, 41, 28, 0.04), 0 12px 32px -12px rgba(20, 41, 28, 0.12)",
-        lift: "0 2px 4px rgba(20, 41, 28, 0.05), 0 24px 48px -16px rgba(20, 41, 28, 0.20)",
+        card: "0 1px 2px rgba(20, 42, 34, 0.04), 0 12px 32px -12px rgba(20, 42, 34, 0.12)",
+        lift: "0 2px 4px rgba(20, 42, 34, 0.05), 0 24px 48px -16px rgba(20, 42, 34, 0.20)",
         glow: "0 0 0 1px hsl(var(--primary) / 0.12), 0 18px 40px -18px hsl(var(--primary) / 0.35)",
       },
       keyframes: {
@@ -100,10 +103,6 @@ const config: Config = {
         marquee: "marquee var(--marquee-speed, 36s) linear infinite",
         "fade-up": "fade-up 0.6s ease-out both",
         "pulse-ring": "pulse-ring 2.4s ease-in-out infinite",
-      },
-      backgroundImage: {
-        "contour":
-          "radial-gradient(circle at 20% 30%, hsl(var(--primary) / 0.05) 0, transparent 32%), radial-gradient(circle at 80% 0%, hsl(var(--accent) / 0.06) 0, transparent 30%)",
       },
     },
   },
