@@ -1,7 +1,5 @@
 "use client";
 
-import Link from "next/link";
-import { InfiniteMarquee } from "@/components/animations/InfiniteMarquee";
 import { CREDENTIALS } from "@/lib/site";
 import {
   MapPin, CalendarCheck, HardHat, Timer, Zap, Award,
