@@ -1,0 +1,127 @@
+{
+  "location": "United States",
+  "language": "English",
+  "source": "dataforseo google_ads search_volume + keyword_suggestions",
+  "keywords": [
+    {
+      "keyword": "tree service insurance",
+      "search_volume": 1000,
+      "competition": "LOW",
+      "cpc": 47.7
+    },
+    {
+      "keyword": "arborist insurance",
+      "search_volume": 320,
+      "competition": "MEDIUM",
+      "cpc": 38.19
+    },
+    {
+      "keyword": "logging truck insurance",
+      "search_volume": 210,
+      "competition": "LOW",
+      "cpc": 28.49
+    },
+    {
+      "keyword": "log truck insurance",
+      "search_volume": 210,
+      "competition": "LOW",
+      "cpc": 28.49
+    },
+    {
+      "keyword": "forestry insurance",
+      "search_volume": 210,
+      "competition": "LOW",
+      "cpc": 24.5
+    },
+    {
+      "keyword": "logging insurance",
+      "search_volume": 110,
+      "competition": "MEDIUM",
+      "cpc": 21.28
+    },
+    {
+      "keyword": "logger insurance",
+      "search_volume": 110,
+      "competition": "MEDIUM",
+      "cpc": 21.28
+    },
+    {
+      "keyword": "timber insurance",
+      "search_volume": 70,
+      "competition": "LOW",
+      "cpc": 22.24
+    },
+    {
+      "keyword": "sawmill insurance",
+      "search_volume": 50,
+      "competition": "LOW",
+      "cpc": 0
+    },
+    {
+      "keyword": "logging equipment insurance",
+      "search_volume": 20,
+      "competition": "MEDIUM",
+      "cpc": 18.31
+    },
+    {
+      "keyword": "lumberjack insurance",
+      "search_volume": 10,
+      "competition": "LOW",
+      "cpc": 0
+    },
+    {
+      "keyword": "chainsaw insurance",
+      "search_volume": 10,
+      "competition": "MEDIUM",
+      "cpc": 0
+    },
+    {
+      "keyword": "logging liability insurance",
+      "search_volume": 10,
+      "competition": "LOW",
+      "cpc": 0
+    },
+    {
+      "keyword": "timber harvesting insurance",
+      "search_volume": null,
+      "competition": null,
+      "cpc": 0
+    },
+    {
+      "keyword": "logger workers comp",
+      "search_volume": null,
+      "competition": null,
+      "cpc": 0
+    },
+    {
+      "keyword": "loggers workers compensation",
+      "search_volume": null,
+      "competition": null,
+      "cpc": 0
+    },
+    {
+      "keyword": "commercial auto logging",
+      "search_volume": null,
+      "competition": null,
+      "cpc": 0
+    },
+    {
+      "keyword": "logging contractor insurance",
+      "search_volume": null,
+      "competition": null,
+      "cpc": 0
+    },
+    {
+      "keyword": "timber falling insurance",
+      "search_volume": null,
+      "competition": null,
+      "cpc": 0
+    },
+    {
+      "keyword": "skidder insurance",
+      "search_volume": null,
+      "competition": null,
+      "cpc": 0
+    }
+  ]
+}
