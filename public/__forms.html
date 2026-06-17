@@ -1,11 +1,33 @@
 <!DOCTYPE html>
 <html>
-<body>
-  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
-    <input name="name" /><input name="email" /><input name="phone" /><textarea name="message"></textarea>
-  </form>
-  <form name="quote-request" netlify netlify-honeypot="bot-field" hidden>
-    <input name="name" /><input name="email" /><input name="phone" /><input name="bike-type" /><input name="coverage-type" /><textarea name="message"></textarea>
-  </form>
-</body>
+  <head><title>Netlify Form Declarations</title></head>
+  <body>
+    <!-- Static form declarations so Netlify detects our client-rendered forms at build time. -->
+
+    <!-- Quote form -->
+    <form name="quote" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="quote" />
+      <input name="bot-field" type="hidden" />
+      <input name="name" type="text" />
+      <input name="businessName" type="text" />
+      <input name="email" type="email" />
+      <input name="phone" type="tel" />
+      <select name="state"></select>
+      <select name="serviceType"></select>
+      <select name="crewSize"></select>
+      <select name="currentCoverage"></select>
+      <textarea name="message"></textarea>
+    </form>
+
+    <!-- Contact form -->
+    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="contact" />
+      <input name="bot-field" type="hidden" />
+      <input name="name" type="text" />
+      <input name="email" type="email" />
+      <input name="phone" type="tel" />
+      <select name="subject"></select>
+      <textarea name="message"></textarea>
+    </form>
+  </body>
 </html>
