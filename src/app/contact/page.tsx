@@ -1,61 +1,28 @@
-"use client";
-
-import { useState } from "react";
+import type { Metadata } from "next";
 import { Navbar } from "@/components/sections/Navbar";
 import { Footer } from "@/components/sections/Footer";
 import { FadeIn } from "@/components/animations/FadeIn";
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, TreePine } from "lucide-react";
+import { ArrowRight, Phone, Mail, MapPin, Clock } from "lucide-react";
 import { SITE } from "@/lib/site";
 
-const WEBHOOK_URL =
-  "https://josh.jam-bot.com/social-api/api/leads/webhook/netlify?tenant=josh&site=lumberjackinsurance.com";
+export const metadata: Metadata = {
+  title: "Contact — Local Flagstaff Insurance Agents",
+  description:
+    "Talk to a real, local Flagstaff insurance agent about home, auto, business, landlord, or renters coverage. Call 844-967-5247 or send a note — serving Flagstaff & all of Northern Arizona.",
+  alternates: { canonical: `${SITE.url}/contact` },
+  openGraph: {
+    title: "Contact Lumberjack Insurance | Flagstaff, Arizona",
+    description:
+      "Reach a local Flagstaff agent for home, auto, business, landlord, or renters insurance. Serving Flagstaff & Northern Arizona.",
+    url: `${SITE.url}/contact`,
+  },
+};
+
+const inputClass =
+  "w-full px-4 py-3 rounded-xl border border-border bg-white text-foreground placeholder-muted-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all text-sm";
+const labelClass = "block text-sm font-body font-semibold text-foreground mb-1.5";
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    subject: "",
-    message: "",
-    "bot-field": "",
-  });
-  const [submitted, setSubmitted] = useState(false);
-  const [submitting, setSubmitting] = useState(false);
-  const [error, setError] = useState("");
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
-  ) => {
-    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    if (formData["bot-field"]) return;
-    setSubmitting(true);
-    setError("");
-    try {
-      await fetch(WEBHOOK_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          form_name: "contact",
-          source: "lumberjackinsurance.com",
-          ...formData,
-        }),
-      });
-      setSubmitted(true);
-    } catch {
-      setError("Something went wrong. Please call us at 844-967-5247 or try again.");
-    } finally {
-      setSubmitting(false);
-    }
-  };
-
-  const inputClass =
-    "w-full px-4 py-3 rounded-xl border border-border bg-white text-foreground placeholder-muted-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all text-sm";
-  const labelClass = "block text-sm font-body font-semibold text-foreground mb-1.5";
-
   return (
     <>
       <Navbar />
@@ -65,15 +32,15 @@ export default function ContactPage() {
             <FadeIn className="text-center max-w-2xl mx-auto mb-12">
               <span className="pill-accent">Get in touch</span>
               <h1 className="mt-5 font-display font-semibold text-foreground text-4xl md:text-5xl tracking-tight">
-                Talk to the{" "}
+                Talk to a{" "}
                 <span className="bg-gradient-to-r from-primary via-forest-500 to-accent bg-clip-text text-transparent">
-                  logging desk
+                  local Flagstaff agent
                 </span>
               </h1>
               <p className="mt-5 lead">
-                Questions about class codes, an existing policy, a claim, or a timber sale
-                requirement? Call us — usually answered live. Or send a note and we&apos;ll get
-                back the same business day.
+                Questions about your home, car, business, rental, or a renters policy? Call us —
+                usually answered live by a real person here in Northern Arizona. Or send a note and
+                we&apos;ll get back to you the same business day.
               </p>
             </FadeIn>
 
@@ -85,9 +52,9 @@ export default function ContactPage() {
                   className="block p-6 rounded-3xl bg-forest-gradient text-white shadow-card hover:shadow-lift transition-all"
                 >
                   <Phone className="h-7 w-7 text-accent-light mb-3" />
-                  <p className="text-xs uppercase tracking-wider text-white/70 mb-1">Primary phone</p>
+                  <p className="text-xs uppercase tracking-wider text-white/70 mb-1">Call or text</p>
                   <p className="font-display font-semibold text-2xl">{SITE.phone}</p>
-                  <p className="text-sm text-white/75 mt-1">Alt: {SITE.phoneAlt}</p>
+                  <p className="text-sm text-white/75 mt-1">Serving Flagstaff &amp; Northern Arizona</p>
                 </a>
 
                 <a
@@ -101,10 +68,13 @@ export default function ContactPage() {
 
                 <div className="p-6 rounded-3xl bg-white border border-border shadow-card">
                   <MapPin className="h-7 w-7 text-accent mb-3" />
-                  <p className="text-xs uppercase tracking-wider text-muted-foreground mb-1">Headquarters</p>
+                  <p className="text-xs uppercase tracking-wider text-muted-foreground mb-1">Service area</p>
                   <p className="font-body font-semibold text-foreground">
-                    {SITE.address.street}<br />
-                    {SITE.address.city}, {SITE.address.state} {SITE.address.zip}
+                    Flagstaff &amp; Northern Arizona
+                  </p>
+                  <p className="text-sm text-muted-foreground mt-1">
+                    Sedona · Williams · Cottonwood · Camp Verde · Page · Munds Park · Doney Park &amp; the
+                    surrounding communities
                   </p>
                 </div>
 
@@ -112,106 +82,85 @@ export default function ContactPage() {
                   <Clock className="h-7 w-7 text-accent mb-3" />
                   <p className="text-xs uppercase tracking-wider text-muted-foreground mb-1">Hours</p>
                   <p className="font-body font-semibold text-foreground">{SITE.hours}</p>
-                  <p className="text-sm text-muted-foreground mt-1">Claims: 24/7, 2-hour response SLA</p>
+                  <p className="text-sm text-muted-foreground mt-1">Claims help available 24/7</p>
                 </div>
               </FadeIn>
 
-              {/* Form column */}
+              {/* Form column — native Netlify Forms submission (no JS fetch) */}
               <div className="lg:col-span-3">
-                {submitted ? (
-                  <div className="p-10 rounded-3xl text-center bg-white border border-border shadow-lift h-full flex flex-col justify-center">
-                    <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                      <CheckCircle className="w-8 h-8 text-primary" />
-                    </div>
-                    <h2 className="text-2xl font-display font-semibold text-foreground mb-3">Message Sent</h2>
-                    <p className="text-muted-foreground">
-                      Thanks for reaching out. We&apos;ll respond within one business day — or call us
-                      anytime at <a href={SITE.phoneHref} className="text-accent font-body font-bold">{SITE.phone}</a>.
-                    </p>
-                  </div>
-                ) : (
-                  <form
-                    name="contact"
-                    data-netlify="true"
-                    netlify-honeypot="bot-field"
-                    onSubmit={handleSubmit}
-                    className="rounded-3xl p-8 md:p-10 space-y-6 bg-white border border-border shadow-lift"
-                  >
-                    <input type="hidden" name="form-name" value="contact" />
-                    <input
-                      name="bot-field"
-                      type="hidden"
-                      value={formData["bot-field"]}
-                      onChange={handleChange}
-                      className="hidden"
-                    />
+                <form
+                  name="contact"
+                  method="POST"
+                  data-netlify="true"
+                  netlify-honeypot="bot-field"
+                  action="/thank-you"
+                  className="rounded-3xl p-8 md:p-10 space-y-6 bg-white border border-border shadow-lift"
+                >
+                  <input type="hidden" name="form-name" value="contact" />
+                  <p className="hidden">
+                    <label>
+                      Don&apos;t fill this out if you&apos;re human: <input name="bot-field" />
+                    </label>
+                  </p>
 
-                    <div className="grid sm:grid-cols-2 gap-4">
-                      <div>
-                        <label htmlFor="name" className={labelClass}>Name *</label>
-                        <input
-                          id="name" name="name" type="text" required
-                          value={formData.name} onChange={handleChange}
-                          placeholder="Your name" className={inputClass}
-                        />
-                      </div>
-                      <div>
-                        <label htmlFor="email" className={labelClass}>Email *</label>
-                        <input
-                          id="email" name="email" type="email" required
-                          value={formData.email} onChange={handleChange}
-                          placeholder="you@example.com" className={inputClass}
-                        />
-                      </div>
-                    </div>
-
-                    <div className="grid sm:grid-cols-2 gap-4">
-                      <div>
-                        <label htmlFor="phone" className={labelClass}>Phone</label>
-                        <input
-                          id="phone" name="phone" type="tel"
-                          value={formData.phone} onChange={handleChange}
-                          placeholder="(541) 555-0100" className={inputClass}
-                        />
-                      </div>
-                      <div>
-                        <label htmlFor="subject" className={labelClass}>Topic</label>
-                        <select
-                          id="subject" name="subject"
-                          value={formData.subject} onChange={handleChange}
-                          className={inputClass}
-                        >
-                          <option value="">Select…</option>
-                          <option>New quote</option>
-                          <option>Existing policy / endorsement</option>
-                          <option>Claim</option>
-                          <option>Timber sale / contract requirement</option>
-                          <option>General question</option>
-                        </select>
-                      </div>
-                    </div>
-
+                  <div className="grid sm:grid-cols-2 gap-4">
                     <div>
-                      <label htmlFor="message" className={labelClass}>Message *</label>
-                      <textarea
-                        id="message" name="message" rows={5} required
-                        value={formData.message} onChange={handleChange}
-                        placeholder="How can we help?" className={`${inputClass} resize-none`}
+                      <label htmlFor="name" className={labelClass}>Name *</label>
+                      <input
+                        id="name" name="name" type="text" required
+                        placeholder="Your name" className={inputClass}
                       />
                     </div>
+                    <div>
+                      <label htmlFor="email" className={labelClass}>Email *</label>
+                      <input
+                        id="email" name="email" type="email" required
+                        placeholder="you@example.com" className={inputClass}
+                      />
+                    </div>
+                  </div>
 
-                    {error && <p className="text-destructive text-sm font-medium">{error}</p>}
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <div>
+                      <label htmlFor="phone" className={labelClass}>Phone</label>
+                      <input
+                        id="phone" name="phone" type="tel"
+                        placeholder="(928) 555-0100" className={inputClass}
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="subject" className={labelClass}>Topic</label>
+                      <select id="subject" name="subject" defaultValue="" className={inputClass}>
+                        <option value="">Select…</option>
+                        <option>New quote</option>
+                        <option>Home insurance</option>
+                        <option>Auto insurance</option>
+                        <option>Business insurance</option>
+                        <option>Landlord insurance</option>
+                        <option>Renters insurance</option>
+                        <option>Existing policy / change</option>
+                        <option>Claim</option>
+                        <option>General question</option>
+                      </select>
+                    </div>
+                  </div>
 
-                    <button
-                      type="submit"
-                      disabled={submitting}
-                      className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-forest-gradient text-white font-body font-bold rounded-xl shadow-card hover:shadow-lift transition-all disabled:opacity-60 disabled:cursor-not-allowed"
-                    >
-                      {submitting ? "Sending…" : "Send Message"}
-                      {!submitting && <ArrowRight className="w-5 h-5" />}
-                    </button>
-                  </form>
-                )}
+                  <div>
+                    <label htmlFor="message" className={labelClass}>Message *</label>
+                    <textarea
+                      id="message" name="message" rows={5} required
+                      placeholder="How can we help?" className={`${inputClass} resize-none`}
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-forest-gradient text-white font-body font-bold rounded-xl shadow-card hover:shadow-lift transition-all"
+                  >
+                    Send Message
+                    <ArrowRight className="w-5 h-5" />
+                  </button>
+                </form>
               </div>
             </div>
           </div>
