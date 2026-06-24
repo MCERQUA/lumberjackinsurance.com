@@ -1,96 +1,56 @@
-"use client";
-
-import { useState } from "react";
+import type { Metadata } from "next";
 import { Navbar } from "@/components/sections/Navbar";
 import { Footer } from "@/components/sections/Footer";
 import { FadeIn } from "@/components/animations/FadeIn";
-import { CheckCircle, Shield, ArrowRight, Phone, TreePine } from "lucide-react";
+import { CheckCircle, Shield, ArrowRight, Phone } from "lucide-react";
 import { SITE } from "@/lib/site";
 
-const US_STATES = [
-  "Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut",
-  "Delaware","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa",
-  "Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan",
-  "Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada","New Hampshire",
-  "New Jersey","New Mexico","New York","North Carolina","North Dakota","Ohio",
-  "Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina","South Dakota",
-  "Tennessee","Texas","Utah","Vermont","Virginia","Washington","West Virginia",
-  "Wisconsin","Wyoming",
+export const metadata: Metadata = {
+  title: "Get a Free Quote — Flagstaff Home, Auto & Business Insurance",
+  description:
+    "Get a free local insurance quote for your Flagstaff or Northern Arizona home, car, business, rental property, or apartment. A real local agent — no out-of-state call center. Call 844-967-5247.",
+  alternates: { canonical: `${SITE.url}/quote` },
+  openGraph: {
+    title: "Get a Free Quote | Lumberjack Insurance — Flagstaff, AZ",
+    description:
+      "Home, auto, business, landlord, and renters insurance for Flagstaff & Northern Arizona. Free, no-obligation quote.",
+    url: `${SITE.url}/quote`,
+  },
+};
+
+const TOWNS = [
+  "Flagstaff",
+  "Sedona",
+  "Williams",
+  "Cottonwood",
+  "Camp Verde",
+  "Page",
+  "Munds Park",
+  "Bellemont",
+  "Doney Park",
+  "Kachina Village",
+  "Mountainaire",
+  "Parks",
+  "Winona",
+  "Mormon Lake",
+  "Other (Northern Arizona)",
 ];
 
-const SERVICE_TYPES = [
-  "Logging — mechanized (feller buncher / skidder)",
-  "Logging — cable / high-lead",
-  "Logging — hand falling",
-  "Sawmill / planing mill",
-  "Log truck / hauling",
-  "Tree service / arborist",
-  "Multiple / full program",
-  "Other / not sure",
+const COVERAGE_LINES = [
+  "Home insurance",
+  "Auto insurance",
+  "Business insurance",
+  "Landlord / rental property insurance",
+  "Renters insurance",
+  "Bundle / multiple policies",
+  "Not sure — help me figure it out",
 ];
 
-const CREW_SIZE = [
-  "Just me / owner-operator",
-  "2–5 employees",
-  "6–15 employees",
-  "16–30 employees",
-  "30+ employees",
-];
-
-const WEBHOOK_URL =
-  "https://josh.jam-bot.com/social-api/api/leads/webhook/netlify?tenant=josh&site=lumberjackinsurance.com";
+const inputClass =
+  "w-full px-4 py-3 rounded-xl border border-border bg-white text-foreground placeholder-muted-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all text-sm";
+const labelClass = "block text-sm font-body font-semibold text-foreground mb-1.5";
 
 export default function QuotePage() {
-  const [formData, setFormData] = useState({
-    name: "",
-    businessName: "",
-    email: "",
-    phone: "",
-    state: "",
-    serviceType: "",
-    crewSize: "",
-    currentCoverage: "",
-    message: "",
-    "bot-field": "",
-  });
-  const [submitted, setSubmitted] = useState(false);
-  const [submitting, setSubmitting] = useState(false);
-  const [error, setError] = useState("");
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
-  ) => {
-    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    if (formData["bot-field"]) return; // honeypot triggered
-    setSubmitting(true);
-    setError("");
-
-    try {
-      await fetch(WEBHOOK_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          form_name: "quote",
-          source: "lumberjackinsurance.com",
-          ...formData,
-        }),
-      });
-      setSubmitted(true);
-    } catch {
-      setError("Something went wrong. Please call us at 844-967-5247 or try again.");
-    } finally {
-      setSubmitting(false);
-    }
-  };
-
-  const inputClass =
-    "w-full px-4 py-3 rounded-xl border border-border bg-white text-foreground placeholder-muted-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all text-sm";
-  const labelClass = "block text-sm font-body font-semibold text-foreground mb-1.5";
-
   return (
     <>
       <Navbar />
@@ -102,17 +62,20 @@ export default function QuotePage() {
               <div className="text-center mb-12">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/25 mb-6">
                   <Shield className="w-4 h-4 text-primary" />
-                  <span className="text-xs font-bold text-primary uppercase tracking-wider">Free Quote · 15-Minute Turnaround</span>
+                  <span className="text-xs font-bold text-primary uppercase tracking-wider">
+                    Free Quote · Local Flagstaff Agents
+                  </span>
                 </div>
                 <h1 className="font-display font-semibold text-foreground text-4xl md:text-5xl mb-4 tracking-tight">
                   Get Your{" "}
                   <span className="bg-gradient-to-r from-primary via-forest-500 to-accent bg-clip-text text-transparent">
-                    Logging Insurance Quote
+                    Free Insurance Quote
                   </span>
                 </h1>
                 <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-                  Tell us about your operation and we&apos;ll come back within one business
-                  day with a real program — workers&apos; comp, trucks, equipment, and GL.
+                  Tell us what you need to protect here in Flagstaff or Northern Arizona — home,
+                  car, business, rental, or apartment — and a local agent will follow up the same
+                  business day with a real quote.
                 </p>
               </div>
             </FadeIn>
@@ -121,10 +84,22 @@ export default function QuotePage() {
               {/* Trust sidebar */}
               <FadeIn direction="right" className="space-y-4">
                 {[
-                  { title: "Specialty markets that write logging", desc: "We don't submit you to generalists who decline class 2702 — we go straight to the A-rated programs that underwrite logging every day." },
-                  { title: "Real turnaround", desc: "Most logging quotes within one business day of receiving loss runs and payroll data." },
-                  { title: "No obligation", desc: "Get the quote and compare. No pressure, no commitment, no spam." },
-                  { title: "All 50 states", desc: "Licensed everywhere — including OH, WA, ND, WY state funds, OR SAIF, and ID." },
+                  {
+                    title: "A real local agency",
+                    desc: "We live in Northern Arizona too. You get a neighbor who knows 7,000-ft living — not an out-of-state 800-number.",
+                  },
+                  {
+                    title: "All your coverage in one place",
+                    desc: "Home, auto, business, landlord, and renters — one local agent, often bundled to save you money.",
+                  },
+                  {
+                    title: "We know the real risks",
+                    desc: "Wildfire, snow load, monsoon storms, and elk on the highway — we build coverage around how Flagstaff actually lives.",
+                  },
+                  {
+                    title: "No obligation",
+                    desc: "Get the quote and compare. No pressure, no commitment, no spam.",
+                  },
                 ].map((item) => (
                   <div
                     key={item.title}
@@ -158,204 +133,106 @@ export default function QuotePage() {
                 </div>
               </FadeIn>
 
-              {/* Form */}
+              {/* Form — native Netlify Forms submission (no JS fetch) */}
               <div className="lg:col-span-2">
-                {submitted ? (
-                  <div className="p-10 rounded-3xl text-center bg-white border border-border shadow-lift">
-                    <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                      <CheckCircle className="w-8 h-8 text-primary" />
-                    </div>
-                    <h2 className="text-2xl font-display font-semibold text-foreground mb-3">Quote Request Received</h2>
-                    <p className="text-muted-foreground mb-2">
-                      Thank you! We&apos;ll review your operation and reach out within one business
-                      day with a real program for your logging crew.
-                    </p>
-                    <p className="text-sm text-muted-foreground">
-                      Questions in the meantime? Call{" "}
-                      <a href={SITE.phoneHref} className="text-accent font-body font-bold">
-                        {SITE.phone}
-                      </a>
-                    </p>
-                  </div>
-                ) : (
-                  <form
-                    name="quote"
-                    data-netlify="true"
-                    netlify-honeypot="bot-field"
-                    onSubmit={handleSubmit}
-                    className="rounded-3xl p-8 md:p-10 space-y-6 bg-white border border-border shadow-lift"
-                  >
-                    <input type="hidden" name="form-name" value="quote" />
-                    <input
-                      name="bot-field"
-                      type="hidden"
-                      value={formData["bot-field"]}
-                      onChange={handleChange}
-                      className="hidden"
-                    />
+                <form
+                  name="quote"
+                  method="POST"
+                  data-netlify="true"
+                  netlify-honeypot="bot-field"
+                  action="/thank-you"
+                  className="rounded-3xl p-8 md:p-10 space-y-6 bg-white border border-border shadow-lift"
+                >
+                  <input type="hidden" name="form-name" value="quote" />
+                  <p className="hidden">
+                    <label>
+                      Don&apos;t fill this out if you&apos;re human: <input name="bot-field" />
+                    </label>
+                  </p>
 
-                    <div className="grid sm:grid-cols-2 gap-4">
-                      <div>
-                        <label htmlFor="name" className={labelClass}>Full Name *</label>
-                        <input
-                          id="name"
-                          name="name"
-                          type="text"
-                          required
-                          value={formData.name}
-                          onChange={handleChange}
-                          placeholder="Josh Cotner"
-                          className={inputClass}
-                        />
-                      </div>
-                      <div>
-                        <label htmlFor="businessName" className={labelClass}>Business Name *</label>
-                        <input
-                          id="businessName"
-                          name="businessName"
-                          type="text"
-                          required
-                          value={formData.businessName}
-                          onChange={handleChange}
-                          placeholder="Ridgetop Logging LLC"
-                          className={inputClass}
-                        />
-                      </div>
-                    </div>
-
-                    <div className="grid sm:grid-cols-2 gap-4">
-                      <div>
-                        <label htmlFor="email" className={labelClass}>Email Address *</label>
-                        <input
-                          id="email"
-                          name="email"
-                          type="email"
-                          required
-                          value={formData.email}
-                          onChange={handleChange}
-                          placeholder="josh@ridgetoplogging.com"
-                          className={inputClass}
-                        />
-                      </div>
-                      <div>
-                        <label htmlFor="phone" className={labelClass}>Phone Number *</label>
-                        <input
-                          id="phone"
-                          name="phone"
-                          type="tel"
-                          required
-                          value={formData.phone}
-                          onChange={handleChange}
-                          placeholder="(541) 555-0100"
-                          className={inputClass}
-                        />
-                      </div>
-                    </div>
-
-                    <div className="grid sm:grid-cols-2 gap-4">
-                      <div>
-                        <label htmlFor="state" className={labelClass}>Primary State of Operation *</label>
-                        <select
-                          id="state"
-                          name="state"
-                          required
-                          value={formData.state}
-                          onChange={handleChange}
-                          className={inputClass}
-                        >
-                          <option value="">Select a state…</option>
-                          {US_STATES.map((s) => (
-                            <option key={s} value={s}>{s}</option>
-                          ))}
-                        </select>
-                      </div>
-                      <div>
-                        <label htmlFor="serviceType" className={labelClass}>Operation Type *</label>
-                        <select
-                          id="serviceType"
-                          name="serviceType"
-                          required
-                          value={formData.serviceType}
-                          onChange={handleChange}
-                          className={inputClass}
-                        >
-                          <option value="">Select operation…</option>
-                          {SERVICE_TYPES.map((s) => (
-                            <option key={s} value={s}>{s}</option>
-                          ))}
-                        </select>
-                      </div>
-                    </div>
-
-                    <div className="grid sm:grid-cols-2 gap-4">
-                      <div>
-                        <label htmlFor="crewSize" className={labelClass}>Crew / Employee Size</label>
-                        <select
-                          id="crewSize"
-                          name="crewSize"
-                          value={formData.crewSize}
-                          onChange={handleChange}
-                          className={inputClass}
-                        >
-                          <option value="">Select…</option>
-                          {CREW_SIZE.map((c) => (
-                            <option key={c} value={c}>{c}</option>
-                          ))}
-                        </select>
-                      </div>
-                      <div>
-                        <label htmlFor="currentCoverage" className={labelClass}>Current Coverage Status</label>
-                        <select
-                          id="currentCoverage"
-                          name="currentCoverage"
-                          value={formData.currentCoverage}
-                          onChange={handleChange}
-                          className={inputClass}
-                        >
-                          <option value="">Select…</option>
-                          <option>Currently insured, shopping renewal</option>
-                          <option>Currently insured, unhappy with carrier</option>
-                          <option>Uninsured / new operation</option>
-                          <option>Dropped / declined by a carrier</option>
-                          <option>Not sure</option>
-                        </select>
-                      </div>
-                    </div>
-
+                  <div className="grid sm:grid-cols-2 gap-4">
                     <div>
-                      <label htmlFor="message" className={labelClass}>
-                        Tell us about your operation{" "}
-                        <span className="text-muted-foreground font-normal">(optional)</span>
-                      </label>
-                      <textarea
-                        id="message"
-                        name="message"
-                        rows={4}
-                        value={formData.message}
-                        onChange={handleChange}
-                        placeholder="Equipment owned, trucks in the fleet, current EMOD, type of timber sales you work, anything that helps us quote accurately…"
-                        className={`${inputClass} resize-none`}
+                      <label htmlFor="name" className={labelClass}>Full Name *</label>
+                      <input
+                        id="name" name="name" type="text" required
+                        placeholder="Jane Doe" className={inputClass}
                       />
                     </div>
+                    <div>
+                      <label htmlFor="coverage" className={labelClass}>Coverage Needed *</label>
+                      <select id="coverage" name="coverage" required defaultValue="" className={inputClass}>
+                        <option value="">Select coverage…</option>
+                        {COVERAGE_LINES.map((c) => (
+                          <option key={c} value={c}>{c}</option>
+                        ))}
+                      </select>
+                    </div>
+                  </div>
 
-                    {error && (
-                      <p className="text-destructive text-sm font-medium">{error}</p>
-                    )}
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <div>
+                      <label htmlFor="email" className={labelClass}>Email Address *</label>
+                      <input
+                        id="email" name="email" type="email" required
+                        placeholder="jane@example.com" className={inputClass}
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="phone" className={labelClass}>Phone Number *</label>
+                      <input
+                        id="phone" name="phone" type="tel" required
+                        placeholder="(928) 555-0100" className={inputClass}
+                      />
+                    </div>
+                  </div>
 
-                    <button
-                      type="submit"
-                      disabled={submitting}
-                      className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-forest-gradient text-white font-body font-bold rounded-xl shadow-card hover:shadow-lift transition-all disabled:opacity-60 disabled:cursor-not-allowed"
-                    >
-                      {submitting ? "Sending…" : "Request My Free Quote"}
-                      {!submitting && <ArrowRight className="w-5 h-5" />}
-                    </button>
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <div>
+                      <label htmlFor="town" className={labelClass}>Your Community *</label>
+                      <select id="town" name="town" required defaultValue="" className={inputClass}>
+                        <option value="">Select your town…</option>
+                        {TOWNS.map((t) => (
+                          <option key={t} value={t}>{t}</option>
+                        ))}
+                      </select>
+                    </div>
+                    <div>
+                      <label htmlFor="currentCoverage" className={labelClass}>Current Coverage Status</label>
+                      <select id="currentCoverage" name="currentCoverage" defaultValue="" className={inputClass}>
+                        <option value="">Select…</option>
+                        <option>Currently insured, shopping for a better rate</option>
+                        <option>Currently insured, unhappy with my carrier</option>
+                        <option>New home / car / business — need coverage</option>
+                        <option>Not currently insured</option>
+                        <option>Not sure</option>
+                      </select>
+                    </div>
+                  </div>
 
-                    <p className="text-xs text-center text-muted-foreground">
-                      No spam. No commitment. We&apos;ll contact you to discuss your specific operation.
-                    </p>
-                  </form>
-                )}
+                  <div>
+                    <label htmlFor="message" className={labelClass}>
+                      Tell us what you need{" "}
+                      <span className="text-muted-foreground font-normal">(optional)</span>
+                    </label>
+                    <textarea
+                      id="message" name="message" rows={4}
+                      placeholder="Address or neighborhood, year/type of home, vehicles, business details, rental property — anything that helps us quote accurately…"
+                      className={`${inputClass} resize-none`}
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-forest-gradient text-white font-body font-bold rounded-xl shadow-card hover:shadow-lift transition-all"
+                  >
+                    Request My Free Quote
+                    <ArrowRight className="w-5 h-5" />
+                  </button>
+
+                  <p className="text-xs text-center text-muted-foreground">
+                    No spam. No commitment. A local Flagstaff agent will reach out to discuss your needs.
+                  </p>
+                </form>
               </div>
             </div>
           </div>

@@ -6,23 +6,23 @@ import { CTABand } from "@/components/sections/CTABand";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { SERVICES, SITE } from "@/lib/site";
 import {
-  ShieldCheck, HardHat, Truck, Wrench, Building2, FlaskConical, Trees,
+  ShieldCheck, Home, Car, Building2, KeyRound,
   ArrowRight,
 } from "lucide-react";
 
 const ICONS = {
-  ShieldCheck, HardHat, Truck, Wrench, Building2, FlaskConical, Trees,
+  ShieldCheck, Home, Car, Building2, KeyRound,
 } as const;
 
 export const metadata: Metadata = {
-  title: "Logging & Forestry Insurance Coverage Lines",
+  title: "Insurance Coverage for Flagstaff & Northern Arizona",
   description:
-    "Seven specialized coverage lines for logging contractors and forestry operations — loggers' workers' comp, log trucks, equipment, GL, sawmill, pollution, and tree service. Licensed all 50 states.",
+    "Five coverage lines for Flagstaff & Northern Arizona — homeowners, auto, business, landlord, and renters insurance from a local independent agency that shops multiple carriers.",
   alternates: { canonical: `${SITE.url}/services` },
   openGraph: {
-    title: "Logging & Forestry Insurance Coverage Lines | Lumberjack Insurance",
+    title: "Insurance Coverage Lines | Lumberjack Insurance",
     description:
-      "Workers' comp for logging class codes, log trucks, equipment, GL, sawmill, pollution, and tree service coverage.",
+      "Homeowners, auto, business, landlord, and renters insurance for Flagstaff & Northern Arizona — local agents who shop multiple carriers for you.",
     url: `${SITE.url}/services`,
   },
 };
@@ -47,14 +47,14 @@ export default function ServicesPage() {
             <FadeIn>
               <span className="pill-accent">Coverage lines</span>
               <h1 className="mt-5 font-display font-semibold text-foreground text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight">
-                Logging insurance,{" "}
+                Hometown insurance,{" "}
                 <span className="bg-gradient-to-r from-primary via-forest-500 to-accent bg-clip-text text-transparent">
                   line by line
                 </span>
               </h1>
               <p className="mt-5 lead max-w-2xl mx-auto">
-                Seven specialized coverage lines — each built for the real exposures of
-                logging, timber, and forestry work. No generic contractor policies.
+                Five coverage lines for Flagstaff &amp; Northern Arizona — home, auto, business,
+                landlord, and renters. Local agents who shop multiple carriers for you.
               </p>
             </FadeIn>
           </div>
@@ -65,7 +65,7 @@ export default function ServicesPage() {
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {SERVICES.map((service, i) => {
                 const Icon = ICONS[service.icon as keyof typeof ICONS] ?? ShieldCheck;
-                const isFeatured = service.slug === "loggers-workers-comp";
+                const isFeatured = service.slug === "homeowners-insurance";
                 return (
                   <FadeIn key={service.slug} delay={(i % 3) * 0.05}>
                     <Link
@@ -105,8 +105,8 @@ export default function ServicesPage() {
         </section>
 
         <CTABand
-          title="Not sure which lines you need?"
-          description="Most logging operations carry four to six of these together. We'll review your program and quote the gaps — in about a day."
+          title="Not sure which coverage you need?"
+          description="Most Flagstaff households and businesses carry two or three of these together. We'll review what you have, find the gaps, and shop carriers to fit your budget."
         />
       </main>
       <Footer />

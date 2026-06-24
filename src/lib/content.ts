@@ -1,11 +1,12 @@
 // Detailed niche content for service pages, why-choose, process, FAQs.
-// Niche-accurate logging/timber terminology throughout.
+// Niche: LOCAL Flagstaff, Arizona insurance agency (friendly lumberjack mascot).
+// Personal + small-commercial lines for Flagstaff & Northern Arizona —
+// home, auto, business, landlord, renters. Friendly, locally-flavored copy.
 
 import {
-  ShieldCheck, HardHat, Truck, Wrench, Building2, FlaskConical, Trees,
-  Umbrella, AlertTriangle, HeartPulse, TreePine, Gauge, Sticker,
-  FileCheck, PhoneCall, MapPinned, Banknote, Timer, Users, Target,
-  ClipboardList, BadgeCheck, ArrowRight, ArrowLeft, CheckCircle2, Quote,
+  ShieldCheck, Home, Car, Building2, KeyRound,
+  MapPin, Banknote, HeartPulse, Timer, BadgeCheck,
+  PhoneCall, ClipboardList, Users,
 } from "lucide-react";
 
 // === Service detail (one per service slug) ===
@@ -20,468 +21,399 @@ export interface ServiceDetail {
 }
 
 export const SERVICE_DETAIL: Record<string, ServiceDetail> = {
-  "loggers-workers-comp": {
+  "homeowners-insurance": {
     heroBlurb:
-      "Logging is consistently ranked one of the deadliest jobs in America — above roofing, steel, and trucking. Your workers' comp policy isn't a commodity; it's the policy most likely to sink or save your business. We write logging class codes (2702, 2710, 2712) with real EMOD strategy and A-rated specialty markets that actually know what a feller buncher does.",
+      "When you own a home at 7,000 feet beneath the San Francisco Peaks, your insurance has to understand mountain living the way you do — the ponderosas you love are also the wildfire fuel insurers worry about, and that first heavy snow can sit a long time on a Flagstaff roof. Lumberjack Insurance is your local Flagstaff agency, built for Northern Arizona homeowners who deal with real wildfire exposure, deep winter snow loads, and monsoon downpours every single year. As an independent agent we shop multiple carriers on your behalf — so when the fire-zone market gets tight, you have a real person fighting to keep you covered. Friendly as a flannel, serious about protecting your home.",
     whatsCovered: [
-      "Class code 2702 — logging (felling, bucking, skidding, yarding)",
-      "Class code 2710 — sawmill or planing mill operations",
-      "Class code 2712 — logging road construction & maintenance",
-      "Cable logging / high-lead yarding crews",
-      "Chainsaw operators, chokersetters, rigging slingers",
-      "Feller buncher, skidder, forwarder, and loader operators",
-      "Medical, indemnity, and rehab for work injuries",
-      "EMOD / experience rating review and dispute strategy",
-      "Alternative markets: self-insured groups, PEOs, captive options",
+      "Dwelling coverage that rebuilds your home at altitude-adjusted replacement cost — not lowball market value",
+      "Wildfire and smoke damage protection, with carriers that still write in ponderosa-forest and brush-exposed zones",
+      "Winter snow-load and roof-collapse damage, including ice dams and the weight of a long Flagstaff snowpack",
+      "Monsoon-season wind and hail damage to roofs, siding, windows, and skylights (July–September storms)",
+      "Sudden water damage and water backup through drains and sump pumps after heavy rain or snowmelt",
+      "Personal property coverage for your furniture, electronics, gear, and belongings, on or off the premises",
+      "Personal liability if someone is injured on your property or you're held responsible for damage",
+      "Loss of use / additional living expenses to pay for a hotel and meals if you're displaced during repairs",
+      "Detached structures like garages, sheds, cabins, workshops, and barns on your lot",
+      "Theft and vandalism coverage for primary homes, cabins, and seasonally vacant second homes",
     ],
     whoItsFor: [
-      "Independent logging contractors & timber harvesters",
-      "Cable / high-lead logging operations on steep terrain",
-      "Mechanized logging crews running feller bunchers + skidders",
-      "Sawmill and planing mill operators (class 2710)",
-      "Logging road builders and site prep contractors",
-      "Forestry contractors with a climbing experience mod (1.10+)",
+      "Flagstaff and Northern Arizona homeowners who want a local agent, not an 800-number out of state",
+      "Owners of older homes, historic downtown houses, and mountain cabins that need replacement-cost done right",
+      "Anyone in or near the ponderosa forest with real wildfire and brush exposure who's worried about coverage",
+      "Second-home and vacation-home owners whose property sits empty part of the year",
+      "Homeowners who've been non-renewed or rate-shocked in the fire-zone hard market and need carriers re-shopped",
+      "New buyers closing on a Flagstaff home who need a solid policy bound before move-in",
     ],
     whyCca: [
       {
-        title: "We read your loss runs before we quote",
-        body: "A bad mod year shouldn't follow you for three. We pull your experience rating sheet, walk through every claim, and build a submission that tells the real story — not just the numbers.",
+        title: "We Shop, You Don't Settle",
+        body: "As an independent agency we represent multiple carriers, not just one. When a single insurer non-renews or jacks your rate because you're in a fire zone, we re-shop the whole market to find someone who still wants your business. You get options instead of an ultimatum.",
       },
       {
-        title: "Specialty markets that write logging",
-        body: "The standard carriers decline class 2702 on sight. We have direct appointments with the A-rated specialty programs that underwrite logging operations every day — and we know what they need to see to offer their best terms.",
+        title: "We Actually Live Up Here",
+        body: "We know what a Flagstaff winter does to a roof and what the Museum and Pipeline fires taught this community about defensible space. That local knowledge means we size your dwelling coverage for mountain rebuild costs and flag the exposures out-of-state agents miss. Your policy reflects how homes actually get damaged at 7,000 feet.",
       },
       {
-        title: "Safety program support that lowers the mod",
-        body: "We help you build the documented safety program the underwriter wants to see — fall protection, chainsaw PPE, daily job-briefs — which translates into lower premiums and a falling experience mod.",
+        title: "A Real Person, Same Number",
+        body: "Call 844-967-5247 and you reach people who handle Northern Arizona homes every day — at quote time, at renewal, and when you have a claim. We walk you through coverage in plain English and stay in your corner when it matters most. No phone-tree roulette, no being handed off across three states.",
       },
     ],
     faqs: [
       {
-        q: "What workers' comp class codes apply to logging?",
-        a: "The three core logging class codes are 2702 (logging — felling, bucking, skidding, yarding, and related woods work), 2710 (sawmill or planing mill operations, including portable mills), and 2712 (logging road construction and maintenance). Your payroll must be assigned to the correct code for each operation; miscoding between 2702 and 2710 alone can shift your premium 30%+.",
+        q: "My insurer just non-renewed me because I'm in a wildfire zone. Can you still get me covered?",
+        a: "Very often, yes. Flagstaff is in a hard market for fire-exposed homes, but different carriers draw their risk maps differently, so a property one company drops is still writable by another. As an independent agency we shop multiple carriers to find that fit, and we'll also point out defensible-space and home-hardening steps that can improve your eligibility and pricing.",
       },
       {
-        q: "Why is loggers' workers' comp so expensive?",
-        a: "Because the losses are real. Logging has one of the highest fatal and severe-injury rates of any US occupation — struck-by-tree, chainsaw laceration, cable snap-back, and equipment rollover. Base rates for class 2702 are among the highest in the workers' comp manual. The good news: your experience modification factor (EMOD) lets a safe operator pay well below the manual rate, and we build submissions that show underwriters exactly that.",
+        q: "Does standard homeowners insurance cover snow and ice damage to my roof?",
+        a: "Generally yes — damage from the sheer weight of ice and snow, and the structural collapse it can cause, is typically a covered peril on a homeowners policy. Ice dams that force water under shingles and into your home are usually covered too. We'll make sure your dwelling limit is high enough to actually rebuild a Flagstaff roof and confirm there are no surprise snow-related exclusions before you sign.",
       },
       {
-        q: "My experience mod is over 1.0 — can I still get coverage?",
-        a: "Yes. A mod above 1.0 means you pay more than the average logger, but it is not uninsurable. We work with specialty excess-and-surplus markets and group self-insurance pools that write climbing-mod operators. The key is getting ahead of it — the longer you stay uninsured or in the residual market, the harder and more expensive it gets.",
+        q: "What about monsoon damage — wind, hail, and flash flooding in July and August?",
+        a: "Wind and hail damage from monsoon storms is normally covered under your homeowners policy, including roof, siding, and window damage. Sudden water intrusion from a storm-damaged roof is typically covered as well. Flash flooding that rises from the ground, however, requires separate flood insurance — homeowners policies exclude flood, so if you're near a wash or in a low spot, ask us about adding it.",
       },
       {
-        q: "Do you write logging workers' comp in all 50 states?",
-        a: "Yes. Contractors Choice Agency is licensed in all 50 states, including the four monopolistic-fund states (Ohio, Washington, North Dakota, Wyoming) where we coordinate coverage through the state fund and handle the UW and service. We also handle Oregon SAIF and Idaho submissions.",
+        q: "Why does my agent talk about replacement cost instead of what my home is worth?",
+        a: "Market value is what someone would pay to buy your home; replacement cost is what it takes to rebuild it from the studs up — and at 7,000 feet, with mountain labor and material costs, rebuilding often costs more than the sale price. You want your dwelling coverage set to replacement cost so a total loss actually rebuilds your home. We calculate this for Flagstaff construction rather than guessing off a Zillow estimate.",
       },
       {
-        q: "How fast can I get a quote?",
-        a: "Most logging workers' comp quotes are turned around within one business day of receiving your loss runs and payroll data — and we quote a complete program, not just a number. Call 844-967-5247 and ask for the logging desk.",
+        q: "I own a cabin or second home that sits empty part of the year. Is that a problem?",
+        a: "It can be, because vacant and seasonally unoccupied homes carry higher risk of undetected water leaks, freeze damage, theft, and vandalism — and some carriers restrict or surcharge them. The good news is we know which carriers write second homes and cabins comfortably, and we'll structure the policy around how often you're actually there. Simple steps like a monitored alarm or a freeze sensor can also help your rate.",
       },
     ],
     deepDive: [
       {
-        heading: "The experience modification factor (EMOD): your single biggest lever",
-        body: "Your EMOD is a multiplier applied to your workers' comp premium, calculated from your actual claims history over a rolling three-year period. A mod of 1.00 means you pay the manual rate; 0.80 means you pay 20% less; 1.30 means you pay 30% more. For a logging operation with a sizable class-2702 payroll, a single point of EMOD can mean tens of thousands of dollars a year. The levers that move it: documented safety programs, prompt injury reporting, a return-to-work policy, and aggressive claim management. We help you put all four in place — and we review your annual mod worksheets for errors before they cost you a year of inflated premium.",
+        heading: "Living With Wildfire Risk in the Ponderosa Forest",
+        body: "The same ponderosa pines that make Flagstaff beautiful also make it one of Arizona's more wildfire-exposed places to own a home, and the Museum Fire and Pipeline Fire are recent reminders that the threat is real, not theoretical. Insurers have responded by tightening underwriting in forested and brush-exposed zones, which is why some longtime homeowners have seen non-renewals or steep increases through no fault of their own. The single most useful thing you can do is create and maintain defensible space — clearing brush, trimming branches away from the roof, and keeping the first few feet around your foundation lean — because many carriers now weigh this directly in their decisions. Home-hardening choices like a Class-A fire-rated roof, ember-resistant vents, and non-combustible siding can further improve both your eligibility and your premium. As an independent agency, we don't just hand you one company's verdict; we shop the market to find a carrier that still wants forest-zone homes and we help you present your property in its best light. The goal is simple: keep you continuously insured even as the fire-zone market keeps shifting.",
       },
       {
-        heading: "Why standard carriers decline logging — and who writes it instead",
-        body: "Most standard workers' comp carriers decline logging class codes outright. The losses are severe and frequent, and the data shows it. The markets that write logging are a handful of A-rated specialty programs, regional mutual carriers, and in some states, self-insured group funds (SIGs). Contractors Choice Agency has direct appointments with these specialty markets. That means your submission goes straight to an underwriter who writes logging every day — not into a generalist queue where it gets declined on the class code alone.",
-      },
-    ],
-  },
-
-  "logging-truck-insurance": {
-    heroBlurb:
-      "Log trucks are not standard commercial auto. Loaded trailers with stake binders, long log overhang, forest-road approaches, and ICC/MC authority requirements all change the risk. We quote physical damage, cargo, bobtail, and filings as a single coordinated fleet program.",
-    whatsCovered: [
-      "Physical damage — collision, comprehensive, fire, theft, overturn",
-      "Motor truck cargo — coverage for the logs in transit",
-      "Bobtail / non-trucking liability (when dispatched or returning empty)",
-      "Motor truck general liability (MTGC) for the for-hire operation",
-      "ICC / MC authority filings (Form E & Form H) for interstate",
-      "State-specific filings (Form H, SR22) where required",
-      "Truckers' workers' comp for the driver class code",
-      "Trailer interchange coverage (lowboys, pole trailers, log trailers)",
-      "Rental reimbursement / downtime coverage",
-    ],
-    whoItsFor: [
-      "For-hire log truck operators with ICC/MC authority",
-      "Logging contractors running their own trucks to the mill",
-      "Lowboy / heavy-haul operators moving logging equipment",
-      "Single-truck owner-operators leased to larger carriers",
-      "Fleets hauling poles, pulpwood, saw logs, or biomass",
-    ],
-    whyCca: [
-      {
-        title: "We handle the filings, not just the policy",
-        body: "ICC/MC authority requires Form E (proof of financial responsibility) and Form H (cargo) filings with the FMCSA — and your state may require its own. We file them. You don't lose days on a load because a filing lapsed.",
-      },
-      {
-        title: "Cargo built for logs, not pallets",
-        body: "Most cargo forms are written for dry vans. Log cargo has its own exposures — binders slipping, logs rolling on unloading, and shifting loads on forest-road grades. We write cargo forms that actually contemplate how you load and haul.",
-      },
-      {
-        title: "Fleet programs, not piecemeal quotes",
-        body: "We quote your trucks, trailers, drivers, and cargo as one program — so there are no gaps between the auto and cargo when a loaded trailer overturns on a forest road.",
-      },
-    ],
-    faqs: [
-      {
-        q: "Do I need a special endorsement to haul logs?",
-        a: "If you cross state lines for-hire, you need FMCSA operating authority (MC number) plus Form E and Form H filings proving you carry the required auto liability and cargo limits. Some states also require state-level filings or permits for oversize/overweight loads (long logs often qualify). We file the federal forms as part of your policy and walk you through the state permit side.",
-      },
-      {
-        q: "What's the difference between bobtail and non-trucking liability?",
-        a: "Bobtail covers you when you're driving the truck without a trailer (often after dispatch, returning empty). Non-trucking liability is broader — it covers personal-use driving when you're not under dispatch. If you're leased to a carrier, your carrier's policy covers you under load; you need bobtail or non-trucking for everything else. We'll quote the right one for your lease setup.",
-      },
-      {
-        q: "Does cargo cover the logs themselves?",
-        a: "Yes — motor truck cargo covers the freight (the logs) against damage or loss in transit, up to the limit you carry. The exposures for logs are different than dry freight: binders and stakes can fail, logs can shift on grades, and unloading at the mill has its own hazards. We quote cargo limits that reflect the real value of your loads.",
-      },
-      {
-        q: "Can you insure a single-truck owner-operator?",
-        a: "Yes. We write owner-operators whether you're leased to a larger carrier or running your own authority. The package typically combines your primary auto liability (when you have your own authority) or bobtail/non-trucking (when leased), plus physical damage on the truck and trailer, and cargo. Drivers' workers' comp is quoted separately under the appropriate trucking class code.",
-      },
-      {
-        q: "What does a log truck insurance quote cost?",
-        a: "It depends on the truck, the driver's record, radius of operation, cargo limits, and whether you run your own authority. A single power unit with a clean record typically runs a few thousand dollars a year for liability plus physical damage; fleets get volume rating. The fastest way to a real number is a 15-minute call to the logging desk at 844-967-5247.",
+        heading: "What a Northern Arizona Winter Does to Your Policy",
+        body: "Flagstaff routinely sees more snow than almost anywhere else in Arizona, and that snow has a way of staying on your roof through repeated freeze-thaw cycles all winter long. The two big risks are snow-load — the accumulated weight that can stress or collapse a roof — and ice dams, where snowmelt refreezes at the eaves and backs water up under the shingles and into your ceilings and walls. Both of these perils are generally covered on a well-built homeowners policy, but the coverage only helps if your dwelling limit is high enough to rebuild and your deductible fits your budget. We pay close attention to roof age, pitch, and construction when we place your policy, because those details drive both your risk and your rate. We'll also talk through practical prevention — attic insulation, proper ventilation, and clearing snow buildup — since fewer claims means more stable pricing over time. When the weather does cause damage, having a local agent who understands Flagstaff winters makes the claim conversation a whole lot smoother.",
       },
     ],
   },
 
-  "logging-equipment-insurance": {
+  "auto-insurance": {
     heroBlurb:
-      "A feller buncher is a $400,000 machine. A skidder or processor costs more. When the iron goes over on a slope, catches fire, or gets hit at the landing, your inland marine policy is what stands between you and a season-ending loss. We schedule every piece — in transit, at the landing, and in the woods.",
+      "Driving in Flagstaff means mountain grades, surprise spring snow on the way up Highway 89, and a stretch of I-17 down to Phoenix where the weather can flip three times in an hour. Lumberjack Insurance is your local Flagstaff agency, built for the everyday driver who deals with black ice, monsoon flash floods, and the occasional elk stepping onto the road at dusk. As an independent agent we shop multiple carriers to find you the right coverage at the right price — and we are a phone call away at 844-967-5247 when you need us.",
     whatsCovered: [
-      "Scheduled equipment — feller bunchers, harvesters, processors",
-      "Skidders (cable & grapple), forwarders, delimbers",
-      "Knuckle-boom loaders, stroke delimbers, slash saws",
-      "Cable yarders, tower skidders, carriage & rigging systems",
-      "Chainsaws, power tools, and small equipment (scheduled)",
-      "Perils: fire, theft, overturn, collision, flood, windstorm, vandalism",
-      "In-transit coverage (lowboy haul between tracts)",
-      "At-the-landing and in-the-woods coverage",
-      "Rental reimbursement / extra expense to keep working",
+      "Liability coverage (bodily injury & property damage) that meets — and exceeds — Arizona's 25/50/15 minimums",
+      "Collision coverage for fender-benders, spin-outs on icy switchbacks, and at-fault accidents",
+      "Comprehensive coverage for elk and deer strikes, falling rocks, hail dents, and monsoon flood damage",
+      "Uninsured & underinsured motorist coverage — critical protection given how many Arizona drivers carry no insurance",
+      "Medical payments (MedPay) for you and your passengers regardless of fault",
+      "Roadside assistance and towing built for remote forest roads around Williams, Sedona, and Page",
+      "Rental reimbursement so you stay mobile while your vehicle is in the shop",
+      "Gap coverage that pays the difference if a totaled car is worth less than your loan or lease balance",
+      "Glass and windshield coverage for rock chips off I-40 gravel and winter sanding trucks",
+      "Full-coverage and liability-only options tailored to your vehicle's age and value",
     ],
     whoItsFor: [
-      "Mechanized logging contractors running feller bunchers + skidders",
-      "Cable / high-lead logging operations with yarders & carriages",
-      "Logging contractors who move equipment between timber sales",
-      "Operators financing equipment (lender will require listed loss payee)",
-      "Crews with mixed owned/leased/rented iron",
+      "Flagstaff and Northern Arizona residents who drive mountain roads and winter weather year-round",
+      "NAU students and staff commuting across town, up the hill, or home for the weekend",
+      "Long-distance commuters running the I-17 Phoenix corridor or I-40 east toward Winslow",
+      "Families who want higher-than-minimum limits and real protection against uninsured drivers",
+      "Drivers in rural and forested areas where a breakdown means a long wait for a tow",
+      "Anyone financing or leasing a newer vehicle who needs gap and full coverage",
     ],
     whyCca: [
       {
-        title: "We know what a Tigercat vs a Deere costs to replace",
-        body: "Inland marine claims go sideways fast when the adjuster doesn't know the equipment. We document make, model, hours, and attachments at bind — so when a machine goes down the conversation is about getting it back to work, not about what it was.",
+        title: "We Shop, You Save",
+        body: "As an independent local agency, we are not tied to a single insurance company. We compare quotes across multiple top carriers to find the best fit for your driving, your vehicle, and your budget. When rates change, we re-shop so you are never overpaying.",
       },
       {
-        title: "Scheduled, not blanket",
-        body: "Blanket coverage leaves gaps. We schedule every serial-numbered machine with its agreed value or replacement cost, list your lender as loss payee, and update the schedule every time you add or trade equipment.",
+        title: "Local and Reachable",
+        body: "We live and drive the same Flagstaff roads you do, so we understand mountain winters, elk season, and monsoon flooding firsthand. You get a real person who answers the phone at 844-967-5247 — not a call center reading from a script.",
       },
       {
-        title: "Coverage that follows the equipment",
-        body: "Your equipment moves — from tract to tract, on a lowboy, parked at the landing. We write inland marine that follows the iron, not a property form tied to one address.",
+        title: "Coverage Built for Up Here",
+        body: "We know Arizona's minimum limits leave most drivers dangerously exposed, especially against the state's many uninsured motorists. We help you right-size comprehensive, collision, and uninsured-motorist coverage for the real hazards of Northern Arizona, not a one-size-fits-all checklist.",
       },
     ],
     faqs: [
       {
-        q: "What's the difference between inland marine and equipment floater?",
-        a: "They're often used interchangeably for logging equipment. 'Inland marine' is the broad line of insurance for property that moves or doesn't sit at a fixed address; an 'equipment floater' is the specific form within that line that schedules your mobile equipment. For logging, we write an inland marine equipment floater that covers your machines in transit, at the landing, and working in the woods.",
+        q: "Does my insurance cover hitting an elk or deer?",
+        a: "Yes — collisions with elk, deer, and other animals are covered under comprehensive coverage, not collision. This is exactly why we steer Northern Arizona drivers away from liability-only policies. Wildlife strikes are a genuine and costly hazard on roads around Flagstaff, especially at dawn and dusk, and comprehensive is what pays to repair or replace your vehicle.",
       },
       {
-        q: "Does this cover a machine that goes over on a slope?",
-        a: "Yes — overturn is a covered peril on a properly written equipment floater, and it's one of the most common logging losses. Steep-slope operations should be disclosed at bind (some markets surcharge or exclude above a certain slope grade); we'll find the market that fits how you actually work.",
+        q: "Is Arizona's 25/50/15 minimum coverage enough?",
+        a: "It is the legal minimum, but it is rarely enough. A single serious accident on I-17 can easily produce medical and vehicle costs that blow past 25/50/15, leaving you personally on the hook for the rest. We almost always recommend higher liability limits plus strong uninsured/underinsured motorist coverage, which is affordable and protects you from Arizona's large pool of uninsured drivers.",
       },
       {
-        q: "My lender requires them as loss payee — can you do that?",
-        a: "Yes. We list the bank, captive finance arm, or leasing company as loss payee on the schedule at bind and provide the evidence of insurance (ACORD 28) they require. If equipment is added or financed later, we update the schedule and reissue the evidence the same day.",
+        q: "Do I need full coverage or is liability-only fine?",
+        a: "If you are financing or leasing your vehicle, your lender will require full coverage (comprehensive plus collision). Even on a paid-off car, full coverage is worth considering up here, because hail, flooding, and wildlife strikes can total a vehicle without any other car being involved. We walk you through the trade-off based on your car's value and your budget.",
       },
       {
-        q: "Should I carry actual cash value or replacement cost?",
-        a: "For newer equipment, replacement cost (RC) is almost always worth it — a 3-year-old feller buncher has a lot of useful life left but heavy depreciation on an actual-cash-value (ACV) basis. For older machines near end-of-life, ACV may make economic sense. We'll model both on the schedule and show you the difference.",
+        q: "What happens if I break down on a remote forest road?",
+        a: "Our roadside assistance and towing coverage is designed for exactly that — a flat or breakdown on a backroad near Williams, Sedona, or out toward Page where help is not around the corner. Coverage can include towing to the nearest qualified shop, fuel delivery, lockout service, and jump-starts. We will make sure the towing mileage limits actually match how far out you drive.",
       },
       {
-        q: "Are chainsaws and small tools covered?",
-        a: "Small unscheduled tools are typically covered under a tools-and-equipment schedule with a per-item and aggregate cap. High-value items (large saws, power tools) should be individually scheduled. Theft from an unsecured job site is a common exclusion to watch for — we write forms that cover job-site theft with reasonable security requirements.",
+        q: "Why use a local independent agent instead of buying online?",
+        a: "An online quote shops one company; we shop several to find your best rate and the right coverage for mountain-town driving. We also catch the gaps a website misses — like under-buying uninsured-motorist coverage or skipping gap insurance on a financed car. And when you have a claim, you call a local person at 844-967-5247 who already knows your policy.",
+      },
+    ],
+    deepDive: [
+      {
+        heading: "Winter Driving, Comprehensive, and Why Coverage Matters Up Here",
+        body: "Flagstaff sits at 7,000 feet, and winter driving here is a different animal than the rest of Arizona. Black ice forms on shaded curves and bridge decks, sudden whiteouts can drop visibility to nothing on I-40, and the steep grades down toward Phoenix on I-17 punish worn tires and overconfidence. Collision coverage protects you when a spin-out or icy slide leads to an at-fault crash or a hit against a guardrail. Comprehensive picks up the events that are not a collision at all — hail pitting your hood during a summer storm, monsoon flash flooding submerging a parked car, or a rock kicked up off a sanding truck cracking your windshield. We help you set deductibles you can actually afford to pay in the moment, so a winter claim does not turn into a second emergency. The goal is simple: keep you legally covered, financially protected, and back on the road fast.",
+      },
+      {
+        heading: "Uninsured Motorists, Long Commutes, and Right-Sizing Your Limits",
+        body: "Arizona consistently ranks among the states with the most uninsured drivers, which means a meaningful share of the cars sharing your commute carry no coverage at all. If one of them causes a crash, uninsured/underinsured motorist coverage is what pays for your injuries and damage when they cannot. For Flagstaff drivers racking up long miles — the I-17 run to Phoenix, the I-40 stretch toward Winslow, or weekend trips to Sedona and Page — those miles add up to more exposure on the road. That is also where gap coverage earns its keep: if you total a financed or leased vehicle, gap pays the difference between what you owe and what the car is actually worth, so you are not making payments on a car you can no longer drive. We sit down with how and where you actually drive, then right-size your liability, uninsured-motorist, and gap coverage to match. Higher limits cost far less than most people expect, and they are the difference between a covered claim and a personal financial hit.",
       },
     ],
   },
 
-  "forestry-timber-liability": {
+  "business-insurance": {
     heroBlurb:
-      "General liability for loggers is not a standard contractor GL. You need the Loggers Broad Form endorsement (coverage for the trees you're cutting and the work you're doing), loading and unloading at the landing, and completed-operations protection. Generic contractor GL excludes most of what you do.",
+      "Running a small business in Flagstaff means owning your block on a snowy January morning and a packed July afternoon all in the same year. Lumberjack Insurance is your local, independent agency built for the shops, cafes, trades, and tourism outfits that make downtown and the NAU area run. We shop the carriers for you and right-size a policy to your storefront, your season, and your budget. Real coverage, plain talk, one phone call away at 844-967-5247.",
     whatsCovered: [
-      "Third-party bodily injury (hunters, hikers, adjoining landowners)",
-      "Property damage — to others' land, structures, improvements",
-      "Loggers Broad Form endorsement (LCP) — cutting/operations coverage",
-      "Loading & unloading liability at the landing and mill",
-      "Completed-operations coverage (post-harvest claims)",
-      "Products / completed operations aggregate",
-      "Personal & advertising injury",
-      "Damage to rented premises (log decks, mill yards)",
-      "Defense costs outside or inside the limit (market dependent)",
+      "Business Owners Policy (BOP) bundling your commercial property and general liability into one right-sized, cost-effective package",
+      "General liability for third-party slip-and-fall claims — including the icy-sidewalk and packed-snow falls that come with a Flagstaff winter",
+      "Commercial property coverage for your building, fixtures, and inventory against snow load, wildfire, and monsoon water damage",
+      "Business interruption coverage that keeps income flowing when a wildfire evacuation or road closure shuts your doors",
+      "Arizona-required workers' compensation for your employees, with on-the-job injury and medical protection",
+      "Liquor liability for the breweries, bars, restaurants, and tasting rooms serving downtown and Route 66",
+      "Professional liability (errors and omissions) for offices, consultants, salons, and service providers",
+      "Equipment and tools coverage for the trades, plus contents protection for shop and kitchen gear",
+      "Exterior signage, awnings, and storefront glass coverage for your Route 66 and downtown frontage",
+      "Cyber liability and hired/non-owned auto for the data you hold and the vehicles your team drives on the job",
     ],
     whoItsFor: [
-      "Logging contractors cutting on private, state, or federal timber sales",
-      "Cable & mechanized operations near public access or adjoining land",
-      "Loggers working under US Forest Service timber sale contracts",
-      "Forestry operators with mill-delivery and unloading exposure",
-      "Crews running their own log trucks with combined loading operations",
+      "Downtown Flagstaff and historic Route 66 storefronts — retail shops, boutiques, and galleries",
+      "Restaurants, cafes, coffee houses, breweries, and tasting rooms serving locals and seasonal crowds",
+      "Contractors and trades — electricians, plumbers, HVAC, handymen, and finish crews working across Northern Arizona",
+      "Salons, barbershops, spas, studios, and personal-care businesses near campus and around town",
+      "Offices, consultants, and professional service firms that need liability and E&O protection",
+      "Tourism and outdoor operators — guides, outfitters, rental shops, and Snowbowl-season businesses",
     ],
     whyCca: [
       {
-        title: "The Loggers Broad Form is non-negotiable",
-        body: "Standard contractor GL excludes the trees and logs themselves, plus the operations of cutting, yarding, and loading. The Loggers Broad Form endorsement (sometimes called LCP) adds that coverage back. We don't quote a logging GL without it.",
+        title: "We're local, not a 1-800 quote engine",
+        body: "We know Flagstaff because we work here — the winters, the wildfire seasons, the tourism swings, and the way a road closure on I-17 or a Snowbowl weekend changes everything. That context goes into every policy we build. You get an agent who picks up the phone, not a call center reading a script.",
       },
       {
-        title: "We handle US Forest Service contract requirements",
-        body: "Federal timber sale contracts have specific insurance requirements — limits, additional insured wording, endorsement forms. We issue the certificates and endorsements the contracting officer needs to sign your contract.",
+        title: "We shop carriers so you don't overpay",
+        body: "As an independent agency, we aren't tied to one company. We compare multiple carriers and put their offers side by side to find the right coverage at the right price for your business. When your needs change, we re-shop instead of leaving you on autopilot.",
       },
       {
-        title: "Coverage for the unloading exposure",
-        body: "A surprising share of logging GL claims happen at the mill — logs rolling off the trailer, binders releasing under load. We write loading/unloading liability that follows the logs all the way to the debarker.",
+        title: "Right-sized for a Main Street budget",
+        body: "Small businesses shouldn't pay for coverage built for a national chain. We bundle smart with a BOP, trim what you don't need, and keep the protection that actually matters for your storefront. The goal is a policy that fits your revenue and your real-world risks.",
       },
     ],
     faqs: [
       {
-        q: "What is the Loggers Broad Form endorsement?",
-        a: "The Loggers Broad Form (sometimes labeled LCP — Loggers Comprehensive Policy, or written as a broad-form endorsement to a standard GL) adds coverage for the property you're working on — the trees, logs, and the operations of felling, bucking, skidding, yarding, loading, and unloading. Without it, a standard contractor GL typically excludes the work itself and leaves the largest exposure in logging uncovered. We will not bind a logging GL without this endorsement in place.",
+        q: "What does a Business Owners Policy (BOP) actually cover for my Flagstaff shop?",
+        a: "A BOP bundles your commercial property and general liability into one package, usually at a lower combined cost than buying them separately. For a downtown or Route 66 storefront, that means coverage for your building or contents against things like snow load and water damage, plus liability if a customer is injured on your property. Many BOPs also include business interruption, which replaces lost income if you have to close. We tailor the limits to your square footage, inventory, and seasonal revenue.",
       },
       {
-        q: "What GL limit should a logger carry?",
-        a: "$1,000,000 per occurrence / $2,000,000 aggregate is the floor for almost every timber buyer, mill, and landowner that will hire you — and US Forest Service contracts often require more (typically $1M–$5M depending on contract size), frequently paired with an umbrella. We commonly write $1M GL plus a $1M–$5M umbrella/excess to reach the contract thresholds you'll actually see.",
+        q: "Do I really need workers' compensation in Arizona?",
+        a: "Yes — Arizona requires employers to carry workers' compensation for their employees, even if you only have one. It covers medical bills and lost wages when a worker is injured on the job, and it protects you from being sued directly over that injury. If you have a team behind the counter, in the kitchen, or out on a job site, this is not optional. We'll set it up alongside the rest of your coverage so nothing falls through the cracks.",
       },
       {
-        q: "Do I need to list the timber buyer or landowner as additional insured?",
-        a: "Usually yes — virtually every private timber sale, state contract, and federal timber sale requires the landowner/buyer/contracting officer to be listed as additional insured, often with specific endorsement wording (CG 20 10, CG 20 37, or per-contract language). We issue additional insured certificates and the required endorsements at bind and on demand throughout the policy term.",
+        q: "Does my property policy cover wildfire, snow, and monsoon damage?",
+        a: "A properly built commercial property policy can cover wildfire damage, roof and structure damage from heavy snow load, and water intrusion from monsoon storms — the three weather risks that define a Northern Arizona year. The key is making sure your limits reflect what it would actually cost to rebuild and restock at today's prices. We also recommend business interruption coverage so a wildfire evacuation or extended closure doesn't sink your income. We'll walk through each risk so there are no surprises at claim time.",
       },
       {
-        q: "Does GL cover pollution from a fuel spill on the landing?",
-        a: "No — standard GL excludes pollution. A hydraulic-line failure on a skidder or a fuel spill at the landing is a pollution loss and requires a separate Contractors Pollution Liability (CPL) policy. We almost always quote logging GL alongside a forestry CPL policy; see our Pollution Liability page.",
+        q: "I run a brewery / bar / restaurant that serves alcohol. What extra coverage do I need?",
+        a: "If you serve alcohol, you'll want liquor liability coverage on top of your general liability. It protects your business if an intoxicated patron causes harm after being served — a real exposure for the breweries, tasting rooms, and restaurants packed along downtown and Route 66. Standard general liability usually excludes alcohol-related claims, so this is a gap worth closing. We'll match the coverage to your license type and how much of your sales come from the bar.",
       },
       {
-        q: "Does this cover damage to the timber itself if I cut the wrong trees?",
-        a: "Cutting outside the marked boundary or the wrong tract is a real exposure (timber trespass), and it's often contested under GL. The Loggers Broad Form extends coverage for the trees being harvested under contract; timber trespass outside the sale boundary is a separate question we discuss at bind, sometimes addressed by an errors-and-omissions / professional policy.",
+        q: "My business is way busier in summer and ski season — can my coverage flex with that?",
+        a: "It should. Tourism swings around Snowbowl and the summer season mean your revenue, foot traffic, and even staffing change throughout the year, and your coverage should reflect that reality. We can structure limits and review your policy so you're not underinsured during your peak months or overpaying in the slow ones. Because we're independent, we re-shop and adjust as your business grows. Just call us when your situation shifts and we'll right-size it.",
+      },
+    ],
+    deepDive: [
+      {
+        heading: "Why a local independent agent beats a national quote site for Flagstaff businesses",
+        body: "A national quote engine sells you the same template whether you're in Phoenix, Portland, or Flagstaff — and that's exactly the problem. Flagstaff small businesses face a specific mix of risks: black ice and snow-packed sidewalks driving winter slip-and-fall claims, wildfire seasons that can trigger evacuations and road closures, and monsoon storms that push water into basements and storerooms. On top of that, tourism around Arizona Snowbowl and the summer season makes revenue swing hard from month to month. As an independent agency, we represent multiple carriers and put their quotes side by side, so you get coverage shaped around your block, your season, and your budget instead of a one-size-fits-all bundle. And when something changes — you add staff, expand the patio, or pick up a second location — you call a person who already knows your business, not a queue.",
+      },
+      {
+        heading: "Building the right coverage stack for a Main Street small business",
+        body: "Most Flagstaff small businesses start with a Business Owners Policy, which bundles commercial property and general liability into one cost-effective package — the foundation that protects your building or contents and covers third-party injury claims like a customer slipping on an icy entryway. From there, we layer in the pieces your specific operation needs: Arizona-required workers' compensation if you have employees, liquor liability if you pour, professional liability if you give advice or provide a service, and equipment or tools coverage for the trades. We also look at the gaps owners forget — exterior signage and storefront glass, cyber liability for the customer data and card payments you handle, and hired/non-owned auto for the times your team runs an errand or makes a delivery. Then we add business interruption so a wildfire closure or a road shutdown doesn't drain your savings while you're closed. The result is a layered policy that's thorough where it counts and trimmed everywhere it doesn't, sized for a Main Street budget.",
       },
     ],
   },
 
-  "sawmill-insurance": {
+  "landlord-insurance": {
     heroBlurb:
-      "A sawmill combines property, equipment breakdown, and serious bodily-injury exposure in one site. Band saws, circular saws, planers, dry kilns, and lumber packages create fire, amputation, and drying-loss risks that generic property forms under-price and under-cover. We build sawmill programs for portable and stationary operations.",
+      "Owning a rental in Flagstaff means working with NAU students one semester and Grand Canyon-bound vacationers the next — and weather that swings from monsoon to four feet of Snowbowl powder. Lumberjack Insurance is your local independent agent for landlord and rental-dwelling coverage built around how property actually gets rented up here. We match the right dwelling policy to your single-family rental, multi-family building, or short-term Airbnb, then make sure the rent keeps flowing even when a unit goes dark after a fire, burst pipe, or snow-load claim. One call to 844-967-5247 and you talk to a neighbor, not a call center.",
     whatsCovered: [
-      "Property — buildings, mill structures, kilns, dry sheds, offices",
-      "Equipment breakdown — boilers, kilns, band mills, motors, electrical",
-      "Business income / extra expense (downtime after a fire)",
-      "Sawmill general liability — third-party bodily injury & property damage",
-      "Products liability (sold lumber defects)",
-      "Lumber yard stock coverage (inventory at risk of fire)",
-      "Outdoor property — log decks, lumber packages, yard equipment",
-      "Sawyers' & mill workers' workers' comp (class 2710)",
-      "Pollution — boiler fuel, hydraulic oil, kiln combustion",
+      "Dwelling and structure coverage on a replacement-cost basis, so a damaged rental gets rebuilt to today's Flagstaff construction costs — not a depreciated check",
+      "Landlord liability / premises liability for tenant or guest injuries on your property, including the classic icy-step or unshoveled-walkway slip-and-fall in winter",
+      "Loss of rental income (fair rental value) that pays your lost rent while a unit is uninhabitable after a covered fire, snow, or water-damage loss",
+      "Wildfire and smoke damage protection — critical for rentals in and around the Coconino National Forest wildland-urban interface",
+      "Snow-load damage to roofs, decks, and structures from heavy Northern Arizona winter accumulation",
+      "Frozen and burst pipe water damage, including losses during vacant winter stretches between tenants",
+      "Vandalism and malicious mischief coverage, including damage from high-turnover or problem tenants",
+      "Other-structures coverage for detached garages, sheds, fences, carports, and casitas on the rental property",
+      "Optional short-term rental endorsements that extend coverage to Airbnb / VRBO use standard landlord policies otherwise exclude",
+      "Choice of DP-1, DP-2, or DP-3 dwelling policy forms so coverage breadth matches your property and budget",
     ],
     whoItsFor: [
-      "Stationary sawmills — band, circular, and planer mills",
-      "Portable sawmill operators (Wood-Mizer, Lucas, similar)",
-      "Custom sawyers serving local builders and landowners",
-      "Mills with dry kilns (conventional and dehumidification)",
-      "Lumber remanufacturers, planing mills, and treaters",
+      "Owners of single-family rental homes in Flagstaff and the surrounding mountain communities",
+      "Landlords of NAU off-campus student housing dealing with high tenant turnover and seasonal vacancies",
+      "Short-term rental hosts running Airbnb / VRBO properties for Grand Canyon, Sedona, and Snowbowl travelers",
+      "Multi-family owners with duplexes, triplexes, fourplexes, or small apartment buildings",
+      "First-time and out-of-area investors who bought a Flagstaff rental and need it insured correctly",
+      "Owners converting a former primary residence or second home into a long-term or seasonal rental",
     ],
     whyCca: [
       {
-        title: "Replacement cost on a mill that actually rebuilds",
-        body: "A fire in a sawmill doesn't just damage a building — it takes out the head rig, the edger, and the kiln, and the business stops. We write replacement-cost property with realistic business-income coverage so a fire doesn't end the business.",
+        title: "Local, not a 1-800 script",
+        body: "We live and work in Northern Arizona, so we know what a Flagstaff winter, monsoon season, and wildfire risk actually do to a rental property. You reach a real local agent at 844-967-5247 who has walked properties just like yours. That means coverage advice grounded in this market, not a generic national template.",
       },
       {
-        title: "Equipment breakdown that covers the head rig",
-        body: "Boiler and machinery (equipment breakdown) coverage is critical for mills — it covers the electrical and pressure damage standard property excludes. We schedule the head rig, resaw, planer, and kiln as covered objects.",
+        title: "Independent — we shop for you",
+        body: "Because we're an independent agency, we compare landlord and dwelling policies across multiple carriers instead of pushing one company's product. We line up DP-1, DP-2, and DP-3 options side by side and match the form to your property and budget. You get the right fit, not whatever a single insurer happens to sell.",
       },
       {
-        title: "Class 2710 workers' comp under one roof",
-        body: "Sawmill workers' comp (class code 2710) is one of the higher-rated manufacturing codes. We quote it alongside your property and GL so the whole program is coordinated — and we apply the same EMOD strategy we use for logging crews.",
+        title: "Built for how Flagstaff rents",
+        body: "Student rentals, seasonal vacancies, and short-term stays each create gaps a basic landlord policy can miss. We structure your coverage around turnover, winter vacancy, and Airbnb / VRBO use so you're not exposed between tenants. It's the difference between a policy that technically exists and one that actually pays.",
       },
     ],
     faqs: [
       {
-        q: "Do portable sawmills need different insurance than stationary mills?",
-        a: "The coverages are similar (property, GL, workers' comp, equipment breakdown) but the property form differs. A portable mill moves between sites, so the equipment is insured on an inland marine floater rather than a fixed-location property form, and GL follows the operation wherever it's set up. We write both, depending on whether you're stationary, mobile, or both.",
+        q: "Do I need a special policy if I rent my Flagstaff place on Airbnb or VRBO?",
+        a: "Yes — most standard landlord and homeowners policies exclude or limit short-term rental activity, so a claim during a paid guest stay can be denied. We add a short-term rental endorsement, or place a policy built for vacation rentals, so your Grand Canyon and Snowbowl guests are covered. We also review premises liability limits, since transient guests raise your exposure compared to a year-long tenant.",
       },
       {
-        q: "Does sawmill property cover lumber yard stock fires?",
-        a: "Yes — outdoor lumber packages and log decks are a real fire exposure and should be specifically scheduled on the property form. Stock coverage is written on either an actual-cash-value or replacement-cost basis (we model both), and high-value inventory should be reappraised annually as lumber prices move.",
+        q: "What happens to my rent if a covered loss makes the unit unlivable?",
+        a: "That's what loss of rental income, or fair rental value, coverage is for. If a covered event like a fire, burst pipe, or snow-load roof failure forces tenants out, the policy reimburses the rent you would have collected during repairs. We set that limit to match your actual monthly rents and realistic Flagstaff rebuild timelines, which can run long in winter.",
       },
       {
-        q: "What workers' comp class code is a sawmill?",
-        a: "Class code 2710 covers sawmill or planing mill operations — the head rig, resaw, edger, planer, and kiln operations. It's one of the higher-rated manufacturing codes because of the amputation and struck-by exposures. We quote 2710 with the same EMOD review and specialty-market access we bring to logging class 2702.",
+        q: "What's the difference between DP-1, DP-2, and DP-3 dwelling policies?",
+        a: "DP-1 is the most basic, covering a short named list of perils, often at actual cash value. DP-2 broadens the covered perils and adds more protection, while DP-3 is the strongest — an open-perils form that typically pays replacement cost on the structure. For most Flagstaff rentals we recommend DP-3, but we'll walk you through the tradeoffs and price each option.",
       },
       {
-        q: "Do I need equipment breakdown if I don't have a boiler?",
-        a: "Almost always yes. Equipment breakdown (formerly called boiler & machinery) covers electrical short circuits, motor burnout, and pressure-vessel failures — not just boilers. A band-mill motor failure or a kiln electrical fault is a covered loss under equipment breakdown and an exclusion under standard property.",
+        q: "Should I require my tenants to carry renters insurance?",
+        a: "We strongly recommend it and can help you write it into your lease. Your landlord policy covers the building, but not your tenants' belongings or their personal liability — renters insurance handles those and reduces the chance a tenant turns to your policy after a loss. For student rentals especially, it sets clear expectations from day one.",
       },
       {
-        q: "Can you bundle sawmill coverage with my logging operation?",
-        a: "Yes — and we usually recommend it. If you harvest timber and mill it, bundling logging workers' comp (2702), sawmill workers' comp (2710), logging equipment, mill property, and a coordinated GL/CPL program gives you one renewal date, one broker, and no gaps between the woods and the mill.",
+        q: "How is my rental protected during a vacant Flagstaff winter between tenants?",
+        a: "Vacancy is a real exposure here — frozen pipes, snow load, and undetected leaks do the most damage when no one is in the unit. We make sure your policy addresses vacancy terms up front, since many policies restrict coverage after a property sits empty too long. We'll also talk through simple steps like maintaining heat and winterizing that keep both your property and your coverage intact.",
+      },
+    ],
+    deepDive: [
+      {
+        heading: "Insuring rentals through Flagstaff's seasons and wildfire risk",
+        body: "Flagstaff rentals face a weather and risk profile most of Arizona never sees. Heavy snow loads stress roofs and decks, monsoon rains drive water intrusion, and freezing temperatures threaten pipes — especially in units that sit empty between tenants. On top of that, properties near the Coconino National Forest carry genuine wildfire and smoke exposure in the wildland-urban interface. We build your dwelling coverage to respond to all of it, from snow-load structural damage to wildfire rebuilds, on a replacement-cost basis that reflects what it actually costs to rebuild here. The goal is simple: a policy that holds up to a real Northern Arizona year, not a fair-weather one.",
+      },
+      {
+        heading: "Matching coverage to how your property earns",
+        body: "A duplex full of NAU students, a single-family long-term rental, and a vacation home rented to weekend skiers are three different businesses, and they shouldn't share a one-size-fits-all policy. Student rentals bring high turnover, vacancy gaps, and a higher chance of vandalism or accidental damage. Short-term Airbnb and VRBO properties bring constant guest traffic and liability that standard landlord forms often exclude without an endorsement. Multi-family buildings need liability limits and loss-of-rent figures scaled to multiple units and tenants. As your local independent agent, we map your coverage — dwelling form, liability, loss of rental income, and endorsements — to the way each property actually generates income, then shop carriers to land the right protection at the right price.",
       },
     ],
   },
 
-  "logging-pollution-liability": {
+  "renters-insurance": {
     heroBlurb:
-      "Logging has real pollution exposure — hydraulic and fuel spills at the landing, sediment and erosion running into streams, wetlands disturbance during site prep, and stump-grinding debris. Standard general liability excludes pollution outright. A forestry Contractors Pollution Liability (CPL) policy is the only thing standing between a spill and a six-figure cleanup.",
+      "Renters insurance in Flagstaff that actually fits a mountain-town budget — often just $10–20 a month for the peace of mind that your stuff, and your wallet, are protected. Whether you are an NAU student in off-campus housing near downtown or a young professional renting up in the pines, we cover your laptop, your bike, your ski and snowboard gear, and everything in between. As a local independent agency, Contractors Choice makes getting covered fast and painless, and we will help you check the box your landlord requires for your lease. Real coverage, real local people, no runaround.",
     whatsCovered: [
-      "On-site and off-site cleanup of fuel, hydraulic oil, and lubricant spills",
-      "Bodily injury and property damage from a pollution condition",
-      "Sediment / erosion runoff into streams and waterways",
-      "Wetlands and riparian-area disturbance claims",
-      "Third-party claims (downstream landowners, water users)",
-      "Contractor-driven cleanup (you cause it, you clean it up)",
-      "Loading-area and fueling-site spills",
-      "Natural resource damages (where covered by the form)",
-      "Defense costs for pollution claims",
+      "Personal property protection for your electronics, laptop, TV, furniture, clothes, and outdoor gear — at home or while you are traveling",
+      "Theft coverage, including belongings stolen from your car, storage unit, or a break-in at your Flagstaff rental",
+      "Personal liability if someone is injured in your unit or you accidentally damage someone else's property",
+      "Additional living expenses (loss of use) to pay for a hotel and meals if your unit becomes uninhabitable after a covered loss",
+      "Water damage from a burst frozen pipe — a very real risk during cold Flagstaff winters",
+      "Fire and smoke damage to your belongings and the cost of replacing them",
+      "Wildfire and evacuation displacement coverage so you are not stranded if Northern Arizona fire season forces you out",
+      "Guest medical payments to cover minor injuries to visitors regardless of fault",
+      "Snow and weather-related water damage to your personal property from a covered event",
+      "Optional scheduled coverage for high-value items like e-bikes, jewelry, skis, snowboards, and gaming rigs",
     ],
     whoItsFor: [
-      "Logging contractors working near streams, lakes, or wetlands",
-      "Operations with on-site fueling or hydraulic equipment at the landing",
-      "Crews on USFS / state timber sales with environmental stipulations",
-      "Forestry contractors doing site prep, road building, or mechanical planting",
-      "Loggers subject to state BMP (best management practice) requirements",
+      "NAU students living in off-campus housing, apartments, or shared houses around Flagstaff",
+      "Young professionals and first-time renters settling into a place in the pines",
+      "Roommates who each need their own separate policy to protect their own belongings",
+      "Renters whose landlord or property manager requires proof of insurance to sign the lease",
+      "Outdoor folks with valuable ski, snowboard, climbing, or bike gear they cannot afford to replace out of pocket",
+      "Anyone who wants serious protection for around the price of a couple of coffees a month",
     ],
     whyCca: [
       {
-        title: "Standard GL excludes pollution — we close that gap",
-        body: "Virtually every standard general liability policy contains an absolute pollution exclusion. A hydraulic-line failure on a skidder, a fuel spill at the landing, or sediment into a classified stream — none are covered by GL alone. A forestry CPL policy is how you close the gap.",
+        title: "Local & Independent",
+        body: "We are right here in Flagstaff and Northern Arizona, not a faceless 1-800 line. Because we are independent, we shop multiple carriers to find you the lowest rate instead of pushing one company's product.",
       },
       {
-        title: "We speak BMP, SMZ, and the federal contract language",
-        body: "Streamside Management Zones, Best Management Practices, and the environmental stipulations in federal timber sale contracts all create pollution exposures the underwriter needs to understand. We translate your operation into language the CPL market prices correctly.",
+        title: "Fast & Lease-Ready",
+        body: "Landlords often need proof of renters insurance before you can move in, and we make that easy. We can usually quote and bind same-day, then send the certificate straight to your property manager.",
       },
       {
-        title: "Cleanup first, defense second",
-        body: "Pollution claims move fast — a spill in a stream is a same-day problem. We write CPL forms that prioritize cleanup with experienced environmental contractors, not just legal defense.",
+        title: "Built for Real Budgets",
+        body: "Renters insurance is one of the most affordable policies you will ever buy — frequently $10–20 a month. We help you pick the right coverage limits so you are protected without paying for more than you need.",
       },
     ],
     faqs: [
       {
-        q: "What counts as a 'pollution condition' for a logging operation?",
-        a: "The release of fuel, hydraulic fluid, lubricants, or other petroleum products at the landing or during fueling; sediment and erosion runoff into a stream, wetland, or waterway; disturbance of wetlands or riparian buffers during site prep or road building; and debris from grinding or mechanical site prep. Any of these can trigger a third-party claim, a state environmental enforcement action, or a federal timber sale contract issue.",
+        q: "How much does renters insurance cost in Flagstaff?",
+        a: "For most Flagstaff renters and NAU students, a policy runs about $10–20 a month, depending on your coverage limits and deductible. That small amount protects thousands of dollars of belongings plus personal liability. We will quote a few carriers to land you the best price for the coverage you actually need.",
       },
       {
-        q: "Doesn't my GL cover fuel spills?",
-        a: "Generally no. Standard general liability contains a pollution exclusion that removes coverage for most releases of petroleum products. Some GL forms have a very limited 'hostile fire' exception, but it is narrow and unreliable. A forestry CPL policy is the only reliable way to cover fuel and hydraulic spills at a logging operation.",
+        q: "My landlord says I have to have renters insurance — what do I do?",
+        a: "This is extremely common with Flagstaff and NAU-area leases. Most landlords just need proof of a policy with a minimum liability limit, often $100,000, and want to be listed as an additional interested party. We can set that up and send the certificate of insurance directly to your property manager, usually the same day.",
       },
       {
-        q: "Do federal timber sales require pollution liability insurance?",
-        a: "Some do, depending on the tract and the contracting officer's stipulations. Even where it's not strictly required by the contract, federal timber sale environmental stipulations (SMZs, BMPs, sediment control) create real exposures that make a CPL policy prudent. We'll review your timber sale contract and quote the limits that match the actual exposure.",
+        q: "Does my roommate's policy cover my stuff too?",
+        a: "No — a renters policy only covers the person named on it and their belongings. If you have roommates, each of you should carry your own separate policy so everyone's property and liability are protected. The good news is that individual policies are cheap, and we can get each roommate quoted quickly.",
       },
       {
-        q: "What limit should I carry?",
-        a: "$1,000,000 per occurrence is the common floor for forestry CPL, and many timber buyers and landowners require it. Operations near sensitive waterways or with significant on-site fuel storage often carry $2M–$5M, sometimes stacked with an excess policy. We'll quote to your contract requirements and your actual site exposure.",
+        q: "Will it cover my laptop, ski gear, or e-bike if they get stolen?",
+        a: "Yes. Personal property coverage follows your belongings even outside your apartment, so a laptop stolen from the library or gear taken from your car is generally covered. High-value items like e-bikes, jewelry, and premium ski or snowboard setups can have category limits, so we often recommend scheduling them for full, deductible-free protection. We will flag anything worth scheduling when we build your policy.",
       },
       {
-        q: "Does CPL cover the cleanup if I cause the spill?",
-        a: "Yes — that's the point. CPL covers pollution conditions arising from your contracting operations, whether the claim comes from a downstream landowner, a state agency, or your own discovery of a spill. Coverage includes the cleanup cost (often the largest component), third-party bodily injury and property damage, and defense.",
-      },
-    ],
-  },
-
-  "tree-service-arborist-insurance": {
-    heroBlurb:
-      "Tree care is the high-volume trade adjacent to logging — and it has its own class codes, exposures, and markets. Aerial lifts, chippers, climbing crews, and class code 0106 workers' comp mean a generic contractor policy won't do. We write tree service and arborist programs for pruning, removal, and plant-health-care operators.",
-    whatsCovered: [
-      "General liability — tree service & arborist (class 9102)",
-      "Workers' comp — tree trimming (class 0106) and tree removal",
-      "Aerial lift / bucket truck coverage (auto + equipment)",
-      "Chipper inland marine (scheduled equipment)",
-      "Climbing gear, chain saws, and rigging equipment",
-      "Completed operations — tree falls after the job, property damage",
-      "Property damage to the trees and plants being serviced",
-      "Herbicide / pesticide application coverage (pollution extension)",
-      "Professional liability (arborist consulting & reports)",
-    ],
-    whoItsFor: [
-      "Residential & commercial tree service contractors",
-      "ISA Certified Arborists and consulting arborists",
-      "Line-clearance / utility tree care contractors",
-      "Stump grinding and plant-health-care operators",
-      "Tree care crews running bucket trucks and chippers",
-    ],
-    whyCca: [
-      {
-        title: "We know class 0106 from class 9102",
-        body: "Tree trimming workers' comp (0106) is rated differently than tree removal, and both differ from logging. We assign codes correctly, document your operation, and route the submission to the tree-care specialists, not the generalist desk.",
-      },
-      {
-        title: "Completed-operations is where tree claims live",
-        body: "The classic tree-service claim is a tree that falls after the crew leaves — onto a house, a car, a power line. We write GL with real completed-operations coverage and talk through the contractual protection you need before the climb.",
-      },
-      {
-        title: "Bucket trucks and chippers, together",
-        body: "Most tree crews run a bucket truck and a chipper as their core iron. We quote the auto (bucket truck), the inland marine (chipper and climbing gear), and the GL/comp as one program — no gaps when the boom touches a power line.",
+        q: "What happens if a pipe bursts in winter and I cannot live in my unit?",
+        a: "A burst frozen pipe is one of the most common cold-climate claims in Flagstaff. Your policy covers the resulting damage to your personal property, and loss-of-use coverage pays for a hotel, meals, and other extra costs while your place is being repaired. The same loss-of-use protection applies if a fire or wildfire evacuation makes your unit uninhabitable.",
       },
     ],
-    faqs: [
+    deepDive: [
       {
-        q: "What's the difference between tree service insurance and logging insurance?",
-        a: "They overlap but use different class codes and markets. Logging (class 2702) covers timber harvesting — felling trees for lumber, in a forest setting, on a timber sale. Tree service / arborist work (class 9102 for GL, 0106 for workers' comp) covers pruning, removal, and plant health care, usually in residential or commercial settings. We write both, and many of our logging clients also run a tree-service arm.",
+        heading: "Why Flagstaff Renters Need Coverage More Than Most",
+        body: "Living at 7,000 feet comes with risks that flatland renters never think about. Hard winter freezes can burst pipes and flood a unit overnight, snowmelt and ice dams cause water damage, and Northern Arizona's fire seasons can trigger sudden evacuations that leave you displaced for days or weeks. Renters insurance answers all of these with personal property coverage for your belongings and loss-of-use coverage that pays for somewhere to stay when your unit is uninhabitable. For NAU students especially, a single laptop, phone, and ski setup can easily add up to more than your entire semester's rent. Replacing all of that out of pocket after a fire or theft is the kind of hit a $15-a-month policy is designed to prevent.",
       },
       {
-        q: "Do I need workers' comp if my climbers are subcontractors?",
-        a: "In most states, yes — and even where it's not strictly required, the liability for an uninsured injured climber falls back on you. Tree climbing (class 0106) has a high fall severity, and most jurisdictions treat your subcontractors as employees for workers' comp if they don't carry their own policy. We'll review your crew structure and quote accordingly.",
-      },
-      {
-        q: "Does tree service GL cover a tree that falls after we finish the job?",
-        a: "Completed-operations coverage under your GL is what responds here, and it's one of the most important parts of a tree-care policy. We write GL with adequate completed-operations aggregate and talk through the pre-job documentation (photos, site conditions, neighbor notifications) that keeps a post-job claim defensible.",
-      },
-      {
-        q: "Are herbicide and pesticide applications covered?",
-        a: "Herbicide and pesticide application is a pollution exposure that standard GL typically excludes. We add a pollution extension or a limited-pollution endorsement to cover plant-health-care applications — and we ask up front whether you spray, because the question comes back from the underwriter every time.",
-      },
-      {
-        q: "What does a tree service insurance program cost?",
-        a: "It depends on revenue, crew size, class code mix (trimming vs removal), subcontractor use, and loss history. A small residential tree service commonly runs a few thousand dollars a year for GL; adding workers' comp, the bucket truck, and the chipper brings the total program higher. The fastest way to a real number is a 15-minute call to 844-967-5247.",
+        heading: "Replacement Cost vs. Actual Cash Value — and Scheduling High-Value Gear",
+        body: "When you file a claim, how your policy values your stuff makes a huge difference. Actual cash value pays what your three-year-old laptop is worth today after depreciation, which is often far less than what a new one costs. Replacement cost coverage pays to buy a comparable new item instead, and for just a little more in premium it is almost always worth it for renters. Standard policies also cap certain categories — jewelry, bikes, and electronics frequently have sub-limits — so a stolen e-bike or engagement ring might only be partially covered. That is where scheduling comes in: we list those specific items on the policy at their full appraised value, often with no deductible, so your most valuable gear is fully protected. When we build your quote, we will walk through exactly which items to schedule so there are no surprises at claim time.",
       },
     ],
   },
 };
 
-// === Why-choose-us cards (homepage) ===
+// === Why-choose (homepage) ===
 export const WHY_CHOOSE = [
   {
-    icon: HardHat,
-    title: "Former contractor on staff",
+    icon: MapPin,
+    title: "Hometown Flagstaff agency",
     description:
-      "Josh Cotner ran crews before founding CCA in 2005. He reads your loss runs, knows what a feller buncher costs to replace, and writes submissions that get the specialty market's best terms.",
-  },
-  {
-    icon: Gauge,
-    title: "EMOD strategy, not just a quote",
-    description:
-      "Your experience mod is the biggest single lever on logging workers' comp. We review your mod worksheet, flag errors, and build the safety documentation that pulls it back down.",
+      "We live, work, and insure right here in Northern Arizona. We know what wildfire season, monsoon storms, and a 7,000-foot winter actually do to your home, car, and business — and we build coverage around it.",
   },
   {
     icon: ShieldCheck,
-    title: "Loggers Broad Form — standard",
+    title: "Independent — we shop for you",
     description:
-      "We don't bind a logging GL without the Loggers Broad Form endorsement. The trees, the cutting, the loading — all back in coverage, where it belongs.",
+      "We aren't tied to one company. We compare multiple A-rated carriers and put their offers side by side, so you get the right coverage at the right price instead of whatever a single insurer happens to sell.",
   },
   {
-    icon: Truck,
-    title: "Log trucks & ICC filings handled",
+    icon: Banknote,
+    title: "Bundle and save",
     description:
-      "Physical damage, cargo, bobtail, and the federal Form E & Form H filings — quoted as one fleet program and filed with the FMCSA so you don't lose a load to a lapsed filing.",
+      "Home and auto under one roof usually means real savings and one less thing to juggle. Add landlord, renters, or business coverage and we'll keep it all coordinated — and keep an eye out for every discount you qualify for.",
   },
   {
-    icon: MapPinned,
-    title: "All 50 states, including monopolistic",
+    icon: Home,
+    title: "Every line you need locally",
     description:
-      "Licensed everywhere — yes, including Ohio, Washington, North Dakota, and Wyoming state-fund work, plus Oregon SAIF and Idaho submissions.",
+      "Homeowners, auto, business, landlord, and renters — five coverage lines under one friendly roof. Whatever stage of Flagstaff life you're in, we have you covered without the runaround.",
+  },
+  {
+    icon: HeartPulse,
+    title: "Real people, real service",
+    description:
+      "Call 844-967-5247 and reach a person who knows your name and your policy — at quote time, at renewal, and when you have a claim. No phone-tree roulette, no being handed across three states.",
   },
   {
     icon: Timer,
-    title: "15-minute quotes, 2-hour claims",
+    title: "Fast, no-pressure quotes",
     description:
-      "Most logging quotes turn around in a business day once we have loss runs. Claims reach a live person within two hours, 24/7 — because a downed machine or injured crew can't wait.",
+      "Tell us what you need and we'll come back with real options quickly — no jargon, no hard sell. We can often quote and bind same-day and send proof of coverage straight to whoever needs it.",
   },
 ];
 
@@ -490,81 +422,81 @@ export const PROCESS = [
   {
     step: 1,
     icon: PhoneCall,
-    title: "Tell us about your operation",
+    title: "Tell us about you",
     description:
-      "A 15-minute call or a quote form. We learn your class codes, your equipment, your mod, and how your crew actually works — the details the underwriter needs to see.",
+      "A quick call or a short quote form. We learn about your home, your vehicles, your business, or your rental — and what matters most to you about protecting them.",
   },
   {
     step: 2,
     icon: ClipboardList,
-    title: "We build the submission",
+    title: "We shop the carriers",
     description:
-      "We pull your loss runs, assemble the safety documentation, schedule the equipment, and frame the operation for the specialty markets that write logging.",
+      "As an independent agency, we compare multiple A-rated carriers and line up the options — looking for the best fit on coverage, price, and the bundle discounts you qualify for.",
   },
   {
     step: 3,
     icon: Banknote,
-    title: "Real quotes, real markets",
+    title: "Real quotes, plain English",
     description:
-      "A-rated specialty program quotes — not a generic number. We compare options, explain the differences, and show you where the gaps were in your old program.",
+      "We walk you through your options side by side, explain the differences without the jargon, and right-size the coverage to your Flagstaff life and your budget.",
   },
   {
     step: 4,
     icon: BadgeCheck,
-    title: "Bound, filed, and serviced",
+    title: "Covered and looked after",
     description:
-      "We bind coverage, file the certificates and ICC forms, list your lenders and landowners, and stay on the policy all term — claims, audits, adds, changes.",
+      "We bind your coverage, send proof to your lender or landlord, and stay on your policy all year — renewals, changes, claims, and re-shopping when your needs change.",
   },
 ];
 
 // === Homepage FAQ ===
 export const HOME_FAQS = [
   {
-    q: "Is logging really that dangerous to insure?",
-    a: "Yes — logging is consistently ranked among the most dangerous jobs in America, with a fatal injury rate far above the all-occupation average. Struck-by-tree, chainsaw laceration, cable snap-back, and equipment rollover are real and frequent. That's why most standard carriers decline the class codes and why we work with the A-rated specialty markets that underwrite logging every day.",
+    q: "What kinds of insurance does Lumberjack Insurance offer?",
+    a: "We're a local Flagstaff agency covering five core lines for Northern Arizona residents: homeowners, auto, business, landlord, and renters insurance. Whether you're protecting a home up by the Peaks, a car that braves I-17 in winter, a downtown shop, a student rental, or your apartment near campus, we can help — and bundle it to save you money.",
   },
   {
-    q: "What does a logging insurance program cost?",
-    a: "It depends on payroll (workers' comp), equipment value (inland marine), truck count (auto), and your loss history. Logging workers' comp is the biggest line and the most sensitive to your experience mod (EMOD) — a safe operator with a mod below 1.0 pays substantially less than the manual rate. The fastest way to a real number is a 15-minute call to the logging desk at 844-967-5247.",
+    q: "Are you a local Flagstaff agency?",
+    a: "Yes. We proudly serve Flagstaff and Northern Arizona, so we understand the real risks up here — wildfire in the ponderosa forest, heavy winter snow loads, monsoon storms, elk on the roads, and the tourism swings that drive local business. When you call 844-967-5247, you reach real people who know this community.",
   },
   {
-    q: "Can you write coverage if my EMOD is above 1.0?",
-    a: "Yes. A climbing experience mod makes you more expensive but not uninsurable. We have access to specialty excess-and-surplus markets and group self-insurance funds that write climbing-mod operators — and we help you build the safety program that pulls the mod back down over time.",
+    q: "How does an independent agency save me money?",
+    a: "Because we're independent, we aren't locked into one insurance company. We shop multiple A-rated carriers and compare their quotes side by side to find you the best coverage at the best price — then look for every discount you qualify for, including home-and-auto bundle savings. When rates change, we re-shop so you're never stuck overpaying.",
   },
   {
-    q: "Do you handle US Forest Service and state timber sale requirements?",
-    a: "Yes. Federal and state timber sale contracts have specific insurance requirements — per-contract limits, additional insured wording, and endorsement forms. We issue the certificates and endorsements the contracting officer needs to sign your contract, and we list the timber buyer or landowner as additional insured.",
+    q: "Can I bundle my home and auto?",
+    a: "Absolutely — bundling home and auto is one of the easiest ways to lower your total premium, and it means one local agent handling both. We can layer in landlord, renters, or business coverage too, and keep everything coordinated so nothing falls through the cracks.",
   },
   {
-    q: "What's the difference between logging insurance and tree service insurance?",
-    a: "Logging covers timber harvesting for lumber — felling trees in a forest, on a timber sale, under class code 2702 (workers' comp) and a Loggers Broad Form GL. Tree service / arborist work covers pruning, removal, and plant health care in residential or commercial settings, under class codes 9102 (GL) and 0106 (workers' comp). We write both, and many contractors run both operations.",
+    q: "Does my coverage handle Flagstaff's wildfire, snow, and monsoon risks?",
+    a: "It should, and that's exactly what we focus on. We make sure your home, business, or rental policy responds to the perils that define a Northern Arizona year — wildfire and smoke, snow-load and ice damage, and monsoon wind and water — with limits high enough to actually rebuild at mountain construction costs. We'll flag any gaps, like separate flood coverage, before you sign.",
   },
   {
-    q: "How fast can I get covered?",
-    a: "Most logging programs are quoted within one business day of receiving your loss runs and payroll data, and bound the same week. We can issue evidence of insurance and certificates the same day coverage is bound. Call 844-967-5247 and ask for the logging desk.",
+    q: "How fast can I get a quote?",
+    a: "Fast. Tell us what you need and we'll come back with real options quickly — often same day — and we can usually bind coverage and send proof to your lender or landlord right away. Call 844-967-5247 or request a quote online to get started.",
   },
 ];
 
 // === About page team/credentials content ===
 export const ABOUT_POINTS = [
   {
-    icon: HardHat,
-    title: "Former contractor credibility",
-    body: "Josh Cotner ran crews before becoming an insurance specialist. He reads a loss run the way a logger reads a stand — and writes submissions that reflect how the operation actually works.",
+    icon: MapPin,
+    title: "Proudly serving Flagstaff & Northern Arizona",
+    body: "We're focused on the high country — Flagstaff, the surrounding mountain communities, and Northern Arizona. We know the risks because we live with them too, from wildfire season to the deepest snow in the state.",
   },
   {
     icon: ShieldCheck,
-    title: "20+ years contractor-focused",
-    body: "Founded in 2005, Contractors Choice Agency has spent two decades insuring the trades that standard carriers won't touch — spray foam, roofing, and now logging and forestry.",
+    title: "Independent agency, on your side",
+    body: "As an independent agency we represent multiple A-rated carriers, not just one. That means we shop the market for you and recommend what's genuinely right for your home, family, or business — not whatever one company is selling.",
   },
   {
-    icon: MapPinned,
-    title: "Licensed in all 50 states",
-    body: "We write coast to coast, including the four monopolistic-fund states (OH, WA, ND, WY), Oregon SAIF, and Idaho. Wherever your timber sale is, we can write the coverage.",
+    icon: Users,
+    title: "Backed by Contractors Choice Agency",
+    body: "Lumberjack Insurance is operated by Contractors Choice Agency, founded by Josh Cotner in 2005. That gives our friendly local service the strength and carrier access of an established agency behind it.",
   },
   {
     icon: HeartPulse,
-    title: "Specialty-market access",
-    body: "Direct appointments with the A-rated specialty programs that actually underwrite logging class codes, cable operations, and forestry pollution — not just the generalist markets.",
+    title: "Real people, hometown service",
+    body: "Call 844-967-5247 and you'll reach someone who knows your name and your policy — at quote time, at renewal, and when you need to file a claim. That's the difference between an 800-number and a hometown agent.",
   },
 ];
