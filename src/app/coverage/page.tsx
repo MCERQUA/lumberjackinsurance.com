@@ -8,33 +8,41 @@ import { SITE } from "@/lib/site";
 import { MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Coverage Area — Logging Insurance in All 50 States",
+  title: "Service Area — Local Insurance for Flagstaff & Northern Arizona",
   description:
-    "Lumberjack Insurance writes logging and forestry coverage in all 50 states, including the four monopolistic-fund states (OH, WA, ND, WY), Oregon SAIF, and Idaho. Wherever your timber sale is, we can write the coverage.",
+    "Lumberjack Insurance is your hometown agency for Flagstaff and Northern Arizona — home, auto, business, landlord, and renters coverage from neighbors who know 7,000-ft mountain living. Serving Flagstaff, Sedona, Williams, Cottonwood, Camp Verde, Page, and the surrounding communities.",
   alternates: { canonical: `${SITE.url}/coverage` },
   openGraph: {
-    title: "Coverage Area — Logging Insurance in All 50 States",
-    description: "Licensed in all 50 states, including monopolistic-fund coordination.",
+    title: "Service Area — Local Insurance for Flagstaff & Northern Arizona",
+    description:
+      "A hometown insurance agency serving Flagstaff and the surrounding mountain-town communities of Northern Arizona.",
     url: `${SITE.url}/coverage`,
   },
 };
 
-const ALL_STATES = [
-  "Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut",
-  "Delaware","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa",
-  "Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan",
-  "Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada","New Hampshire",
-  "New Jersey","New Mexico","New York","North Carolina","North Dakota","Ohio",
-  "Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina","South Dakota",
-  "Tennessee","Texas","Utah","Vermont","Virginia","Washington","West Virginia",
-  "Wisconsin","Wyoming",
+const TOWNS = [
+  "Flagstaff","Sedona","Williams","Cottonwood","Camp Verde","Page",
+  "Munds Park","Bellemont","Doney Park","Kachina Village","Mountainaire",
+  "Parks","Winona","Mormon Lake",
 ];
 
-const MONOPOLISTIC = [
-  { state: "Ohio", note: "Ohio Bureau of Workers' Compensation (BWC) — we coordinate" },
-  { state: "Washington", note: "WA Dept of Labor & Industries (L&I) — we coordinate" },
-  { state: "North Dakota", note: "ND Workforce Safety & Insurance (WSI) — we coordinate" },
-  { state: "Wyoming", note: "Wyoming Workers' Safety (WCSF) — we coordinate" },
+const TRUST_SIGNALS = [
+  {
+    title: "Built for 7,000 feet",
+    note: "At a mile and a half up, beneath the San Francisco Peaks, homes here face real mountain weather. We write coverage that fits how Flagstaff is actually built and lived in.",
+  },
+  {
+    title: "A true college town",
+    note: "With NAU right downtown, we write renters and landlord policies every single day — the kind of coverage students, parents, and local property owners actually need.",
+  },
+  {
+    title: "We know Northern Arizona's risks",
+    note: "Wildfire season, heavy winter snow load, and summer monsoon storms aren't theoretical to us — they're the risks we help our neighbors plan for year after year.",
+  },
+  {
+    title: "Hometown service",
+    note: "We're a local agency, not an 800-number routed to another state. When you call, you reach people who live here, drive these roads, and know your part of the mountain.",
+  },
 ];
 
 export default function CoveragePage() {
@@ -45,30 +53,31 @@ export default function CoveragePage() {
         <section className="relative bg-topo pt-32 pb-16 md:pt-40 md:pb-20">
           <div className="container-tight text-center">
             <FadeIn>
-              <span className="pill-accent">Coverage area</span>
+              <span className="pill-accent">Service area</span>
               <h1 className="mt-5 font-display font-semibold text-foreground text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight">
-                Logging insurance in{" "}
+                Local insurance for{" "}
                 <span className="bg-gradient-to-r from-primary via-forest-500 to-accent bg-clip-text text-transparent">
-                  all 50 states
+                  Flagstaff &amp; Northern Arizona
                 </span>
               </h1>
               <p className="mt-5 lead max-w-2xl mx-auto">
-                Timber grows everywhere — and so do we. From the cable-logging slopes of the
-                Pacific Northwest and Appalachia to the southern yellow-pine belt and the Maine
-                woods, Contractors Choice Agency writes logging and forestry coverage nationwide.
+                We&apos;re a hometown agency, born and based in the mountains. From the pines of
+                Flagstaff to the red rocks of Sedona and the towns in between, we&apos;re your
+                neighbors — people who know what it takes to live, drive, and do business at 7,000
+                feet, and who&apos;ll be here when you need us.
               </p>
             </FadeIn>
           </div>
         </section>
 
-        {/* Map image */}
+        {/* Local scenery image */}
         <section className="bg-background pb-16">
           <div className="container-wide">
             <FadeIn direction="up">
               <div className="rounded-[2rem] overflow-hidden border-4 border-white shadow-lift">
                 <img
                   src="/images/forest-tract.jpg"
-                  alt="Managed forest tract with pine rows and a logging access road"
+                  alt="Ponderosa pine forest below the San Francisco Peaks near Flagstaff, Arizona"
                   className="w-full h-[280px] md:h-[400px] object-cover"
                 />
               </div>
@@ -76,33 +85,32 @@ export default function CoveragePage() {
           </div>
         </section>
 
-        {/* Monopolistic fund callout */}
+        {/* Local trust signals */}
         <section className="bg-warm-radial-sand py-16 md:py-20">
           <div className="container-wide">
             <FadeIn className="max-w-3xl mb-10">
               <span className="eyebrow">
                 <span className="h-px w-8 bg-accent" />
-                Monopolistic state funds — handled
+                Neighbors who know the mountain
               </span>
               <h2 className="mt-3 h-section">
-                Four states run their own workers&apos; comp fund.{" "}
-                <span className="text-primary">We coordinate all of them.</span>
+                We don&apos;t just sell policies here.{" "}
+                <span className="text-primary">We live here.</span>
               </h2>
               <p className="mt-4 lead">
-                If you log in Ohio, Washington, North Dakota, or Wyoming, workers&apos; comp goes
-                through the state fund — but you still need the rest of your program (GL, equipment,
-                auto, pollution) and someone to handle the UW, certificates, and service. We do all
-                of it, plus Oregon SAIF and Idaho submissions.
+                Insurance is a lot easier when the person on the other end of the line knows your
+                town. We understand how homes are built for Flagstaff winters, what a college town
+                needs, and the real risks of life in Northern Arizona — because it&apos;s our home too.
               </p>
             </FadeIn>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-              {MONOPOLISTIC.map((m, i) => (
-                <FadeIn key={m.state} delay={(i % 4) * 0.05}>
+              {TRUST_SIGNALS.map((t, i) => (
+                <FadeIn key={t.title} delay={(i % 4) * 0.05}>
                   <div className="h-full rounded-3xl bg-white border border-border p-6 shadow-card">
                     <MapPin className="h-7 w-7 text-accent mb-3" strokeWidth={2.2} />
-                    <p className="font-display font-semibold text-lg text-foreground">{m.state}</p>
-                    <p className="mt-1 text-sm text-muted-foreground leading-relaxed">{m.note}</p>
+                    <p className="font-display font-semibold text-lg text-foreground">{t.title}</p>
+                    <p className="mt-1 text-sm text-muted-foreground leading-relaxed">{t.note}</p>
                   </div>
                 </FadeIn>
               ))}
@@ -110,24 +118,25 @@ export default function CoveragePage() {
           </div>
         </section>
 
-        {/* All states grid */}
+        {/* Communities grid */}
         <section className="bg-background py-16 md:py-20">
           <div className="container-wide">
             <FadeIn className="max-w-3xl mb-8">
               <h2 className="font-display font-semibold text-2xl md:text-3xl text-foreground">
-                Licensed everywhere
+                Communities we serve
               </h2>
               <p className="mt-2 text-muted-foreground">
-                We write logging insurance in every US state — including the high-volume timber
-                states below and everywhere else.
+                Proudly local across Northern Arizona — from Flagstaff and the surrounding high
+                country down through the Verde Valley. If your town is on the mountain, chances are
+                we&apos;re already here for it.
               </p>
             </FadeIn>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
-              {ALL_STATES.map((s, i) => (
-                <FadeIn key={s} delay={(i % 5) * 0.03}>
+              {TOWNS.map((town, i) => (
+                <FadeIn key={town} delay={(i % 5) * 0.03}>
                   <div className="flex items-center gap-2 p-3 rounded-xl bg-white border border-border">
                     <MapPin className="h-4 w-4 text-accent flex-shrink-0" strokeWidth={2.4} />
-                    <span className="text-sm font-body font-semibold text-foreground">{s}</span>
+                    <span className="text-sm font-body font-semibold text-foreground">{town}</span>
                   </div>
                 </FadeIn>
               ))}
@@ -136,8 +145,8 @@ export default function CoveragePage() {
         </section>
 
         <CTABand
-          title="Logging in a state not listed?"
-          description="We're licensed in all 50. Call us with your timber sale location and we'll confirm coverage."
+          title="Live in the Flagstaff area?"
+          description="Let's protect your home, car, and business — talk to a local agent who knows the mountain. Call 844-967-5247."
         />
       </main>
       <Footer />
