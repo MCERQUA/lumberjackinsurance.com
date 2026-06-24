@@ -11,8 +11,8 @@ interface CTABandProps {
 }
 
 export function CTABand({
-  title = "Have a coverage question we didn't answer?",
-  description = "Get a straight answer — and a real quote — in about 15 minutes.",
+  title = "Have a coverage question?",
+  description = "Get a straight answer — and a real quote — from a local Flagstaff agent in about 15 minutes.",
 }: CTABandProps) {
   return (
     <section className="relative bg-warm-radial-sand py-16 md:py-20">

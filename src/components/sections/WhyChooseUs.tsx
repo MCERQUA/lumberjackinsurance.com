@@ -13,17 +13,18 @@ export function WhyChooseUs() {
           <FadeIn className="lg:col-span-5 lg:sticky lg:top-28">
             <span className="eyebrow">
               <span className="h-px w-8 bg-accent" />
-              Why loggers switch to us
+              Why Flagstaff trusts us
             </span>
             <h2 className="mt-3 h-section">
               The coverage gaps that{" "}
-              <span className="text-accent">cost logging contractors</span> the most.
+              <span className="text-accent">cost local families &amp; businesses</span> the most.
             </h2>
             <p className="mt-4 lead">
-              Most agents hand a logger a generic contractor policy and call it done.
-              Then a chainsaw claim hits, or a skidder goes over on a slope, and the
-              exclusion kicks in. We underwrite the parts of your work everyone else
-              leaves out.
+              A big-box carrier sells you the same template whether you live in Phoenix
+              or up here at 7,000 feet — and that&apos;s the problem. Wildfire, snow load,
+              monsoon water, and elk on the road are real exposures generic policies miss.
+              As a local independent agent, we shop multiple carriers and build coverage
+              around how Flagstaff actually lives.
             </p>
 
             <div className="mt-8 rounded-3xl bg-white border border-border shadow-card p-6">
@@ -33,12 +34,12 @@ export function WhyChooseUs() {
                 </span>
                 <div>
                   <p className="font-display font-semibold text-foreground">
-                    Former contractor on staff
+                    A real local agent
                   </p>
                   <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
-                    Josh Cotner ran crews before founding CCA in 2005. He reads your
-                    loss runs and knows exactly what a Tigercat feller buncher costs
-                    to replace.
+                    Meet Jack — we&apos;re independent and based in Northern Arizona, so
+                    we know Flagstaff weather, Flagstaff homes, and we shop multiple
+                    carriers to get you covered right. Jack&apos;s got your back.
                   </p>
                 </div>
               </div>

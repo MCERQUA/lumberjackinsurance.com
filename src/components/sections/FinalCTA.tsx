@@ -27,15 +27,15 @@ export function FinalCTA() {
               15-minute quote · 2-hour claims
             </span>
             <h2 className="mt-5 font-display font-semibold text-white text-3xl md:text-4xl lg:text-5xl leading-[1.08] tracking-tight">
-              Logging is dangerous enough.{" "}
+              Life in the high country is good.{" "}
               <span className="bg-gradient-to-r from-white via-forest-100 to-accent-light bg-clip-text text-transparent">
-                Your insurance shouldn&apos;t be a gamble.
+                Make sure you&apos;re covered.
               </span>
             </h2>
             <p className="mt-5 text-lg text-white/85 leading-relaxed">
-              Get a real quote from the markets that actually write logging — workers&apos;
-              comp for class code 2702, log trucks and ICC filings, equipment, and forestry
-              pollution. Built around your operation, in about a day.
+              Get a real quote from a local Flagstaff agent — home, auto, business,
+              landlord, and renters coverage, all in plain English. We&apos;ll shop it
+              for you and have an answer fast, usually in about a day.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
               <Link href="/quote" className="btn-accent text-base">

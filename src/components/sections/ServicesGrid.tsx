@@ -2,14 +2,14 @@
 
 import Link from "next/link";
 import {
-  ShieldCheck, HardHat, Truck, Wrench, Building2, FlaskConical, Trees,
+  Home, Car, Briefcase, Building2, KeyRound, FileText, Users, ShieldCheck, Umbrella,
   ArrowRight,
 } from "lucide-react";
 import { SERVICES } from "@/lib/site";
 import { FadeIn } from "@/components/animations/FadeIn";
 
 const ICONS = {
-  ShieldCheck, HardHat, Truck, Wrench, Building2, FlaskConical, Trees,
+  Home, Car, Briefcase, Building2, KeyRound, FileText, Users, ShieldCheck, Umbrella,
 } as const;
 
 export function ServicesGrid() {
@@ -19,23 +19,24 @@ export function ServicesGrid() {
         <FadeIn className="max-w-3xl mb-12 md:mb-16">
           <span className="eyebrow">
             <span className="h-px w-8 bg-accent" />
-            What we insure
+            What we cover
           </span>
           <h2 className="mt-3 h-section">
-            Seven lines of coverage, written specifically for{" "}
-            <span className="text-primary">logging &amp; forestry operations</span>.
+            Five lines of coverage for{" "}
+            <span className="text-primary">Flagstaff families &amp; businesses</span>.
           </h2>
           <p className="mt-4 lead">
-            A generalist policy leaves chainsaw claims, cable snap-back, log-truck
-            cargo, and hydraulic spills uncovered. We build programs that close
-            those gaps — for loggers, timber harvesters, sawmills, and tree-care crews.
+            Your home, your car, your business, your rental, and all your stuff —
+            protected right here in Northern Arizona. We keep it plain-English, shop
+            multiple carriers for you, and bundle it so you save. One friendly local
+            agent for every line you need.
           </p>
         </FadeIn>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {SERVICES.map((service, i) => {
             const Icon = ICONS[service.icon as keyof typeof ICONS] ?? ShieldCheck;
-            const isFeatured = service.slug === "loggers-workers-comp";
+            const isFeatured = service.slug === "homeowners-insurance" || i === 0;
             return (
               <FadeIn key={service.slug} delay={(i % 3) * 0.05}>
                 <Link
@@ -69,7 +70,7 @@ export function ServicesGrid() {
                   </span>
                   {isFeatured && (
                     <span className="absolute top-5 right-5 inline-flex items-center gap-1 pill !bg-white/15 !text-white !border-white/25">
-                      Flagship
+                      Most popular
                     </span>
                   )}
                 </Link>

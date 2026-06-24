@@ -14,10 +14,10 @@ export function Footer() {
         <div className="container-wide py-10 grid md:grid-cols-2 gap-6 items-center">
           <div>
             <h3 className="font-display font-semibold text-xl md:text-2xl text-white">
-              Ready to insure your logging operation?
+              Ready to protect what matters in Flagstaff?
             </h3>
             <p className="mt-1 text-white/70 text-sm">
-              15-minute quotes · 2-hour claims response · licensed all 50 states.
+              Fast, no-pressure quotes · a real local agent · home, auto, business &amp; more.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 md:justify-end">
@@ -53,12 +53,12 @@ export function Footer() {
             </span>
           </Link>
           <p className="mt-5 text-sm text-white/70 leading-relaxed">
-            Specialty logging, timber, and forestry contractor insurance — by Contractors
-            Choice Agency. Workers&apos; comp for logging class codes, log trucks, equipment,
-            pollution, and sawmills.
+            Your friendly, local independent insurance agency in Flagstaff, Arizona —
+            home, auto, business, landlord, and renters coverage for the high country
+            and all of Northern Arizona.
           </p>
           <p className="mt-4 text-xs text-white/50">
-            A program of {SITE.legalName.split("(")[1]?.replace(")", "") ?? "Contractors Choice Agency"} · NPN #{SITE.npn}
+            An independent agency serving Northern Arizona · NPN #{SITE.npn}
           </p>
         </div>
 
@@ -138,8 +138,8 @@ export function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-white/10">
         <div className="container-wide py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/50">
-          <p>© {new Date().getFullYear()} {SITE.name}. All rights reserved. Licensed in all 50 states.</p>
-          <p>Logging · Timber · Forestry · Sawmill Insurance</p>
+          <p>© {new Date().getFullYear()} {SITE.name}. All rights reserved. Licensed Arizona insurance agency.</p>
+          <p>Home · Auto · Business · Landlord · Renters · Flagstaff, Arizona</p>
         </div>
       </div>
     </footer>

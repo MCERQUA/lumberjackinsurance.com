@@ -37,7 +37,7 @@ export function FAQ({
           <h2 className="mt-3 h-section">
             {title ?? (
               <>
-                Logging insurance,{" "}
+                Flagstaff insurance,{" "}
                 <span className="text-accent">in plain English</span>.
               </>
             )}

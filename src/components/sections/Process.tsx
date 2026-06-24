@@ -16,12 +16,13 @@ export function Process() {
             How it works
           </span>
           <h2 className="mt-3 h-section">
-            From quote request to bound program in{" "}
+            From quote to covered in{" "}
             <span className="text-primary">about a day</span>.
           </h2>
           <p className="mt-4 lead">
-            No two-week back-and-forth. A real conversation, real markets, and a
-            program you can actually understand — built around your logging operation.
+            No two-week back-and-forth. A real conversation with a local Flagstaff
+            agent, real coverage options, and a policy you can actually understand —
+            built around your home, car, or business.
           </p>
         </FadeIn>
 

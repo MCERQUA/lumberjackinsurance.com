@@ -16,16 +16,16 @@ export function BlogPreview({ posts }: { posts: Post[] }) {
         <FadeIn className="max-w-3xl mb-12">
           <span className="eyebrow">
             <span className="h-px w-8 bg-accent" />
-            From the logging desk
+            From the Flagstaff desk
           </span>
           <h2 className="mt-3 h-section">
-            Guides on the coverage that{" "}
-            <span className="text-accent">actually matters to loggers</span>.
+            Local tips on protecting your{" "}
+            <span className="text-accent">Flagstaff home, car & business</span>.
           </h2>
           <p className="mt-4 lead">
-            Class codes, EMOD strategy, log truck filings, equipment claims —
-            plain-English breakdowns of the policies that keep a logging operation
-            running.
+            Deductibles, monsoon and winter storm claims, bundling home and auto,
+            covering a high-country cabin — plain-English guidance from local agents
+            who actually live up here.
           </p>
         </FadeIn>
 

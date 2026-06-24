@@ -80,19 +80,19 @@ export function Hero() {
             <motion.div {...item} className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
               <span className="inline-flex items-center gap-1.5">
                 <CheckCircle2 className="h-4 w-4 text-primary" />
-                15-minute quotes
+                Local Flagstaff agent
               </span>
               <span className="inline-flex items-center gap-1.5">
                 <CheckCircle2 className="h-4 w-4 text-primary" />
-                2-hour claims response
+                Real human, real fast
               </span>
               <span className="inline-flex items-center gap-1.5">
                 <CheckCircle2 className="h-4 w-4 text-primary" />
-                Licensed all 50 states
+                Home · Auto · Business · more
               </span>
               <span className="inline-flex items-center gap-1.5">
                 <Star className="h-4 w-4 text-accent fill-accent" />
-                20+ years insuring contractors
+                Independent — we shop for you
               </span>
             </motion.div>
           </motion.div>
@@ -108,8 +108,8 @@ export function Hero() {
               {/* main hero image — arched (timber-cabin arch) */}
               <div className="relative overflow-hidden rounded-t-[14rem] rounded-b-3xl shadow-lift border-4 border-white">
                 <img
-                  src="/images/hero.jpg"
-                  alt="Logging operation in a Pacific Northwest pine forest — a feller buncher working among tall evergreens at golden hour"
+                  src="/images/mascot.png"
+                  alt="Jack the Lumberjack — Lumberjack Insurance's friendly Flagstaff mascot, with the San Francisco Peaks behind him"
                   className="w-full h-[420px] md:h-[520px] object-cover"
                   loading="eager"
                 />
@@ -129,10 +129,10 @@ export function Hero() {
                   </div>
                   <div>
                     <p className="font-display font-semibold text-foreground text-2xl leading-none">
-                      Class 2702
+                      Flagstaff, AZ
                     </p>
                     <p className="text-xs text-muted-foreground mt-1 leading-snug">
-                      Logging workers&apos; comp — placed with A-rated specialty markets
+                      Your hometown independent insurance agency
                     </p>
                   </div>
                 </div>
@@ -146,7 +146,7 @@ export function Hero() {
                 className="absolute -top-4 -right-3 md:-right-6 bg-primary text-white rounded-2xl shadow-lift px-4 py-3"
               >
                 <p className="font-display font-semibold text-sm">NPN #{SITE.npn}</p>
-                <p className="text-[0.7rem] text-white/80 mt-0.5">Licensed all 50 states</p>
+                <p className="text-[0.7rem] text-white/80 mt-0.5">Licensed Arizona agent</p>
               </motion.div>
             </div>
           </motion.div>
