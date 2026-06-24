@@ -8,6 +8,10 @@ export interface Post {
   category: string;
   readTime: string;
   date: string;
+  author: string;
+  image: string;
+  /** Raw markdown body (frontmatter stripped). */
+  content: string;
 }
 
 const POSTS_DIR = path.join(process.cwd(), "src", "content", "posts");
@@ -41,20 +45,13 @@ export function getAllPosts(): Post[] {
 
   const posts: Post[] = files.map((file) => {
     const slug = file.replace(/\.mdx?$/, "");
-    let fm: Record<string, string> = {};
+    let raw = "";
     try {
-      fm = parseFrontmatter(fs.readFileSync(path.join(POSTS_DIR, file), "utf8"));
+      raw = fs.readFileSync(path.join(POSTS_DIR, file), "utf8");
     } catch {
       /* ignore unreadable file */
     }
-    return {
-      slug,
-      title: fm.title ?? slug,
-      description: fm.description ?? fm.excerpt ?? "",
-      category: fm.category ?? "Insurance",
-      readTime: fm.readTime ?? fm.readingTime ?? "4 min read",
-      date: fm.date ?? "",
-    };
+    return buildPost(slug, raw);
   });
 
   return posts.sort((a, b) => (a.date < b.date ? 1 : -1));
@@ -62,4 +59,38 @@ export function getAllPosts(): Post[] {
 
 export function getPostSlugs(): string[] {
   return getAllPosts().map((p) => p.slug);
+}
+
+// Strip the leading `---` frontmatter block and return the markdown body.
+function stripFrontmatter(raw: string): string {
+  const match = raw.match(/^---\s*\n[\s\S]*?\n---\s*\n?([\s\S]*)$/);
+  return (match ? match[1] : raw).trim();
+}
+
+// Build a complete Post from a slug and the raw file contents.
+function buildPost(slug: string, raw: string): Post {
+  const fm = parseFrontmatter(raw);
+  return {
+    slug,
+    title: fm.title ?? slug,
+    description: fm.description ?? fm.excerpt ?? "",
+    category: fm.category ?? "Insurance",
+    readTime: fm.readTime ?? fm.readingTime ?? "4 min read",
+    date: fm.date ?? "",
+    author: fm.author ?? "Lumberjack Insurance",
+    image: fm.image ?? fm.hero ?? "",
+    content: stripFrontmatter(raw),
+  };
+}
+
+export function getPostBySlug(slug: string): Post | null {
+  for (const ext of [".mdx", ".md"]) {
+    try {
+      const raw = fs.readFileSync(path.join(POSTS_DIR, slug + ext), "utf8");
+      return buildPost(slug, raw);
+    } catch {
+      continue; // try the next extension
+    }
+  }
+  return null;
 }

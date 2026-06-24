@@ -42,6 +42,15 @@ module.exports = {
         4.5: "1.125rem",
         18: "4.5rem",
       },
+      // Non-standard opacity steps referenced via slash modifiers in globals.css
+      // (@apply bg-accent/8 …) and components (text-foreground/85 …). Required so
+      // those bare opacity utilities resolve at build time.
+      opacity: {
+        8: "0.08",
+        12: "0.12",
+        15: "0.15",
+        85: "0.85",
+      },
       boxShadow: {
         card: "0 1px 2px rgba(28,23,20,.04), 0 4px 16px rgba(28,23,20,.06)",
         lift: "0 8px 30px rgba(20,83,45,.12), 0 2px 8px rgba(28,23,20,.08)",

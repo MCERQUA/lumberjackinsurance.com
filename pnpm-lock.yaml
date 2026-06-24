@@ -9,13 +9,13 @@ importers:
   .:
     dependencies:
       '@mdx-js/loader':
-        specifier: ^3.1.1
+        specifier: ^3.1.0
         version: 3.1.1
       '@mdx-js/react':
-        specifier: ^3.1.1
+        specifier: ^3.1.0
         version: 3.1.1(@types/react@19.2.17)(react@19.2.7)
       '@next/mdx':
-        specifier: ^15.5.19
+        specifier: ^15.3.0
         version: 15.5.19(@mdx-js/loader@3.1.1)(@mdx-js/react@3.1.1(@types/react@19.2.17)(react@19.2.7))
       class-variance-authority:
         specifier: ^0.7.0
