@@ -32,7 +32,7 @@ export function Hero() {
             <motion.div {...item}>
               <span className="pill-accent">
                 <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
-                Logging · Timber · Forestry · Sawmill
+                Home · Auto · Business · Landlord · Renters
               </span>
             </motion.div>
 
@@ -40,10 +40,10 @@ export function Hero() {
               {...item}
               className="mt-5 font-display font-semibold text-foreground text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-6xl leading-[1.05] tracking-tight"
             >
-              Logging Insurance,{" "}
+              Flagstaff&apos;s friendly{" "}
               <span className="relative inline-block">
                 <span className="relative z-10 bg-gradient-to-r from-primary via-forest-500 to-accent bg-clip-text text-transparent">
-                  written for the woods
+                  hometown insurance
                 </span>
                 <svg
                   className="absolute -bottom-1 left-0 w-full h-3 text-accent/50"
@@ -58,11 +58,11 @@ export function Hero() {
             </motion.h1>
 
             <motion.p {...item} className="mt-6 lead max-w-xl">
-              Logging is one of the deadliest jobs in America — and most contractor
-              policies <strong className="text-foreground">exclude</strong> the work
-              you actually do. We write workers&apos; comp for logging class codes,
-              log trucks and ICC filings, equipment &amp; inland marine, forestry
-              pollution, and sawmill coverage — for timber harvesters in all 50 states.
+              We&apos;re a <strong className="text-foreground">local, independent</strong>{" "}
+              insurance agency protecting Flagstaff &amp; Northern Arizona families and
+              businesses — home, auto, business, landlord, and renters coverage from a
+              real local agent who knows the high country. We shop multiple carriers so
+              you get the right coverage at the right price, with no runaround.
             </motion.p>
 
             <motion.div {...item} className="mt-8 flex flex-col sm:flex-row gap-3">

@@ -9,23 +9,21 @@ import { FadeIn } from "@/components/animations/FadeIn";
 import { SERVICES, SITE } from "@/lib/site";
 import { SERVICE_DETAIL } from "@/lib/content";
 import {
-  ShieldCheck, HardHat, Truck, Wrench, Building2, FlaskConical, Trees,
+  ShieldCheck, Home, Car, Building2, KeyRound,
   CheckCircle2, ArrowRight, ArrowLeft, Users, Target,
 } from "lucide-react";
 
 const ICONS = {
-  ShieldCheck, HardHat, Truck, Wrench, Building2, FlaskConical, Trees,
+  ShieldCheck, Home, Car, Building2, KeyRound,
 } as const;
 
 // Map each service to its hero image
 const SERVICE_IMAGES: Record<string, string> = {
-  "loggers-workers-comp": "/images/workers-comp.jpg",
-  "logging-truck-insurance": "/images/log-truck.jpg",
-  "logging-equipment-insurance": "/images/logging-equipment.jpg",
-  "forestry-timber-liability": "/images/general-liability.jpg",
-  "sawmill-insurance": "/images/sawmill.jpg",
-  "logging-pollution-liability": "/images/pollution-erosion.jpg",
-  "tree-service-arborist-insurance": "/images/quote-cta.jpg",
+  "homeowners-insurance": "/images/hero.jpg",
+  "auto-insurance": "/images/log-truck.jpg",
+  "business-insurance": "/images/general-liability.jpg",
+  "landlord-insurance": "/images/forest-tract.jpg",
+  "renters-insurance": "/images/quote-cta.jpg",
 };
 
 export function generateStaticParams() {
@@ -40,12 +38,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!service) return {};
   const url = `${SITE.url}/services/${slug}`;
   return {
-    title: `${service.title} for Logging & Forestry Contractors`,
+    title: `${service.title} in Flagstaff & Northern Arizona`,
     description: service.description,
     keywords: service.keywords ? [...service.keywords] : undefined,
     alternates: { canonical: url },
     openGraph: {
-      title: `${service.title} for Logging & Forestry Contractors | ${SITE.name}`,
+      title: `${service.title} in Flagstaff & Northern Arizona | ${SITE.name}`,
       description: service.description,
       url,
     },
@@ -59,7 +57,7 @@ export default async function ServiceDetailPage({ params }: Props) {
 
   const detail = SERVICE_DETAIL[slug];
   const Icon = ICONS[service.icon as keyof typeof ICONS] ?? ShieldCheck;
-  const heroImage = SERVICE_IMAGES[slug] ?? "/images/logging-equipment.jpg";
+  const heroImage = SERVICE_IMAGES[slug] ?? "/images/hero.jpg";
   const url = `${SITE.url}/services/${slug}`;
   const related = SERVICES.filter((s) => s.slug !== slug).slice(0, 3);
 
@@ -88,7 +86,7 @@ export default async function ServiceDetailPage({ params }: Props) {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "InsuranceService",
-    name: `${service.title} for Logging & Forestry Contractors`,
+    name: `${service.title} in Flagstaff & Northern Arizona`,
     description: service.description,
     url,
     provider: {
@@ -96,10 +94,10 @@ export default async function ServiceDetailPage({ params }: Props) {
       name: SITE.name,
       url: SITE.url,
       telephone: "+18449675247",
-      areaServed: { "@type": "Country", name: "United States" },
+      areaServed: { "@type": "City", name: "Flagstaff, Arizona" },
     },
     serviceType: service.title,
-    category: "Logging & Forestry Contractor Insurance",
+    category: "Personal & Business Insurance",
   };
 
   const schemas: Record<string, object> = { serviceSchema, breadcrumb };
@@ -137,7 +135,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                 <h1 className="mt-4 font-display font-semibold text-foreground text-4xl md:text-5xl leading-[1.08] tracking-tight">
                   {service.title}{" "}
                   <span className="bg-gradient-to-r from-primary via-forest-500 to-accent bg-clip-text text-transparent">
-                    for logging &amp; forestry
+                    in Flagstaff &amp; Northern Arizona
                   </span>
                 </h1>
                 {detail && <p className="mt-5 lead max-w-2xl">{detail.heroBlurb}</p>}
@@ -156,7 +154,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                 <div className="rounded-t-[10rem] rounded-b-3xl overflow-hidden border-4 border-white shadow-lift">
                   <img
                     src={heroImage}
-                    alt={`${service.title} — logging & forestry context`}
+                    alt={`${service.title} — Flagstaff & Northern Arizona`}
                     className="w-full h-[300px] md:h-[360px] object-cover"
                     loading="lazy"
                   />
@@ -259,10 +257,10 @@ export default async function ServiceDetailPage({ params }: Props) {
                   />
                   <div className="relative">
                     <p className="font-display font-semibold text-white text-xl">
-                      Need this coverage for your crew?
+                      Need this coverage in Flagstaff?
                     </p>
                     <p className="text-white/80 mt-2 text-sm">
-                      Get a real quote in about a day — we shop A-rated specialty markets that write logging.
+                      Get a real quote fast — we shop multiple A-rated carriers to fit your Northern Arizona life and budget.
                     </p>
                     <div className="mt-5 flex flex-col sm:flex-row gap-3">
                       <Link href="/quote" className="btn-accent">Get a quote</Link>
