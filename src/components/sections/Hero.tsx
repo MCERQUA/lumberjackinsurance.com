@@ -105,7 +105,7 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.15 }}
           >
             <div className="relative">
-              {/* main hero image — arched (timber-cabin arch) */}
+              {/* main hero image — arched (mountain-cabin arch) */}
               <div className="relative overflow-hidden rounded-t-[14rem] rounded-b-3xl shadow-lift border-4 border-white">
                 <img
                   src="/images/mascot.png"

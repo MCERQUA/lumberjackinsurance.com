@@ -21,16 +21,16 @@ export default function HomePage() {
     "@type": "FAQPage",
     mainEntity: [
       {
-        q: "Is logging really that dangerous to insure?",
-        a: "Yes — logging is consistently ranked among the most dangerous jobs in America. We work with A-rated specialty markets that underwrite logging class codes.",
+        q: "Do you cover homes in Flagstaff's high country and pine forests?",
+        a: "Absolutely. We live up here too, so we know ponderosa pines, wildfire risk, heavy snow loads, and high-country cabins. We'll shop local and regional carriers to get your Flagstaff or Northern Arizona home properly covered.",
       },
       {
-        q: "What does a logging insurance program cost?",
-        a: "It depends on payroll, equipment value, truck count, and loss history. The fastest way to a real number is a 15-minute call.",
+        q: "Can you bundle my home and auto?",
+        a: "Yes — bundling home and auto is one of the easiest ways to save, and we handle it all in one quick conversation. We'll compare carriers and find the bundle that fits your high-country life.",
       },
       {
-        q: "Can you write coverage if my EMOD is above 1.0?",
-        a: "Yes. We have access to specialty excess-and-surplus markets and group self-insurance funds that write climbing-mod operators.",
+        q: "Do you write renters and landlord policies in Northern Arizona?",
+        a: "We do. Whether you're renting a place in Flagstaff, Sedona, or Prescott, or you own a rental property across Northern Arizona, we write both renters and landlord coverage — just give your local agent a call.",
       },
     ].map((f) => ({
       "@type": "Question",
@@ -54,7 +54,6 @@ export default function HomePage() {
         <Process />
         <CoverageMap />
         <Stats />
-        <Testimonials />
         <BlogPreview posts={posts} />
         <FAQ />
         <FinalCTA />
