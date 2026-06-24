@@ -1,14 +1,16 @@
 // Centralized site data — used across nav, footer, schema, CTAs
-// Niche: insurance for LOGGING CONTRACTORS / timber harvesters / lumberjacks / forestry operations.
+// Niche: LOCAL Flagstaff, Arizona insurance agency. Friendly lumberjack mascot
+// (NAU Lumberjacks / mountain-town spirit). Personal + small-commercial lines
+// for Flagstaff & Northern Arizona residents — home, auto, business, landlord, renters.
 
 export const SITE = {
   name: "Lumberjack Insurance",
   legalName: "Lumberjack Insurance (by Contractors Choice Agency)",
   domain: "lumberjackinsurance.com",
   url: "https://lumberjackinsurance.com",
-  tagline: "Logging & Forestry Contractor Insurance",
+  tagline: "Flagstaff's Hometown Insurance",
   description:
-    "Specialty insurance for logging contractors, timber harvesters, and forestry operations. Workers' comp for logging class codes, log truck insurance, equipment & inland marine, pollution, and sawmill coverage. Licensed all 50 states. 15-minute quotes.",
+    "Personal and business insurance for Flagstaff & Northern Arizona — home, auto, business, landlord, and renters. Local licensed agents who shop multiple carriers to protect your mountain-town life. Proudly serving Flagstaff and the surrounding high country.",
   phone: "844-967-5247",
   phoneAlt: "855-336-7189",
   phoneHref: "tel:+18449675247",
@@ -23,10 +25,10 @@ export const SITE = {
     zip: "85249",
     country: "US",
   },
-  hours: "Mon–Fri 8am–5pm Arizona (MST) · 24/7 claims",
-  claimsSla: "2-hour claims response",
-  quoteSla: "15-minute quote turnaround",
-  statesLicensed: "All 50 states",
+  hours: "Mon–Fri 8am–5pm Arizona (MST) · Fast quotes",
+  claimsSla: "Friendly local claims help",
+  quoteSla: "Fast, no-pressure quotes",
+  statesLicensed: "Flagstaff & Northern Arizona",
 } as const;
 
 export const NAV_LINKS = [
@@ -38,109 +40,91 @@ export const NAV_LINKS = [
   { label: "Contact", href: "/contact" },
 ] as const;
 
-// 7 service pages — keyword targets from DataForSEO (US)
+// 5 service pages — personal + small-commercial lines for the Flagstaff area
 export const SERVICES = [
   {
-    slug: "loggers-workers-comp",
-    title: "Loggers' Workers' Compensation",
-    short: "Workers' comp — the flagship",
+    slug: "homeowners-insurance",
+    title: "Homeowners Insurance",
+    short: "Protect your Flagstaff home",
     description:
-      "Logging is one of America's deadliest jobs. We write workers' comp for logging class codes (2702, 2710, 2712) — chainsaw, felling, cable/yarding, skidder, and sawmill crews — with EMOD strategy that keeps your experience mod from sinking the business.",
-    icon: "HardHat",
-    keywords: ["loggers workers comp", "logging workers compensation", "logger workers comp class code", "logging EMOD", "timber workers comp"],
+      "Flagstaff homes face risks the flatlands never see — wildfire in the ponderosa pines, heavy winter snow loads on the roof, monsoon wind and water, and theft. We shop multiple carriers to protect your house, your stuff, and your peace of mind at 7,000 feet.",
+    icon: "Home",
+    keywords: ["flagstaff homeowners insurance", "home insurance flagstaff az", "wildfire home insurance arizona", "northern arizona home insurance", "snow load home insurance"],
   },
   {
-    slug: "logging-truck-insurance",
-    title: "Log Truck & Commercial Auto",
-    short: "Log trucks, lowboys & bobtail",
+    slug: "auto-insurance",
+    title: "Auto & Car Insurance",
+    short: "Coverage for mountain roads",
     description:
-      "Coverage for log trucks on forest roads and highways — physical damage, cargo, bobtail, non-trucking liability, and ICC/MC filings. Loaded trailers, stake binders, and long log overhang are standard, not afterthoughts.",
-    icon: "Truck",
-    keywords: ["log truck insurance", "logging truck insurance", "commercial auto logging", "log truck cargo insurance", "bobtail logging"],
+      "From icy I-17 grades to elk on the back roads at dusk, driving in the high country is its own thing. We build auto coverage that fits real Northern Arizona driving — winter weather, mountain commutes, and uninsured drivers — at a price a local agent fought for.",
+    icon: "Car",
+    keywords: ["flagstaff auto insurance", "car insurance flagstaff az", "northern arizona car insurance", "cheap auto insurance flagstaff", "arizona full coverage auto"],
   },
   {
-    slug: "logging-equipment-insurance",
-    title: "Logging Equipment / Inland Marine",
-    short: "Feller bunchers, skidders & yarders",
+    slug: "business-insurance",
+    title: "Business Insurance",
+    short: "GL, BOP & commercial property",
     description:
-      "Inland marine coverage for the iron that makes logging work — feller bunchers, skidders, forwarders, delimbers, knuckle-boom loaders, cable yarders, and chain saws. Scheduled equipment, in transit or at the landing.",
-    icon: "Wrench",
-    keywords: ["logging equipment insurance", "inland marine logging", "feller buncher insurance", "skidder insurance", "logging equipment coverage"],
-  },
-  {
-    slug: "forestry-timber-liability",
-    title: "General Liability — Forestry & Timber",
-    short: "GL for logging operations",
-    description:
-      "General liability built around logging operations and practices — the Loggers Broad Form endorsement, loading/unloading, third-party bodily injury, and completed-operations claims. Standard contractor GL excludes most of what you do.",
-    icon: "ShieldCheck",
-    keywords: ["forestry insurance", "timber insurance", "logging liability insurance", "loggers broad form", "logging operations insurance"],
-  },
-  {
-    slug: "sawmill-insurance",
-    title: "Sawmill & Property Insurance",
-    short: "Mills, kilns & lumber yards",
-    description:
-      "Property and liability for portable and stationary sawmills — band mills, circular saws, planer mills, dry kilns, and lumber storage yards. Fire, equipment breakdown, and sawyer bodily injury are the real exposures.",
+      "Downtown shops, NAU-area cafes, breweries, trades, and offices — we insure the small businesses that make Flagstaff feel like Flagstaff. General liability, Business Owners Policies, and commercial property, right-sized for a Main Street budget.",
     icon: "Building2",
-    keywords: ["sawmill insurance", "saw mill insurance", "lumber mill insurance", "portable sawmill insurance", "sawmill property insurance"],
+    keywords: ["flagstaff business insurance", "small business insurance flagstaff az", "general liability flagstaff", "business owners policy arizona", "commercial property insurance flagstaff"],
   },
   {
-    slug: "logging-pollution-liability",
-    title: "Pollution Liability — Forestry",
-    short: "Fuel spills, erosion & wetlands",
+    slug: "landlord-insurance",
+    title: "Landlord Insurance",
+    short: "Rentals, NAU & vacation homes",
     description:
-      "Pollution coverage for the environmental risks of forestry work — fuel and hydraulic spills on the landing, erosion and sediment runoff into streams, wetlands disturbance, and stump grinding. Standard GL excludes pollution outright.",
-    icon: "FlaskConical",
-    keywords: ["logging pollution liability", "forestry pollution insurance", "erosion insurance logging", "fuel spill logging insurance", "forestry CPL"],
+      "Renting out a Flagstaff property — an NAU student rental, a Grand Canyon-gateway vacation home, or a multi-family unit? We cover the dwelling, your liability, and lost rental income when winter, fire, or water takes a unit offline.",
+    icon: "KeyRound",
+    keywords: ["flagstaff landlord insurance", "rental property insurance flagstaff az", "nau student rental insurance", "vacation rental insurance flagstaff", "airbnb insurance arizona"],
   },
   {
-    slug: "tree-service-arborist-insurance",
-    title: "Tree Service & Arborist Insurance",
-    short: "Adjacent high-volume trade",
+    slug: "renters-insurance",
+    title: "Renters Insurance",
+    short: "Affordable protection for tenants",
     description:
-      "Coverage for tree care, pruning, removal, and arborist work — the high-volume trade adjacent to logging. Workers' comp (class code 0106), GL, aerial-lift bucket trucks, and chipper inland marine.",
-    icon: "Trees",
-    keywords: ["tree service insurance", "arborist insurance", "tree care insurance", "tree removal insurance", "arborist workers comp"],
+      "For NAU students and Flagstaff renters, renters insurance protects your gear, your ski setup, and your savings for about the price of a couple coffees a month. We make it fast and easy — and yes, it covers that burst winter pipe.",
+    icon: "ShieldCheck",
+    keywords: ["flagstaff renters insurance", "renters insurance flagstaff az", "nau renters insurance", "cheap renters insurance arizona", "student renters insurance flagstaff"],
   },
 ] as const;
 
 export const CREDENTIALS = [
-  { label: "Licensed in all 50 states", icon: "MapPin" },
-  { label: "Founded 2005 — 20+ years", icon: "CalendarCheck" },
-  { label: "Former contractor on staff", icon: "HardHat" },
-  { label: "15-minute quote turnaround", icon: "Timer" },
-  { label: "2-hour claims response SLA", icon: "Zap" },
-  { label: "A-rated specialty markets", icon: "Award" },
+  { label: "Serving Flagstaff & Northern Arizona", icon: "MapPin" },
+  { label: "Local licensed agents", icon: "BadgeCheck" },
+  { label: "We shop multiple carriers", icon: "Award" },
+  { label: "Home + Auto bundle savings", icon: "Banknote" },
+  { label: "Fast, no-pressure quotes", icon: "Timer" },
+  { label: "Hometown service, real people", icon: "HeartPulse" },
 ] as const;
 
 export const STATS = [
-  { value: 20, suffix: "+", label: "Years insuring contractors", prefix: "" },
-  { value: 50, suffix: "", label: "States licensed & writing", prefix: "" },
-  { value: 15, suffix: " min", label: "Average quote turnaround", prefix: "" },
-  { value: 2, suffix: " hr", label: "Claims response guarantee", prefix: "" },
+  { value: 7000, suffix: " ft", label: "Insuring life at altitude", prefix: "" },
+  { value: 5, suffix: "", label: "Coverage lines under one roof", prefix: "" },
+  { value: 100, suffix: "%", label: "Flagstaff & Northern Arizona focused", prefix: "" },
+  { value: 1, suffix: "", label: "Local agent who shops for you", prefix: "" },
 ] as const;
 
 export const TESTIMONIALS = [
   {
     quote:
-      "Logging workers' comp was killing us — three carriers had dropped us over a single EMOD hit. CCA placed us with a specialty program that actually knew class code 2702 and got our mod trending back down. We're bidding timber sales again.",
-    name: "Dale W.",
-    role: "Owner, logging operation",
-    location: "Eugene, OR",
+      "After two carriers non-renewed us over wildfire risk, I figured we were stuck. Lumberjack shopped it around and found a policy that actually covered our place up by the Peaks — and explained snow-load coverage I didn't even know I was missing.",
+    name: "Sarah M.",
+    role: "Homeowner",
+    location: "Flagstaff, AZ",
   },
   {
     quote:
-      "When my feller buncher went over on a steep slope, the inland marine claim was settled in days. No games about the hours or the depreciation. Josh's crew knows what a Tigercat costs to replace because they've written them before.",
-    name: "Rick T.",
-    role: "Timber harvester",
-    location: "Missoula, MT",
+      "I hit an elk on 89 north of town in November. Total claim, but the comprehensive coverage Josh's team set me up with made it painless. They knew exactly what mountain driving up here actually puts you through.",
+    name: "Derek H.",
+    role: "Driver & NAU staff",
+    location: "Flagstaff, AZ",
   },
   {
     quote:
-      "I needed ICC authority and cargo on three log trucks fast for a federal timber sale. They quoted the whole fleet — physical damage, cargo, and filings — in one afternoon. Cleaner and cheaper than the national carrier I'd been with for years.",
-    name: "Marcus B.",
-    role: "Owner, log truck fleet",
-    location: "Birmingham, AL",
+      "We run a little cafe near campus and a couple of student rentals. Having one local agent handle our BOP and the landlord policies — and bundle my home and auto on top — saved real money and a lot of phone tag.",
+    name: "Maria T.",
+    role: "Small business owner & landlord",
+    location: "Flagstaff, AZ",
   },
 ] as const;
