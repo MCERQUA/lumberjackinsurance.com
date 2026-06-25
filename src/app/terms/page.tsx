@@ -16,16 +16,27 @@ export default function TermsPage() {
     <>
       <Navbar />
       <main>
-        <section className="bg-warm-radial-sand pt-32 pb-20 md:pt-40">
+        {/* Hero band */}
+        <section className="bg-[#0F1C38] pt-32 pb-16 md:pt-40 md:pb-20">
           <div className="container-tight max-w-3xl">
             <FadeIn>
-              <span className="pill-accent">Legal</span>
-              <h1 className="mt-5 font-display font-semibold text-foreground text-4xl md:text-5xl tracking-tight">
+              <span className="inline-flex items-center gap-2 font-display font-bold uppercase tracking-widest text-sm text-[#E8B923]">
+                <span className="h-px w-8 bg-[#E8B923]" />
+                Legal
+              </span>
+              <h1 className="mt-5 font-display font-800 uppercase text-white text-4xl md:text-5xl tracking-tight">
                 Terms of Use
               </h1>
-              <p className="mt-3 text-sm text-muted-foreground">Last updated: June 17, 2026</p>
+              <p className="mt-3 text-sm text-white/60">Last updated: June 17, 2026</p>
+            </FadeIn>
+          </div>
+        </section>
 
-              <div className="prose-paper prose-warm mt-10">
+        {/* Body */}
+        <section className="bg-white py-16 md:py-20">
+          <div className="container-tight max-w-3xl">
+            <FadeIn>
+              <div className="prose max-w-none">
                 <p>
                   These terms govern your use of lumberjackinsurance.com (the &ldquo;Site&rdquo;),
                   operated by Contractors Choice Agency (&ldquo;CCA,&rdquo; &ldquo;we,&rdquo;
@@ -61,7 +72,7 @@ export default function TermsPage() {
                 <h2>Professional licensing</h2>
                 <p>
                   Contractors Choice Agency is a licensed insurance agency (NPN #{SITE.npn}),
-                  licensed to transact insurance in all 50 states. Insurance products are
+                  licensed to transact insurance in the State of Arizona. Insurance products are
                   underwritten by unaffiliated third-party insurance carriers.
                 </p>
 

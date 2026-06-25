@@ -76,8 +76,8 @@ export default function CoveragePage() {
             <FadeIn direction="up">
               <div className="rounded-[2rem] overflow-hidden border-4 border-white shadow-lift">
                 <img
-                  src="/images/forest-tract.jpg"
-                  alt="Ponderosa pine forest below the San Francisco Peaks near Flagstaff, Arizona"
+                  src="/images/flagstaff-town.png"
+                  alt="Downtown Flagstaff, Arizona below the San Francisco Peaks"
                   className="w-full h-[280px] md:h-[400px] object-cover"
                 />
               </div>

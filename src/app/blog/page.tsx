@@ -9,14 +9,14 @@ import { SITE } from "@/lib/site";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Logging Insurance Blog — Guides & Insights",
+  title: "Insurance Resources & Guides",
   description:
-    "Practical insurance guidance for logging and timber contractors: workers' comp class codes, log truck insurance, equipment coverage, forestry pollution, and sawmill programs.",
+    "Plain-English insurance tips for Flagstaff & Northern Arizona — wildfire & home insurance, snow-load & monsoon claims, winter & elk auto coverage, NAU rentals, landlord, and renters basics.",
   alternates: { canonical: `${SITE.url}/blog` },
   openGraph: {
-    title: "Logging Insurance Blog | Lumberjack Insurance",
+    title: "Insurance Resources & Guides | Lumberjack Insurance",
     description:
-      "Expert guides on logging workers' comp class codes, log truck insurance, equipment coverage, and forestry pollution liability.",
+      "Practical guides for Flagstaff homeowners, drivers, renters, landlords & small businesses — home, auto, business, landlord, and renters insurance made simple.",
     url: `${SITE.url}/blog`,
   },
 };
@@ -42,16 +42,17 @@ export default function BlogPage() {
         <section className="relative bg-[#0F1C38] pt-32 pb-12 md:pt-40 md:pb-16">
           <div className="container-tight text-center">
             <FadeIn>
-              <span className="inline-block font-display font-700 uppercase tracking-widest text-sm text-[#E8B923]">Blog &amp; insights</span>
+              <span className="inline-block font-display font-700 uppercase tracking-widest text-sm text-[#E8B923]">Guides &amp; resources</span>
               <h1 className="mt-5 font-display font-800 uppercase text-white text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight">
-                Logging insurance,{" "}
+                Insurance{" "}
                 <span className="text-[#E8B923]">
-                  decoded
+                  Resources
                 </span>
               </h1>
               <p className="mt-5 text-lg text-white/80 max-w-2xl mx-auto">
-                Plain-English guides on the coverage that matters for loggers — class
-                codes, EMOD strategy, log truck filings, equipment claims, and pollution.
+                Plain-English guides for Flagstaff homeowners, drivers, renters, landlords, and
+                small businesses — wildfire &amp; home insurance, snow-load &amp; monsoon claims,
+                winter &amp; elk auto coverage, NAU rentals, and renters basics.
               </p>
             </FadeIn>
           </div>
@@ -69,7 +70,7 @@ export default function BlogPage() {
                       <article className="grid md:grid-cols-2 gap-0 rounded-sm overflow-hidden bg-white border border-gray-200 hover:border-[#E8B923] shadow-card hover:shadow-lift transition-all">
                         <div className="relative overflow-hidden">
                           <img
-                            src={featured.image || "/images/forest-tract.jpg"}
+                            src={featured.image || "/images/home-insurance.jpg"}
                             alt={featured.title}
                             className="w-full h-64 md:h-full object-cover group-hover:scale-105 transition-transform duration-500"
                           />

@@ -80,8 +80,8 @@ export default function AboutPage() {
                 <div className="relative">
                   <div className="rounded-t-[10rem] rounded-b-3xl overflow-hidden border-4 border-[#E8B923] shadow-lift">
                     <img
-                      src="/images/quote-cta.jpg"
-                      alt="Flagstaff neighborhood under ponderosa pines with the San Francisco Peaks beyond"
+                      src="/images/flagstaff-peaks.png"
+                      alt="The San Francisco Peaks rising above the ponderosa pines near Flagstaff, Arizona"
                       className="w-full h-[340px] md:h-[420px] object-cover"
                     />
                   </div>

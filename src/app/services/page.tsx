@@ -48,12 +48,12 @@ export default function ServicesPage() {
         >
           <div className="container-tight text-center">
             <FadeIn>
-              <span className="pill-primary">Coverage Lines</span>
-              <h1 className="mt-5 font-display font-700 uppercase text-white text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight">
+              <span className="inline-block font-display font-700 uppercase tracking-widest text-sm text-[#E8B923]">Coverage Lines</span>
+              <h1 className="mt-5 font-display font-800 uppercase text-white text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight">
                 Hometown Insurance,{" "}
-                <span className="text-gold">Line by Line</span>
+                <span className="text-[#E8B923]">Line by Line</span>
               </h1>
-              <p className="mt-5 lead max-w-2xl mx-auto !text-white/70">
+              <p className="mt-5 text-lg text-white/70 max-w-2xl mx-auto">
                 Five coverage lines for Flagstaff &amp; Northern Arizona — home, auto, business,
                 landlord, and renters. Local agents who shop multiple carriers for you.
               </p>

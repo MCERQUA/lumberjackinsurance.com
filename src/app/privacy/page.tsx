@@ -16,38 +16,49 @@ export default function PrivacyPage() {
     <>
       <Navbar />
       <main>
-        <section className="bg-warm-radial-sand pt-32 pb-20 md:pt-40">
+        {/* Hero band */}
+        <section className="bg-[#0F1C38] pt-32 pb-16 md:pt-40 md:pb-20">
           <div className="container-tight max-w-3xl">
             <FadeIn>
-              <span className="pill-accent">Legal</span>
-              <h1 className="mt-5 font-display font-semibold text-foreground text-4xl md:text-5xl tracking-tight">
+              <span className="inline-flex items-center gap-2 font-display font-bold uppercase tracking-widest text-sm text-[#E8B923]">
+                <span className="h-px w-8 bg-[#E8B923]" />
+                Legal
+              </span>
+              <h1 className="mt-5 font-display font-800 uppercase text-white text-4xl md:text-5xl tracking-tight">
                 Privacy Policy
               </h1>
-              <p className="mt-3 text-sm text-muted-foreground">Last updated: June 17, 2026</p>
+              <p className="mt-3 text-sm text-white/60">Last updated: June 17, 2026</p>
+            </FadeIn>
+          </div>
+        </section>
 
-              <div className="prose-paper prose-warm mt-10">
+        {/* Body */}
+        <section className="bg-white py-16 md:py-20">
+          <div className="container-tight max-w-3xl">
+            <FadeIn>
+              <div className="prose max-w-none">
                 <p>
                   Lumberjack Insurance (&ldquo;we,&rdquo; &ldquo;us,&rdquo; &ldquo;our&rdquo;) is a
-                  logging and forestry insurance program operated by Contractors Choice Agency
-                  (&ldquo;CCA&rdquo;). This policy explains how we collect, use, and protect
-                  information you provide through lumberjackinsurance.com.
+                  local insurance agency serving Flagstaff &amp; Northern Arizona, operated by
+                  Contractors Choice Agency (&ldquo;CCA&rdquo;). This policy explains how we
+                  collect, use, and protect information you provide through lumberjackinsurance.com.
                 </p>
 
                 <h2>Information we collect</h2>
                 <p>
                   We collect the information you voluntarily provide when you request a quote,
                   contact us, or otherwise interact with our site. This typically includes your
-                  name, business name, email address, phone number, state of operation, and
-                  details about your logging operation you choose to share (crew size, equipment,
-                  current coverage). We may also collect limited technical information (such as IP
-                  address and browser type) for security and analytics.
+                  name, email address, phone number, the community you live in, and details about
+                  your home, vehicles, rental property, or business you choose to share. We may also
+                  collect limited technical information (such as IP address and browser type) for
+                  security and analytics.
                 </p>
 
                 <h2>How we use your information</h2>
                 <ul>
                   <li>To prepare insurance quotes and respond to your inquiries.</li>
                   <li>To communicate with you about coverage, policies, endorsements, and claims.</li>
-                  <li>To provide certificates of insurance and filings required by your contracts.</li>
+                  <li>To provide proof of insurance documents your mortgage lender or landlord may require.</li>
                   <li>To improve our website, services, and the quotes we provide.</li>
                   <li>To comply with legal and regulatory obligations as a licensed insurance agency.</li>
                 </ul>
@@ -55,10 +66,10 @@ export default function PrivacyPage() {
                 <h2>How we share your information</h2>
                 <p>
                   We share your information with insurance carriers, wholesale brokers, and
-                  underwriting markets for the purpose of quoting and binding coverage; with
-                  lenders or contract counterparties when you request a certificate or filing; and
-                  with service providers (such as our website host and form-processing vendors)
-                  who help us operate this site. We do not sell your personal information.
+                  underwriting markets for the purpose of quoting and binding coverage; with your
+                  mortgage lender or landlord when you request proof of insurance; and with service
+                  providers (such as our website host and form-processing vendors) who help us
+                  operate this site. We do not sell your personal information.
                 </p>
 
                 <h2>Cookies and analytics</h2>
@@ -91,7 +102,7 @@ export default function PrivacyPage() {
                   Phone: {SITE.phone} · Email: {SITE.email}
                 </p>
 
-                <p className="text-sm text-muted-foreground mt-8">
+                <p className="text-sm text-gray-500 mt-8">
                   This privacy policy may be updated from time to time. Material changes will be
                   reflected by the &ldquo;last updated&rdquo; date above.
                 </p>

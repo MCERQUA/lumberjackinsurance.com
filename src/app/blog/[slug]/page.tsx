@@ -116,9 +116,9 @@ export default async function BlogPostPage({ params }: Props) {
               <div className="prose max-w-none mt-10" dangerouslySetInnerHTML={{ __html: html }} />
 
               <div className="mt-12 p-7 rounded-sm bg-[#0F1C38] text-white">
-                <p className="font-display font-800 uppercase text-[#E8B923] text-xl">Need this coverage for your crew?</p>
+                <p className="font-display font-800 uppercase text-[#E8B923] text-xl">Need this coverage in Flagstaff?</p>
                 <p className="text-white/80 mt-2 text-sm">
-                  Get a real quote in about a day — we shop A-rated specialty markets that write logging.
+                  Get a real quote fast — we shop multiple carriers to protect Flagstaff &amp; Northern Arizona families and businesses.
                 </p>
                 <div className="mt-5 flex flex-col sm:flex-row gap-3">
                   <Link href="/quote" className="btn-primary">Get a quote</Link>
