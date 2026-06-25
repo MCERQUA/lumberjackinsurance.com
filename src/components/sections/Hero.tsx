@@ -1,8 +1,21 @@
 "use client";
 
 import Link from "next/link";
-import { motion, useReducedMotion } from "motion/react";
+import { motion, useReducedMotion, type Variants } from "motion/react";
 import { ChevronDown } from "lucide-react";
+
+const containerV: Variants = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.12, delayChildren: 0.05 } },
+};
+const itemUpV: Variants = {
+  hidden: { opacity: 0, y: 28 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
+};
+const itemLogoV: Variants = {
+  hidden: { opacity: 0, scale: 0.85 },
+  show: { opacity: 1, scale: 1, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
+};
 
 // Tiny floating gold embers behind the mascot — subtle, varied delays/positions.
 const EMBERS = [
@@ -21,32 +34,11 @@ export function Hero() {
 
   const container = prefersReduced
     ? {}
-    : {
-        initial: "hidden",
-        animate: "show",
-        variants: {
-          hidden: {},
-          show: { transition: { staggerChildren: 0.12, delayChildren: 0.05 } },
-        },
-      };
+    : { initial: "hidden", animate: "show", variants: containerV };
 
-  const itemUp = prefersReduced
-    ? {}
-    : {
-        variants: {
-          hidden: { opacity: 0, y: 28 },
-          show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
-        },
-      };
+  const itemUp = prefersReduced ? {} : { variants: itemUpV };
 
-  const itemLogo = prefersReduced
-    ? {}
-    : {
-        variants: {
-          hidden: { opacity: 0, scale: 0.85 },
-          show: { opacity: 1, scale: 1, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
-        },
-      };
+  const itemLogo = prefersReduced ? {} : { variants: itemLogoV };
 
   return (
     <section
