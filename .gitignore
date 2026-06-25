@@ -1,3 +1,7 @@
 
 deploy_key
 deploy_key.pub
+.next/
+node_modules/
+.env.local
+.env*.local
