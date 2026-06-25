@@ -1,63 +1,46 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
-    "./mdx-components.tsx",
-  ],
+  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}", "./mdx-components.tsx"],
   theme: {
     extend: {
       colors: {
-        // Flagstaff mountain-town palette
-        background: "#faf7f1", // cream / birch paper
-        foreground: "#1f1a16", // warm charcoal ink
-        "muted-foreground": "#6b6157",
-        border: "#e7ddcd",
-        primary: {
-          DEFAULT: "#14532d", // deep pine / forest green
-          foreground: "#ffffff",
+        background: "#F4F4F4",
+        foreground: "#0F1C38",
+        "muted-foreground": "#6B7280",
+        border: "#E5E7EB",
+        navy: {
+          dark: "#0F1C38",
+          DEFAULT: "#1B2A4A",
+          light: "#243558",
         },
-        accent: {
-          DEFAULT: "#b1241f", // warm plaid / flannel red
-          light: "#e0584a",
-          foreground: "#ffffff",
+        gold: {
+          DEFAULT: "#E8B923",
+          dark: "#C9A020",
+          light: "#F5CB50",
         },
-        forest: {
-          100: "#dceee2",
-          500: "#2f6b46",
-          700: "#1b4332",
-        },
-        paper: {
-          warm: "#f2ead9", // birch
-          ink: "#1c1714", // dark charcoal (footer)
-        },
-        amber: {
-          warm: "#d99a2b",
-        },
+        primary: { DEFAULT: "#E8B923", foreground: "#0F1C38" },
+        accent: { DEFAULT: "#0F1C38", foreground: "#FFFFFF" },
+        paper: { ink: "#0F1C38" },
       },
       fontFamily: {
-        display: ["var(--font-display)", "Fraunces", "ui-serif", "Georgia", "serif"],
-        body: ["var(--font-body)", "Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+        display: ["var(--font-display)", "Barlow Condensed", "Impact", "ui-sans-serif"],
+        body: ["var(--font-body)", "Barlow", "Inter", "ui-sans-serif"],
       },
-      spacing: {
-        4.5: "1.125rem",
-        18: "4.5rem",
+      // Numeric weight keys so the sports-team CSS (font-700 / font-800) compiles
+      fontWeight: {
+        400: "400",
+        500: "500",
+        600: "600",
+        700: "700",
+        800: "800",
       },
-      // Non-standard opacity steps referenced via slash modifiers in globals.css
-      // (@apply bg-accent/8 …) and components (text-foreground/85 …). Required so
-      // those bare opacity utilities resolve at build time.
-      opacity: {
-        8: "0.08",
-        12: "0.12",
-        15: "0.15",
-        85: "0.85",
-      },
+      spacing: { 4.5: "1.125rem", 18: "4.5rem" },
+      opacity: { 8: "0.08", 12: "0.12", 15: "0.15", 85: "0.85" },
       boxShadow: {
-        card: "0 1px 2px rgba(28,23,20,.04), 0 4px 16px rgba(28,23,20,.06)",
-        lift: "0 8px 30px rgba(20,83,45,.12), 0 2px 8px rgba(28,23,20,.08)",
+        card: "0 2px 8px rgba(0,0,0,0.12)",
+        lift: "0 8px 30px rgba(0,0,0,0.2)",
       },
-      maxWidth: {
-        "7xl": "80rem",
-      },
+      maxWidth: { "7xl": "80rem" },
     },
   },
   plugins: [require("@tailwindcss/typography")],

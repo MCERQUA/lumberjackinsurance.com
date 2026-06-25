@@ -3,101 +3,31 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    color-scheme: light;
-  }
-  html {
-    scroll-behavior: smooth;
-  }
-  body {
-    @apply bg-background text-foreground font-body antialiased;
-  }
-  h1,
-  h2,
-  h3,
-  h4 {
-    @apply font-display;
-  }
-  ::selection {
-    background-color: rgba(20, 83, 45, 0.16);
-  }
+  :root { color-scheme: light; }
+  html { scroll-behavior: smooth; }
+  body { @apply bg-background text-foreground font-body antialiased; }
+  h1, h2, h3, h4 { @apply font-display; }
+  ::selection { background-color: rgba(232, 185, 35, 0.3); }
 }
 
 @layer components {
-  .container-wide {
-    @apply mx-auto w-full max-w-7xl px-5 sm:px-8;
-  }
-  .container-tight {
-    @apply mx-auto w-full max-w-3xl px-5 sm:px-8;
-  }
+  .container-wide { @apply mx-auto w-full max-w-7xl px-5 sm:px-8; }
+  .container-tight { @apply mx-auto w-full max-w-3xl px-5 sm:px-8; }
 
+  /* Gold fill button — dark text */
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-3.5 font-body font-bold text-white shadow-card transition-all duration-300 hover:bg-forest-700 hover:-translate-y-0.5 hover:shadow-lift;
+    @apply inline-flex items-center justify-center gap-2 rounded-sm bg-gold px-7 py-3.5 font-display font-700 text-navy-dark text-sm uppercase tracking-widest shadow-card transition-all duration-200 hover:bg-gold-dark hover:-translate-y-0.5;
   }
-  .btn-accent {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-accent px-7 py-3.5 font-body font-bold text-white shadow-card transition-all duration-300 hover:bg-accent-light hover:-translate-y-0.5 hover:shadow-lift;
-  }
+  /* Dark outline button — white text */
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full border border-border bg-white px-7 py-3.5 font-body font-bold text-foreground shadow-card transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-lift;
+    @apply inline-flex items-center justify-center gap-2 rounded-sm border-2 border-white bg-transparent px-7 py-3.5 font-display font-700 text-white text-sm uppercase tracking-widest transition-all duration-200 hover:bg-white/10;
   }
-
-  .pill {
-    @apply inline-flex items-center gap-2 rounded-full border border-border bg-white px-3.5 py-1.5 text-xs font-body font-bold text-foreground;
+  /* Dark navy fill button */
+  .btn-navy {
+    @apply inline-flex items-center justify-center gap-2 rounded-sm bg-navy-dark border-2 border-navy-dark px-7 py-3.5 font-display font-700 text-white text-sm uppercase tracking-widest transition-all duration-200 hover:bg-navy;
   }
-  .pill-accent {
-    @apply inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent/8 px-3.5 py-1.5 text-xs font-body font-bold text-accent;
-  }
-
-  .eyebrow {
-    @apply inline-flex items-center gap-2 text-xs font-body font-bold uppercase tracking-[0.18em] text-accent;
-  }
-  .h-section {
-    @apply font-display font-semibold text-foreground text-3xl sm:text-4xl lg:text-[2.75rem] leading-[1.1] tracking-tight;
-  }
-  .lead {
-    @apply text-lg text-muted-foreground leading-relaxed;
-  }
-}
-
-@layer utilities {
-  /* Deep pine gradient — used on hero badges, CTAs, footer marks, stat bands */
-  .bg-forest-gradient {
-    background-image: linear-gradient(135deg, #14532d 0%, #1b4332 45%, #2f6b46 100%);
-  }
-  /* Soft cream topographic wash */
-  .bg-topo {
-    background-color: #faf7f1;
-    background-image: radial-gradient(
-        circle at 12% 18%,
-        rgba(20, 83, 45, 0.06),
-        transparent 42%
-      ),
-      radial-gradient(circle at 88% 0%, rgba(177, 36, 31, 0.05), transparent 46%);
-  }
-  /* Warm birch radial */
-  .bg-warm-radial-sand {
-    background-color: #f7f1e6;
-    background-image: radial-gradient(
-      circle at 50% 0%,
-      rgba(217, 154, 43, 0.09),
-      transparent 55%
-    );
-  }
-  /* Faint concentric tree-ring texture for dark bands */
-  .bg-log-rings {
-    background-image: repeating-radial-gradient(
-      circle at 50% 50%,
-      rgba(255, 255, 255, 0.06) 0 2px,
-      transparent 2px 24px
-    );
-  }
-  /* Plaid-red stitched divider line */
-  .pine-divider {
-    background-image: repeating-linear-gradient(
-      90deg,
-      transparent 0 10px,
-      rgba(177, 36, 31, 0.55) 10px 12px,
-      transparent 12px 16px
-    );
+  /* Navy border, navy text — for light sections */
+  .btn-outline-navy {
+    @apply inline-flex items-center justify-center gap-2 rounded-sm border-2 border-navy-dark bg-transparent px-7 py-3.5 font-display font-700 text-navy-dark text-sm uppercase tracking-widest transition-all duration-200 hover:bg-navy-dark hover:text-white;
   }
 }

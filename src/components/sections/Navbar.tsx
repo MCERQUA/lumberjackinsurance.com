@@ -1,21 +1,21 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, Phone, TreePine } from "lucide-react";
-import { NAV_LINKS, SITE } from "@/lib/site";
-import { cn } from "@/lib/utils";
+import { ChevronDown, Menu, X, Lock, CreditCard } from "lucide-react";
+import { SITE } from "@/lib/site";
+
+const NAV = [
+  { label: "HOME", href: "/" },
+  { label: "ABOUT US", href: "/about" },
+  { label: "INSURANCE", href: "/services", dropdown: true },
+  { label: "CLAIMS", href: "/claims" },
+  { label: "RESOURCES", href: "/blog", dropdown: true },
+  { label: "CONTACT", href: "/contact" },
+];
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -25,95 +25,133 @@ export function Navbar() {
   }, [open]);
 
   return (
-    <header
-      className={cn(
-        "fixed top-0 inset-x-0 z-50 transition-all duration-300",
-        scrolled
-          ? "bg-background/90 backdrop-blur-md border-b border-border shadow-sm"
-          : "bg-transparent"
-      )}
-    >
-      <nav className="container-wide flex items-center justify-between h-18 py-3">
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-2.5 group" aria-label="Lumberjack Insurance home">
-          <span className="relative inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-forest-gradient shadow-card">
-            <TreePine className="h-5 w-5 text-white" strokeWidth={2.4} />
-            <span className="absolute -bottom-1 -right-1 h-3 w-3 rounded-full bg-accent border-2 border-background" />
-          </span>
-          <span className="flex flex-col leading-none">
-            <span className="font-display font-semibold text-foreground text-[1.05rem] tracking-tight">
-              Lumberjack
-            </span>
-            <span className="font-body font-semibold text-accent text-[0.65rem] uppercase tracking-[0.18em]">
-              Insurance
-            </span>
-          </span>
-        </Link>
+    <header className="sticky top-0 z-50">
+      {/* Top utility bar — dark navy, gold text */}
+      <div className="bg-[#0F1C38] text-[#E8B923]">
+        <div className="container-wide flex h-9 items-center justify-between gap-4">
+          {/* spacer to balance the right links on desktop */}
+          <span className="hidden lg:block w-[260px]" aria-hidden />
 
-        {/* Desktop nav */}
-        <div className="hidden lg:flex items-center gap-1">
-          {NAV_LINKS.map((link) => (
+          <p className="hidden md:block flex-1 text-center font-display font-600 text-[0.7rem] uppercase tracking-[0.18em]">
+            Protecting What Matters. Supporting What Builds Your Future.
+          </p>
+
+          <div className="flex items-center gap-5 text-[0.7rem] font-display font-700 uppercase tracking-widest">
             <Link
-              key={link.href}
-              href={link.href}
-              className="px-4 py-2 rounded-full text-sm font-body font-semibold text-foreground/80 hover:text-primary hover:bg-primary/8 transition-colors"
+              href="/client-login"
+              className="inline-flex items-center gap-1.5 transition-colors hover:text-gold-light"
             >
-              {link.label}
+              <Lock className="h-3.5 w-3.5" />
+              Client Login
             </Link>
-          ))}
+            <Link
+              href="/pay"
+              className="inline-flex items-center gap-1.5 transition-colors hover:text-gold-light"
+            >
+              <CreditCard className="h-3.5 w-3.5" />
+              Pay My Bill
+            </Link>
+          </div>
         </div>
+      </div>
 
-        {/* CTA + phone */}
-        <div className="hidden lg:flex items-center gap-3">
-          <a
-            href={SITE.phoneHref}
-            className="inline-flex items-center gap-2 text-sm font-body font-bold text-foreground hover:text-accent transition-colors"
-          >
-            <Phone className="h-4 w-4" />
-            {SITE.phone}
-          </a>
-          <Link href="/quote" className="btn-primary !py-2.5 !px-6 text-sm">
-            Get a Quote
+      {/* Main nav — white, border-bottom */}
+      <nav className="border-b border-gray-200 bg-white">
+        <div className="container-wide flex h-20 items-center justify-between gap-6">
+          {/* Logo */}
+          <Link href="/" aria-label={`${SITE.name} home`} className="flex items-center">
+            <img
+              src="/images/lumberjack-logo.png"
+              alt={SITE.name}
+              className="h-16 w-auto"
+            />
           </Link>
-        </div>
 
-        {/* Mobile toggle */}
-        <button
-          className="lg:hidden inline-flex items-center justify-center h-11 w-11 rounded-xl bg-white border border-border shadow-card text-foreground"
-          aria-label="Toggle menu"
-          aria-expanded={open}
-          onClick={() => setOpen((v) => !v)}
-        >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
+          {/* Desktop nav links */}
+          <div className="hidden lg:flex items-center gap-8">
+            {NAV.map((item) => {
+              const active = item.href === "/";
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={[
+                    "inline-flex items-center gap-1 font-display font-700 text-sm uppercase tracking-wide text-navy-dark transition-colors hover:text-gold-dark",
+                    active
+                      ? "border-b-2 border-gold pb-0.5"
+                      : "border-b-2 border-transparent pb-0.5",
+                  ].join(" ")}
+                >
+                  {item.label}
+                  {item.dropdown && <ChevronDown className="h-4 w-4" />}
+                </Link>
+              );
+            })}
+          </div>
+
+          {/* Mobile toggle */}
+          <button
+            className="lg:hidden inline-flex h-11 w-11 items-center justify-center rounded-sm border-2 border-navy-dark text-navy-dark"
+            aria-label="Toggle menu"
+            aria-expanded={open}
+            onClick={() => setOpen((v) => !v)}
+          >
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
       </nav>
 
-      {/* Mobile menu */}
+      {/* Mobile full-screen overlay — dark navy, gold links */}
       <div
-        className={cn(
-          "lg:hidden fixed inset-0 top-[72px] bg-background transition-all duration-300",
-          open ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
-        )}
+        className={[
+          "lg:hidden fixed inset-0 z-50 bg-[#0F1C38] transition-opacity duration-300",
+          open ? "opacity-100 visible" : "pointer-events-none invisible opacity-0",
+        ].join(" ")}
       >
-        <div className="container-wide py-8 flex flex-col gap-2">
-          {NAV_LINKS.map((link, i) => (
+        <div className="container-wide flex h-20 items-center justify-between">
+          <img
+            src="/images/lumberjack-logo.png"
+            alt={SITE.name}
+            className="h-12 w-auto"
+          />
+          <button
+            className="inline-flex h-11 w-11 items-center justify-center rounded-sm border-2 border-gold text-gold"
+            aria-label="Close menu"
+            onClick={() => setOpen(false)}
+          >
+            <X className="h-5 w-5" />
+          </button>
+        </div>
+
+        <div className="container-wide mt-6 flex flex-col gap-1">
+          {NAV.map((item) => (
             <Link
-              key={link.href}
-              href={link.href}
+              key={item.href}
+              href={item.href}
               onClick={() => setOpen(false)}
-              className="px-5 py-4 rounded-2xl text-lg font-display font-semibold text-foreground hover:bg-paper-warm transition-colors"
-              style={{ transitionDelay: `${i * 30}ms` }}
+              className="inline-flex items-center gap-2 border-b border-white/10 py-4 font-display font-700 text-2xl uppercase tracking-wide text-[#E8B923] transition-colors hover:text-gold-light"
             >
-              {link.label}
+              {item.label}
+              {item.dropdown && <ChevronDown className="h-5 w-5" />}
             </Link>
           ))}
-          <div className="mt-4 flex flex-col gap-3">
-            <a href={SITE.phoneHref} className="btn-secondary w-full">
-              <Phone className="h-4 w-4" />
-              {SITE.phone}
-            </a>
-            <Link href="/quote" onClick={() => setOpen(false)} className="btn-primary w-full">
-              Get a Free Quote
+
+          <div className="mt-6 flex flex-col gap-4 text-sm font-display font-700 uppercase tracking-widest text-[#E8B923]">
+            <Link
+              href="/client-login"
+              onClick={() => setOpen(false)}
+              className="inline-flex items-center gap-2"
+            >
+              <Lock className="h-4 w-4" />
+              Client Login
+            </Link>
+            <Link
+              href="/pay"
+              onClick={() => setOpen(false)}
+              className="inline-flex items-center gap-2"
+            >
+              <CreditCard className="h-4 w-4" />
+              Pay My Bill
             </Link>
           </div>
         </div>

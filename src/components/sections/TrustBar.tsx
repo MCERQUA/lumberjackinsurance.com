@@ -1,30 +1,26 @@
-"use client";
+import { Home, Car, Building2, Wheat, Users } from "lucide-react";
 
-import { CREDENTIALS } from "@/lib/site";
-import {
-  MapPin, CalendarCheck, HardHat, Timer, Zap, Award,
-} from "lucide-react";
-
-const ICONS = { MapPin, CalendarCheck, HardHat, Timer, Zap, Award } as const;
+const COVERAGES = [
+  { icon: Home, label: "HOME INSURANCE" },
+  { icon: Car, label: "AUTO INSURANCE" },
+  { icon: Building2, label: "BUSINESS INSURANCE" },
+  { icon: Wheat, label: "FARM & RANCH" },
+  { icon: Users, label: "LIFE INSURANCE" },
+];
 
 export function TrustBar() {
   return (
-    <section className="relative bg-white border-y border-border py-6">
+    <section className="bg-[#0F1C38] py-4 border-y-2 border-[#E8B923]">
       <div className="container-wide">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-6 gap-y-4">
-          {CREDENTIALS.map((c) => {
-            const Icon = ICONS[c.icon as keyof typeof ICONS] ?? Award;
-            return (
-              <div key={c.label} className="flex items-center gap-2.5 justify-center md:justify-start">
-                <span className="inline-flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg bg-primary/8 text-primary">
-                  <Icon className="h-4.5 w-4.5" strokeWidth={2.2} />
-                </span>
-                <span className="text-[0.82rem] font-body font-semibold text-foreground/80 leading-tight">
-                  {c.label}
-                </span>
-              </div>
-            );
-          })}
+        <div className="flex flex-wrap justify-center sm:justify-evenly gap-x-6 gap-y-3">
+          {COVERAGES.map(({ icon: Icon, label }) => (
+            <div key={label} className="flex items-center gap-2">
+              <Icon className="h-5 w-5 text-[#E8B923]" />
+              <span className="font-display font-bold text-white text-sm uppercase tracking-wider">
+                {label}
+              </span>
+            </div>
+          ))}
         </div>
       </div>
     </section>

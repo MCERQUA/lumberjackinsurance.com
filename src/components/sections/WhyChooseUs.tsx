@@ -1,70 +1,114 @@
-"use client";
+import Link from "next/link";
+import { Check, Phone } from "lucide-react";
 
-import { ShieldCheck } from "lucide-react";
-import { WHY_CHOOSE } from "@/lib/content";
-import { FadeIn } from "@/components/animations/FadeIn";
+const REASONS = [
+  "Local agents who care",
+  "Coverage tailored to your needs",
+  "Fast, reliable claims service",
+  "Competitive rates",
+  "Proudly serving our community",
+];
+
+const COVERAGE_TYPES = [
+  "Home Insurance",
+  "Auto Insurance",
+  "Business Insurance",
+  "Farm & Ranch",
+  "Life Insurance",
+];
 
 export function WhyChooseUs() {
   return (
-    <section id="why" className="relative bg-warm-radial-sand py-20 md:py-28">
-      <div className="container-wide">
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
-          {/* Sticky heading column */}
-          <FadeIn className="lg:col-span-5 lg:sticky lg:top-28">
-            <span className="eyebrow">
-              <span className="h-px w-8 bg-accent" />
-              Why Flagstaff trusts us
-            </span>
-            <h2 className="mt-3 h-section">
-              The coverage gaps that{" "}
-              <span className="text-accent">cost local families &amp; businesses</span> the most.
-            </h2>
-            <p className="mt-4 lead">
-              A big-box carrier sells you the same template whether you live in Phoenix
-              or up here at 7,000 feet — and that&apos;s the problem. Wildfire, snow load,
-              monsoon water, and elk on the road are real exposures generic policies miss.
-              As a local independent agent, we shop multiple carriers and build coverage
-              around how Flagstaff actually lives.
-            </p>
+    <section id="why" className="grid md:grid-cols-3">
+      {/* Left column — Why Choose */}
+      <div className="bg-[#F4F4F4] p-8 md:p-10">
+        <h3 className="font-display font-extrabold uppercase text-2xl text-[#0F1C38] leading-tight">
+          Why Choose Lumberjack?
+        </h3>
+        <ul className="mt-6 space-y-3">
+          {REASONS.map((reason) => (
+            <li key={reason} className="flex items-start gap-3">
+              <Check className="h-5 w-5 flex-shrink-0 text-[#E8B923] mt-0.5" strokeWidth={3} />
+              <span className="font-body text-[#0F1C38] text-base">{reason}</span>
+            </li>
+          ))}
+        </ul>
+        <Link
+          href="/about"
+          className="inline-block mt-8 border-2 border-[#0F1C38] text-[#0F1C38] px-6 py-3 font-display font-bold uppercase text-sm hover:bg-[#0F1C38] hover:text-white transition"
+        >
+          Learn More About Us
+        </Link>
+      </div>
 
-            <div className="mt-8 rounded-3xl bg-white border border-border shadow-card p-6">
-              <div className="flex items-start gap-3">
-                <span className="flex-shrink-0 inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-forest-gradient text-white">
-                  <ShieldCheck className="h-6 w-6" strokeWidth={2.2} />
-                </span>
-                <div>
-                  <p className="font-display font-semibold text-foreground">
-                    A real local agent
-                  </p>
-                  <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
-                    Meet Jack — we&apos;re independent and based in Northern Arizona, so
-                    we know Flagstaff weather, Flagstaff homes, and we shop multiple
-                    carriers to get you covered right. Jack&apos;s got your back.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </FadeIn>
+      {/* Center column — Quote form */}
+      <div className="bg-[#0F1C38] p-8 md:p-10">
+        <h3 className="font-display font-extrabold uppercase text-2xl text-[#E8B923]">
+          Get a Quote
+        </h3>
+        <p className="mt-2 font-body text-sm text-white/80">It&apos;s fast, free and easy.</p>
 
-          {/* Reasons grid */}
-          <div className="lg:col-span-7 grid sm:grid-cols-2 gap-5">
-            {WHY_CHOOSE.map((item, i) => (
-              <FadeIn key={item.title} delay={(i % 2) * 0.06}>
-                <div className="h-full rounded-3xl bg-white border border-border p-6 shadow-card hover:shadow-lift hover:-translate-y-1 transition-all duration-300">
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-accent/10 text-accent mb-4">
-                    <item.icon className="h-6 w-6" strokeWidth={2.2} />
-                  </div>
-                  <h3 className="font-display font-semibold text-lg text-foreground leading-tight">
-                    {item.title}
-                  </h3>
-                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
-              </FadeIn>
+        <form name="quote-quick" data-netlify="true" method="POST" className="mt-6 space-y-4">
+          <input type="hidden" name="form-name" value="quote-quick" />
+
+          <select
+            name="coverage-type"
+            className="w-full py-3 px-4 bg-[#0F1C38] border border-white/40 text-white font-body focus:outline-none focus:border-[#E8B923]"
+            defaultValue=""
+            required
+          >
+            <option value="" disabled>
+              Select Coverage Type
+            </option>
+            {COVERAGE_TYPES.map((type) => (
+              <option key={type} value={type}>
+                {type}
+              </option>
             ))}
-          </div>
+          </select>
+
+          <input
+            type="text"
+            name="zip"
+            placeholder="ZIP Code"
+            className="w-full py-3 px-4 bg-[#0F1C38] border border-white/40 text-white placeholder:text-white/50 font-body focus:outline-none focus:border-[#E8B923]"
+            required
+          />
+
+          <button
+            type="submit"
+            className="w-full py-3 bg-[#E8B923] text-[#0F1C38] font-display font-bold uppercase text-sm hover:brightness-95 transition"
+          >
+            Get Started
+          </button>
+        </form>
+
+        <div className="mt-6">
+          <p className="font-body text-sm text-white/80">Prefer to talk to someone?</p>
+          <a
+            href="tel:+18449675247"
+            className="mt-2 inline-flex items-center gap-2 font-display font-bold text-white text-lg hover:text-[#E8B923] transition"
+          >
+            <Phone className="h-5 w-5 text-[#E8B923]" />
+            844-967-5247
+          </a>
         </div>
+      </div>
+
+      {/* Right column — Built on trust */}
+      <div className="bg-white p-8 md:p-10">
+        <h3 className="font-display font-extrabold uppercase text-2xl text-[#0F1C38] leading-tight">
+          Built on Trust.
+          <br />
+          Focused on You.
+        </h3>
+        <p className="mt-4 font-body text-base text-[#0F1C38]/70">
+          We&apos;re here to protect what you&apos;ve built and help you keep moving forward
+          with confidence.
+        </p>
+        <p className="mt-6 font-display italic text-xl text-[#E8B923]">
+          – The LumberJack Team
+        </p>
       </div>
     </section>
   );

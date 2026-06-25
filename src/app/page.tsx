@@ -5,9 +5,7 @@ import { TrustBar } from "@/components/sections/TrustBar";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { Process } from "@/components/sections/Process";
-import { CoverageMap } from "@/components/sections/CoverageMap";
 import { Stats } from "@/components/sections/Stats";
-import { FAQ } from "@/components/sections/FAQ";
 import { BlogPreview } from "@/components/sections/BlogPreview";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { getAllPosts } from "@/lib/blog";
@@ -51,11 +49,9 @@ export default function HomePage() {
         <TrustBar />
         <ServicesGrid />
         <WhyChooseUs />
-        <Process />
-        <CoverageMap />
         <Stats />
+        <Process />
         <BlogPreview posts={posts} />
-        <FAQ />
         <FinalCTA />
       </main>
       <Footer />

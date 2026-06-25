@@ -1,57 +1,65 @@
-"use client";
-
 import Link from "next/link";
-import { ArrowRight, Phone } from "lucide-react";
-import { FadeIn } from "@/components/animations/FadeIn";
-import { SITE } from "@/lib/site";
+
+const NEWS = [
+  { title: "Spring Storms: Is Your Home Protected?", date: "May 1, 2025" },
+  { title: "5 Insurance Tips for New Homeowners", date: "April 15, 2025" },
+  { title: "We Support Local Youth Sports!", date: "April 1, 2025" },
+];
 
 export function FinalCTA() {
   return (
-    <section className="relative overflow-hidden bg-forest-gradient py-20 md:py-28">
-      {/* warm radial + pine silhouette accents */}
+    <section className="grid md:grid-cols-5">
+      {/* Left column — Community / Sports */}
       <div
-        className="absolute inset-0 opacity-60"
-        style={{
-          background:
-            "radial-gradient(circle at 80% 20%, rgba(154,52,18,0.25) 0%, transparent 50%), radial-gradient(circle at 10% 90%, rgba(20,83,45,0.30) 0%, transparent 50%)",
-        }}
-        aria-hidden
-      />
-      <div className="absolute top-0 inset-x-0 h-px pine-divider" aria-hidden />
+        className="md:col-span-3 p-12 min-h-[320px] flex flex-col justify-center"
+        style={{ background: "linear-gradient(135deg, #0F1C38 0%, #1B2A4A 100%)" }}
+      >
+        <h2 className="font-display font-extrabold uppercase text-4xl text-[#E8B923] leading-tight">
+          Community.
+          <br />
+          Teamwork.
+          <br />
+          Trust.
+        </h2>
+        <p className="mt-4 max-w-sm font-body text-base text-white/80">
+          We believe in hard work, doing things right, and standing by our customers—just
+          like a team.
+        </p>
+        <Link
+          href="/about"
+          className="mt-6 inline-flex w-fit border-2 border-white text-white px-6 py-3 font-display font-bold uppercase text-sm hover:bg-white hover:text-[#0F1C38] transition"
+        >
+          See How We Give Back
+        </Link>
+      </div>
 
-      <div className="container-wide relative">
-        <FadeIn>
-          <div className="max-w-3xl mx-auto text-center">
-            <span className="pill !bg-white/10 !text-white !border-white/20">
-              <span className="h-1.5 w-1.5 rounded-full bg-accent-light animate-pulse" />
-              15-minute quote · 2-hour claims
-            </span>
-            <h2 className="mt-5 font-display font-semibold text-white text-3xl md:text-4xl lg:text-5xl leading-[1.08] tracking-tight">
-              Life in the high country is good.{" "}
-              <span className="bg-gradient-to-r from-white via-forest-100 to-accent-light bg-clip-text text-transparent">
-                Make sure you&apos;re covered.
-              </span>
-            </h2>
-            <p className="mt-5 text-lg text-white/85 leading-relaxed">
-              Get a real quote from a local Flagstaff agent — home, auto, business,
-              landlord, and renters coverage, all in plain English. We&apos;ll shop it
-              for you and have an answer fast, usually in about a day.
-            </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-              <Link href="/quote" className="btn-accent text-base">
-                Get a Free Quote
-                <ArrowRight className="h-5 w-5" />
-              </Link>
-              <a
-                href={SITE.phoneHref}
-                className="btn-secondary !bg-white/10 !text-white !border-white/25 hover:!bg-white/20 text-base"
+      {/* Right column — Latest News */}
+      <div className="md:col-span-2 p-8 bg-[#F4F4F4]">
+        <h3 className="font-display font-extrabold uppercase text-xl text-[#0F1C38] tracking-wider">
+          Latest News
+        </h3>
+        <div className="w-12 h-1 bg-[#E8B923] mt-2 mb-4" />
+
+        <ul className="space-y-5">
+          {NEWS.map((item) => (
+            <li key={item.title}>
+              <Link
+                href="/blog"
+                className="font-display font-semibold text-[#0F1C38] hover:text-[#E8B923] transition"
               >
-                <Phone className="h-5 w-5" />
-                {SITE.phone}
-              </a>
-            </div>
-          </div>
-        </FadeIn>
+                {item.title}
+              </Link>
+              <p className="mt-1 font-display text-xs uppercase text-[#E8B923]">{item.date}</p>
+            </li>
+          ))}
+        </ul>
+
+        <Link
+          href="/blog"
+          className="mt-6 inline-block border-2 border-[#0F1C38] text-[#0F1C38] px-6 py-3 font-display font-bold uppercase text-sm hover:bg-[#0F1C38] hover:text-white transition"
+        >
+          View All Articles
+        </Link>
       </div>
     </section>
   );
