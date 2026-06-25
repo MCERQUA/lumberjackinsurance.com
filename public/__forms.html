@@ -2,20 +2,25 @@
 <html lang="en">
 <head><meta charset="UTF-8"><title>Netlify Forms</title><meta name="robots" content="noindex, nofollow"></head>
 <body>
+  <!-- Detection stubs — fields MUST mirror the real forms or Netlify drops unlisted fields. -->
   <form name="quote" netlify netlify-honeypot="bot-field" hidden>
     <input type="hidden" name="form-name" value="quote">
-    <input name="bot-field"><input name="firstName"><input name="lastName">
-    <input name="email" type="email"><input name="phone" type="tel">
-    <input name="businessName"><input name="state">
-    <input name="coverageType"><input name="annualRevenue"><input name="yearsInBusiness">
+    <input name="bot-field">
+    <input name="name"><input name="email" type="email"><input name="phone" type="tel">
+    <input name="town"><input name="coverage"><input name="currentCoverage">
     <textarea name="message"></textarea>
     <button type="submit">Submit</button>
   </form>
   <form name="contact" netlify netlify-honeypot="bot-field" hidden>
     <input type="hidden" name="form-name" value="contact">
-    <input name="bot-field"><input name="name"><input name="firstName"><input name="lastName">
-    <input name="email" type="email"><input name="phone" type="tel">
+    <input name="bot-field">
+    <input name="name"><input name="email" type="email"><input name="phone" type="tel">
     <input name="subject"><textarea name="message"></textarea>
+    <button type="submit">Submit</button>
+  </form>
+  <form name="quote-quick" netlify hidden>
+    <input type="hidden" name="form-name" value="quote-quick">
+    <input name="coverage-type"><input name="zip">
     <button type="submit">Submit</button>
   </form>
 </body>

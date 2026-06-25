@@ -60,7 +60,7 @@ export function WhyChooseUs() {
         </h3>
         <p className="mt-2 font-body text-sm text-white/80">It&apos;s fast, free and easy.</p>
 
-        <form name="quote-quick" data-netlify="true" method="POST" className="mt-6 space-y-4">
+        <form name="quote-quick" data-netlify="true" method="POST" action="/thank-you" className="mt-6 space-y-4">
           <input type="hidden" name="form-name" value="quote-quick" />
 
           <select
