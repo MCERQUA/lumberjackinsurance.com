@@ -6,13 +6,9 @@ import { ServicesGrid } from "@/components/sections/ServicesGrid";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { Process } from "@/components/sections/Process";
 import { Stats } from "@/components/sections/Stats";
-import { BlogPreview } from "@/components/sections/BlogPreview";
 import { FinalCTA } from "@/components/sections/FinalCTA";
-import { getAllPosts } from "@/lib/blog";
 
 export default function HomePage() {
-  const posts = getAllPosts().slice(0, 3);
-
   return (
     <>
       <Navbar />
@@ -23,7 +19,6 @@ export default function HomePage() {
         <WhyChooseUs />
         <Stats />
         <Process />
-        <BlogPreview posts={posts} />
         <FinalCTA />
       </main>
       <Footer />
