@@ -50,40 +50,40 @@ export default function ContactPage() {
               <FadeIn direction="right" className="lg:col-span-2 space-y-4">
                 <a
                   href={SITE.phoneHref}
-                  className="block p-6 rounded-3xl bg-forest-gradient text-white shadow-card hover:shadow-lift transition-all"
+                  className="block p-6 rounded-3xl bg-[#0F1C38] text-white shadow-card hover:shadow-lift transition-all"
                 >
-                  <Phone className="h-7 w-7 text-accent-light mb-3" />
+                  <Phone className="h-7 w-7 text-[#E8B923] mb-3" />
                   <p className="text-xs uppercase tracking-wider text-white/70 mb-1">Call or text</p>
-                  <p className="font-display font-semibold text-2xl">{SITE.phone}</p>
+                  <p className="font-display font-bold text-2xl">{SITE.phone}</p>
                   <p className="text-sm text-white/75 mt-1">Serving Flagstaff &amp; Northern Arizona</p>
                 </a>
 
                 <a
                   href={`mailto:${SITE.email}`}
-                  className="block p-6 rounded-3xl bg-white border border-border shadow-card hover:shadow-lift transition-all"
+                  className="block p-6 rounded-3xl bg-white border border-gray-200 shadow-card hover:border-[#E8B923] hover:shadow-lift transition-all"
                 >
-                  <Mail className="h-7 w-7 text-accent mb-3" />
-                  <p className="text-xs uppercase tracking-wider text-muted-foreground mb-1">Email</p>
-                  <p className="font-body font-semibold text-foreground break-all">{SITE.email}</p>
+                  <Mail className="h-7 w-7 text-[#E8B923] mb-3" />
+                  <p className="text-xs uppercase tracking-wider text-[#0F1C38]/60 mb-1">Email</p>
+                  <p className="font-body font-semibold text-[#0F1C38] break-all">{SITE.email}</p>
                 </a>
 
-                <div className="p-6 rounded-3xl bg-white border border-border shadow-card">
-                  <MapPin className="h-7 w-7 text-accent mb-3" />
-                  <p className="text-xs uppercase tracking-wider text-muted-foreground mb-1">Service area</p>
-                  <p className="font-body font-semibold text-foreground">
+                <div className="p-6 rounded-3xl bg-white border border-gray-200 shadow-card">
+                  <MapPin className="h-7 w-7 text-[#E8B923] mb-3" />
+                  <p className="text-xs uppercase tracking-wider text-[#0F1C38]/60 mb-1">Service area</p>
+                  <p className="font-body font-semibold text-[#0F1C38]">
                     Flagstaff &amp; Northern Arizona
                   </p>
-                  <p className="text-sm text-muted-foreground mt-1">
+                  <p className="text-sm text-[#0F1C38]/70 mt-1">
                     Sedona · Williams · Cottonwood · Camp Verde · Page · Munds Park · Doney Park &amp; the
                     surrounding communities
                   </p>
                 </div>
 
-                <div className="p-6 rounded-3xl bg-white border border-border shadow-card">
-                  <Clock className="h-7 w-7 text-accent mb-3" />
-                  <p className="text-xs uppercase tracking-wider text-muted-foreground mb-1">Hours</p>
-                  <p className="font-body font-semibold text-foreground">{SITE.hours}</p>
-                  <p className="text-sm text-muted-foreground mt-1">Claims help available 24/7</p>
+                <div className="p-6 rounded-3xl bg-white border border-gray-200 shadow-card">
+                  <Clock className="h-7 w-7 text-[#E8B923] mb-3" />
+                  <p className="text-xs uppercase tracking-wider text-[#0F1C38]/60 mb-1">Hours</p>
+                  <p className="font-body font-semibold text-[#0F1C38]">{SITE.hours}</p>
+                  <p className="text-sm text-[#0F1C38]/70 mt-1">Claims help available 24/7</p>
                 </div>
               </FadeIn>
 
@@ -95,7 +95,7 @@ export default function ContactPage() {
                   data-netlify="true"
                   netlify-honeypot="bot-field"
                   action="/thank-you"
-                  className="rounded-3xl p-8 md:p-10 space-y-6 bg-white border border-border shadow-lift"
+                  className="rounded-3xl p-8 md:p-10 space-y-6 bg-white border border-gray-200 shadow-lift"
                 >
                   <input type="hidden" name="form-name" value="contact" />
                   <p className="hidden">
@@ -156,7 +156,7 @@ export default function ContactPage() {
 
                   <button
                     type="submit"
-                    className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-forest-gradient text-white font-body font-bold rounded-xl shadow-card hover:shadow-lift transition-all"
+                    className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-[#E8B923] text-[#0F1C38] font-display font-bold uppercase tracking-widest rounded-xl shadow-card hover:bg-[#d4a91a] hover:shadow-lift transition-all"
                   >
                     Send Message
                     <ArrowRight className="w-5 h-5" />

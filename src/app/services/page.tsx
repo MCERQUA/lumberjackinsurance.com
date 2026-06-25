@@ -42,17 +42,18 @@ export default function ServicesPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <Navbar />
       <main>
-        <section className="relative bg-topo pt-32 pb-12 md:pt-40 md:pb-16">
+        <section
+          className="relative pt-32 pb-12 md:pt-40 md:pb-16"
+          style={{ background: "radial-gradient(ellipse at 60% 30%, #1B3A6B 0%, #0F1C38 60%)" }}
+        >
           <div className="container-tight text-center">
             <FadeIn>
-              <span className="pill-accent">Coverage lines</span>
-              <h1 className="mt-5 font-display font-semibold text-foreground text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight">
-                Hometown insurance,{" "}
-                <span className="bg-gradient-to-r from-primary via-forest-500 to-accent bg-clip-text text-transparent">
-                  line by line
-                </span>
+              <span className="pill-primary">Coverage Lines</span>
+              <h1 className="mt-5 font-display font-700 uppercase text-white text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight">
+                Hometown Insurance,{" "}
+                <span className="text-gold">Line by Line</span>
               </h1>
-              <p className="mt-5 lead max-w-2xl mx-auto">
+              <p className="mt-5 lead max-w-2xl mx-auto !text-white/70">
                 Five coverage lines for Flagstaff &amp; Northern Arizona — home, auto, business,
                 landlord, and renters. Local agents who shop multiple carriers for you.
               </p>
@@ -83,7 +84,7 @@ export default function ServicesPage() {
                       >
                         <Icon className="h-6 w-6" strokeWidth={2.2} />
                       </div>
-                      <h2 className={`font-display font-semibold text-lg leading-tight mb-1.5 ${isFeatured ? "text-white" : "text-foreground"}`}>
+                      <h2 className={`font-display font-700 uppercase tracking-wide text-lg leading-tight mb-1.5 ${isFeatured ? "text-white" : "text-foreground"}`}>
                         {service.title}
                       </h2>
                       <p className={`text-sm leading-relaxed ${isFeatured ? "text-white/85" : "text-muted-foreground"}`}>

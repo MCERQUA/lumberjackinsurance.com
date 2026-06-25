@@ -115,30 +115,33 @@ export default async function ServiceDetailPage({ params }: Props) {
       <Navbar />
       <main>
         {/* Hero */}
-        <section className="relative bg-topo pt-32 pb-16 md:pt-40 md:pb-20">
+        <section
+          className="relative pt-32 pb-16 md:pt-40 md:pb-20"
+          style={{ background: "radial-gradient(ellipse at 65% 30%, #1B3A6B 0%, #0F1C38 60%)" }}
+        >
           <div className="container-wide">
             <FadeIn>
               <Link
                 href="/services"
-                className="inline-flex items-center gap-1.5 text-sm font-body font-semibold text-accent hover:gap-2.5 transition-all mb-6"
+                className="inline-flex items-center gap-1.5 text-sm font-display font-700 uppercase tracking-widest text-gold hover:gap-2.5 transition-all mb-6"
               >
                 <ArrowLeft className="h-4 w-4" />
-                All coverage lines
+                All Coverage Lines
               </Link>
             </FadeIn>
             <div className="grid lg:grid-cols-12 gap-10 items-center">
               <FadeIn className="lg:col-span-7">
-                <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-forest-gradient text-white mb-5 shadow-card">
+                <div className="inline-flex h-14 w-14 items-center justify-center rounded-sm bg-gold text-navy-dark mb-5 shadow-card">
                   <Icon className="h-7 w-7" strokeWidth={2.2} />
                 </div>
-                <span className="pill-primary">Coverage line</span>
-                <h1 className="mt-4 font-display font-semibold text-foreground text-4xl md:text-5xl leading-[1.08] tracking-tight">
+                <span className="pill-primary">Coverage Line</span>
+                <h1 className="mt-4 font-display font-700 uppercase text-white text-4xl md:text-5xl leading-[1.08] tracking-tight">
                   {service.title}{" "}
-                  <span className="bg-gradient-to-r from-primary via-forest-500 to-accent bg-clip-text text-transparent">
+                  <span className="text-gold">
                     in Flagstaff &amp; Northern Arizona
                   </span>
                 </h1>
-                {detail && <p className="mt-5 lead max-w-2xl">{detail.heroBlurb}</p>}
+                {detail && <p className="mt-5 lead max-w-2xl !text-white/70">{detail.heroBlurb}</p>}
                 <div className="mt-7 flex flex-col sm:flex-row gap-3">
                   <Link href="/quote" className="btn-primary">
                     Get a quote
