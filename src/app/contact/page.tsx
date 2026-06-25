@@ -19,25 +19,26 @@ export const metadata: Metadata = {
 };
 
 const inputClass =
-  "w-full px-4 py-3 rounded-xl border border-border bg-white text-foreground placeholder-muted-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all text-sm";
-const labelClass = "block text-sm font-body font-semibold text-foreground mb-1.5";
+  "w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-[#0F1C38] placeholder-[#0F1C38]/40 focus:outline-none focus:border-[#E8B923] focus:ring-2 focus:ring-[#E8B923]/30 transition-all text-sm";
+const labelClass = "block text-sm font-body font-semibold text-[#0F1C38] mb-1.5";
 
 export default function ContactPage() {
   return (
     <>
       <Navbar />
       <main>
-        <section className="relative bg-topo pt-32 pb-20">
+        <section className="relative bg-[#0F1C38] pt-32 pb-20">
           <div className="container-wide">
             <FadeIn className="text-center max-w-2xl mx-auto mb-12">
-              <span className="pill-accent">Get in touch</span>
-              <h1 className="mt-5 font-display font-semibold text-foreground text-4xl md:text-5xl tracking-tight">
+              <span className="inline-flex items-center gap-2 text-xs font-display font-bold uppercase tracking-widest text-[#E8B923]">
+                <span className="h-px w-8 bg-[#E8B923]" />
+                Get in touch
+              </span>
+              <h1 className="mt-5 font-display font-bold uppercase text-white text-4xl md:text-5xl tracking-tight">
                 Talk to a{" "}
-                <span className="bg-gradient-to-r from-primary via-forest-500 to-accent bg-clip-text text-transparent">
-                  local Flagstaff agent
-                </span>
+                <span className="text-[#E8B923]">local Flagstaff agent</span>
               </h1>
-              <p className="mt-5 lead">
+              <p className="mt-5 text-lg text-white/80 leading-relaxed">
                 Questions about your home, car, business, rental, or a renters policy? Call us —
                 usually answered live by a real person here in Northern Arizona. Or send a note and
                 we&apos;ll get back to you the same business day.

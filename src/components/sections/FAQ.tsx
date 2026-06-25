@@ -68,7 +68,7 @@ export function FAQ({
                     <span
                       className={cn(
                         "flex-shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full transition-colors",
-                        isOpen ? "bg-primary text-white" : "bg-paper-warm text-accent"
+                        isOpen ? "bg-navy-dark text-white" : "bg-paper-warm text-accent"
                       )}
                     >
                       {isOpen ? <Minus className="h-4 w-4" /> : <Plus className="h-4 w-4" />}

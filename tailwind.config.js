@@ -19,8 +19,11 @@ module.exports = {
           light: "#F5CB50",
         },
         primary: { DEFAULT: "#E8B923", foreground: "#0F1C38" },
-        accent: { DEFAULT: "#0F1C38", foreground: "#FFFFFF" },
-        paper: { ink: "#0F1C38" },
+        accent: { DEFAULT: "#0F1C38", light: "#F5CB50", foreground: "#FFFFFF" },
+        // Legacy "forest" alias remapped to the navy ramp so old gradient-text
+        // spans (from-primary via-forest-500 to-accent) render gold→navy.
+        forest: { 100: "#243558", 500: "#1B2A4A", 700: "#0F1C38" },
+        paper: { warm: "#F4F4F4", ink: "#0F1C38" },
       },
       fontFamily: {
         display: ["var(--font-display)", "Barlow Condensed", "Impact", "ui-sans-serif"],

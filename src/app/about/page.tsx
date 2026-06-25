@@ -49,19 +49,19 @@ export default function AboutPage() {
       <Navbar />
       <main>
         {/* Hero */}
-        <section className="relative bg-topo pt-32 pb-16 md:pt-40 md:pb-20">
+        <section className="relative bg-[#0F1C38] pt-32 pb-16 md:pt-40 md:pb-20">
           <div className="container-wide">
             <div className="grid lg:grid-cols-12 gap-10 items-center">
               <FadeIn className="lg:col-span-7">
-                <span className="pill-accent">About us</span>
-                <h1 className="mt-5 font-display font-semibold text-foreground text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight">
+                <span className="inline-flex items-center gap-2 text-xs font-display font-bold uppercase tracking-widest text-[#E8B923]">
+                  <span className="h-px w-8 bg-[#E8B923]" />
+                  About us
+                </span>
+                <h1 className="mt-5 font-display font-bold uppercase text-white text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight">
                   Insurance for your life{" "}
-                  <span className="bg-gradient-to-r from-primary via-forest-500 to-accent bg-clip-text text-transparent">
-                    right here in Flagstaff
-                  </span>
-                  .
+                  <span className="text-[#E8B923]">right here in Flagstaff</span>.
                 </h1>
-                <p className="mt-5 lead max-w-2xl">
+                <p className="mt-5 text-lg text-white/80 leading-relaxed max-w-2xl">
                   Lumberjack Insurance is a hometown agency protecting Flagstaff-area
                   families&apos; homes, cars, and businesses across Northern Arizona. We&apos;re
                   a program of Contractors Choice Agency, serving folks since 2005 — neighbors
@@ -78,21 +78,21 @@ export default function AboutPage() {
 
               <FadeIn direction="left" className="lg:col-span-5">
                 <div className="relative">
-                  <div className="rounded-t-[10rem] rounded-b-3xl overflow-hidden border-4 border-white shadow-lift">
+                  <div className="rounded-t-[10rem] rounded-b-3xl overflow-hidden border-4 border-[#E8B923] shadow-lift">
                     <img
                       src="/images/quote-cta.jpg"
                       alt="Flagstaff neighborhood under ponderosa pines with the San Francisco Peaks beyond"
                       className="w-full h-[340px] md:h-[420px] object-cover"
                     />
                   </div>
-                  <div className="absolute -bottom-5 -left-4 bg-white rounded-2xl shadow-lift border border-border p-5 max-w-[14rem]">
+                  <div className="absolute -bottom-5 -left-4 bg-white rounded-2xl shadow-lift border border-gray-200 p-5 max-w-[14rem]">
                     <div className="flex items-center gap-2.5">
-                      <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-forest-gradient text-white">
+                      <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-[#0F1C38] text-[#E8B923]">
                         <TreePine className="h-5 w-5" />
                       </span>
                       <div>
-                        <p className="font-display font-semibold text-foreground text-lg leading-none">Est. 2005</p>
-                        <p className="text-xs text-muted-foreground mt-1">Contractors Choice Agency</p>
+                        <p className="font-display font-bold text-[#0F1C38] text-lg leading-none">Est. 2005</p>
+                        <p className="text-xs text-[#0F1C38]/60 mt-1">Contractors Choice Agency</p>
                       </div>
                     </div>
                   </div>
@@ -103,18 +103,18 @@ export default function AboutPage() {
         </section>
 
         {/* Why we're different */}
-        <section className="bg-background py-20 md:py-24">
+        <section className="bg-white py-20 md:py-24">
           <div className="container-wide">
             <FadeIn className="max-w-3xl mb-12">
-              <span className="eyebrow">
-                <span className="h-px w-8 bg-accent" />
+              <span className="inline-flex items-center gap-2 text-xs font-display font-bold uppercase tracking-widest text-[#E8B923]">
+                <span className="h-px w-8 bg-[#E8B923]" />
                 What makes us different
               </span>
-              <h2 className="mt-3 h-section">
+              <h2 className="mt-3 font-display font-bold uppercase text-[#0F1C38] text-3xl md:text-4xl leading-tight">
                 A big-company policy with{" "}
-                <span className="text-primary">a hometown agent</span>.
+                <span className="text-[#E8B923]">a hometown agent</span>.
               </h2>
-              <p className="mt-4 lead">
+              <p className="mt-4 text-lg text-[#0F1C38]/70 leading-relaxed">
                 Most agencies treat Flagstaff like any other dot on the map. We don&apos;t —
                 we live here, we drive these roads, and we cover our own families against the
                 exact same Northern Arizona risks you face. When you call, you reach people who
@@ -125,12 +125,12 @@ export default function AboutPage() {
             <div className="grid sm:grid-cols-2 gap-6">
               {WHY_US.map((p, i) => (
                 <FadeIn key={p.title} delay={(i % 2) * 0.06}>
-                  <div className="h-full rounded-3xl bg-white border border-border p-7 shadow-card hover:shadow-lift transition-all duration-300">
-                    <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-4">
+                  <div className="h-full rounded-3xl bg-white border border-gray-200 p-7 shadow-card hover:border-[#E8B923] hover:shadow-lift transition-all duration-300">
+                    <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#0F1C38] text-[#E8B923] mb-4">
                       <p.icon className="h-6 w-6" strokeWidth={2.2} />
                     </div>
-                    <h3 className="font-display font-semibold text-lg text-foreground leading-tight">{p.title}</h3>
-                    <p className="mt-2 text-muted-foreground leading-relaxed">{p.body}</p>
+                    <h3 className="font-display font-bold uppercase text-lg text-[#0F1C38] leading-tight">{p.title}</h3>
+                    <p className="mt-2 text-[#0F1C38]/70 leading-relaxed">{p.body}</p>
                   </div>
                 </FadeIn>
               ))}
@@ -139,14 +139,14 @@ export default function AboutPage() {
         </section>
 
         {/* The founder note */}
-        <section className="bg-warm-radial-sand py-20 md:py-24">
+        <section className="bg-[#F4F4F4] py-20 md:py-24">
           <div className="container-tight max-w-3xl">
             <FadeIn>
-              <span className="eyebrow">
-                <span className="h-px w-8 bg-accent" />
+              <span className="inline-flex items-center gap-2 text-xs font-display font-bold uppercase tracking-widest text-[#E8B923]">
+                <span className="h-px w-8 bg-[#E8B923]" />
                 From the founder
               </span>
-              <blockquote className="mt-5 font-display text-2xl md:text-3xl text-foreground leading-snug italic">
+              <blockquote className="mt-5 font-display text-2xl md:text-3xl text-[#0F1C38] leading-snug italic">
                 &ldquo;I built this agency to take care of my neighbors. Flagstaff and Northern
                 Arizona families work hard for what they have — the home up in the pines, the
                 truck that gets them through winter, the business on the corner. My job is making
@@ -154,12 +154,12 @@ export default function AboutPage() {
                 it always will be.&rdquo;
               </blockquote>
               <div className="mt-6 flex items-center gap-3">
-                <div className="h-12 w-12 rounded-full bg-forest-gradient flex items-center justify-center text-white font-display font-semibold">
+                <div className="h-12 w-12 rounded-full bg-[#0F1C38] flex items-center justify-center text-[#E8B923] font-display font-bold">
                   JC
                 </div>
                 <div>
-                  <p className="font-display font-semibold text-foreground">Josh Cotner</p>
-                  <p className="text-sm text-muted-foreground">Founder, Contractors Choice Agency · NPN #{SITE.npn}</p>
+                  <p className="font-display font-bold text-[#0F1C38]">Josh Cotner</p>
+                  <p className="text-sm text-[#0F1C38]/60">Founder, Contractors Choice Agency · NPN #{SITE.npn}</p>
                 </div>
               </div>
             </FadeIn>

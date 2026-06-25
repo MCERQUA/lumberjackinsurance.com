@@ -30,4 +30,51 @@
   .btn-outline-navy {
     @apply inline-flex items-center justify-center gap-2 rounded-sm border-2 border-navy-dark bg-transparent px-7 py-3.5 font-display font-700 text-navy-dark text-sm uppercase tracking-widest transition-all duration-200 hover:bg-navy-dark hover:text-white;
   }
+  /* Accent button — gold fill on dark bands (was red). Same shape as primary. */
+  .btn-accent {
+    @apply inline-flex items-center justify-center gap-2 rounded-sm bg-gold px-7 py-3.5 font-display font-700 text-navy-dark text-sm uppercase tracking-widest shadow-card transition-all duration-200 hover:bg-gold-dark hover:-translate-y-0.5;
+  }
+
+  /* Badges / pills — remapped to navy + gold */
+  .pill {
+    @apply inline-flex items-center gap-2 rounded-sm border border-border bg-white px-3.5 py-1.5 text-xs font-display font-700 uppercase tracking-widest text-navy-dark;
+  }
+  .pill-accent {
+    @apply inline-flex items-center gap-2 rounded-sm border border-gold/40 bg-gold/15 px-3.5 py-1.5 text-xs font-display font-700 uppercase tracking-widest text-navy-dark;
+  }
+  .pill-primary {
+    @apply inline-flex items-center gap-2 rounded-sm bg-navy-dark px-3.5 py-1.5 text-xs font-display font-700 uppercase tracking-widest text-gold;
+  }
+
+  /* Eyebrow label — small gold uppercase kicker */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-display font-700 uppercase tracking-[0.18em] text-gold-dark;
+  }
+  /* Section heading */
+  .h-section {
+    @apply font-display font-700 uppercase text-navy-dark text-3xl sm:text-4xl lg:text-[2.75rem] leading-[1.05] tracking-tight;
+  }
+  /* Lead paragraph */
+  .lead {
+    @apply text-lg text-muted-foreground leading-relaxed;
+  }
+}
+
+@layer utilities {
+  /* Navy gradient — was green forest gradient. Used on CTAs, dark bands, cards. */
+  .bg-forest-gradient {
+    background-image: linear-gradient(135deg, #0F1C38 0%, #1B2A4A 55%, #243558 100%);
+  }
+  /* Light page wash — was cream topo. */
+  .bg-topo { background-color: #F4F4F4; }
+  .bg-warm-radial-sand { background-color: #F4F4F4; }
+  /* Subtle texture on dark navy bands */
+  .bg-log-rings {
+    background-image: repeating-radial-gradient(circle at 50% 50%, rgba(232,185,35,0.05) 0 2px, transparent 2px 24px);
+  }
+  /* Gold dashed divider — was red plaid */
+  .pine-divider {
+    background-image: repeating-linear-gradient(90deg, transparent 0 10px, rgba(232,185,35,0.6) 10px 12px, transparent 12px 16px);
+  }
+  .bg-paper-warm { background-color: #F4F4F4; }
 }
