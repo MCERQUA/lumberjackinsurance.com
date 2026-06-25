@@ -1,16 +1,15 @@
-import { Fraunces, Inter } from "next/font/google";
+import { Barlow_Condensed, Barlow } from "next/font/google";
 
-// Display: Fraunces — rugged-but-friendly serif with character (mountain-town feel)
-export const displayFont = Fraunces({
+export const displayFont = Barlow_Condensed({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-display",
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "600", "700", "800"],
 });
 
-// Body: Inter — clean, highly legible
-export const bodyFont = Inter({
+export const bodyFont = Barlow({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-body",
+  weight: ["400", "500", "600", "700"],
 });

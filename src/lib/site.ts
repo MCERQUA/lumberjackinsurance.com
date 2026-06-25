@@ -32,12 +32,12 @@ export const SITE = {
 } as const;
 
 export const NAV_LINKS = [
-  { label: "Home", href: "/" },
-  { label: "Services", href: "/services" },
-  { label: "Coverage Area", href: "/coverage" },
-  { label: "About", href: "/about" },
-  { label: "Blog", href: "/blog" },
-  { label: "Contact", href: "/contact" },
+  { label: "HOME", href: "/" },
+  { label: "ABOUT US", href: "/about" },
+  { label: "INSURANCE", href: "/services" },
+  { label: "CLAIMS", href: "/contact" },
+  { label: "RESOURCES", href: "/blog" },
+  { label: "CONTACT", href: "/contact" },
 ] as const;
 
 // 5 service pages — personal + small-commercial lines for the Flagstaff area
