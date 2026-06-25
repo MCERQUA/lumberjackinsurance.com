@@ -61,7 +61,7 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        <section className="bg-background py-12 md:py-16">
+        <section className="bg-[#F4F4F4] py-12 md:py-16">
           <div className="container-wide">
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {SERVICES.map((service, i) => {
@@ -71,29 +71,27 @@ export default function ServicesPage() {
                   <FadeIn key={service.slug} delay={(i % 3) * 0.05}>
                     <Link
                       href={`/services/${service.slug}`}
-                      className={`group relative block h-full p-6 rounded-3xl border transition-all duration-300 hover:-translate-y-1.5 ${
+                      className={`group relative block h-full p-6 rounded-sm border transition-all duration-300 hover:-translate-y-1.5 ${
                         isFeatured
-                          ? "bg-forest-gradient text-white border-transparent shadow-lift"
-                          : "bg-white text-foreground border-border shadow-card hover:shadow-lift"
+                          ? "bg-[#0F1C38] text-white border-transparent shadow-lift"
+                          : "bg-white text-[#0F1C38] border-gray-200 hover:border-[#E8B923] shadow-card hover:shadow-lift"
                       }`}
                     >
                       <div
-                        className={`inline-flex h-12 w-12 items-center justify-center rounded-2xl mb-4 ${
-                          isFeatured ? "bg-white/15 text-white" : "bg-primary/10 text-primary"
+                        className={`inline-flex h-12 w-12 items-center justify-center rounded-full mb-4 ${
+                          isFeatured ? "bg-white/15 text-[#E8B923]" : "bg-[#E8B923]/10 text-[#E8B923]"
                         }`}
                       >
                         <Icon className="h-6 w-6" strokeWidth={2.2} />
                       </div>
-                      <h2 className={`font-display font-700 uppercase tracking-wide text-lg leading-tight mb-1.5 ${isFeatured ? "text-white" : "text-foreground"}`}>
+                      <h2 className={`font-display font-700 uppercase tracking-wide text-lg leading-tight mb-1.5 ${isFeatured ? "text-white" : "text-[#0F1C38]"}`}>
                         {service.title}
                       </h2>
-                      <p className={`text-sm leading-relaxed ${isFeatured ? "text-white/85" : "text-muted-foreground"}`}>
+                      <p className={`text-sm leading-relaxed ${isFeatured ? "text-white/85" : "text-[#6B7280]"}`}>
                         {service.description}
                       </p>
                       <span
-                        className={`mt-4 inline-flex items-center gap-1 text-sm font-body font-bold transition-all group-hover:gap-2 ${
-                          isFeatured ? "text-white" : "text-accent"
-                        }`}
+                        className="mt-4 inline-flex items-center gap-1 text-sm font-display font-700 uppercase tracking-wider text-[#E8B923] transition-all group-hover:gap-2"
                       >
                         Explore coverage <ArrowRight className="h-4 w-4" />
                       </span>

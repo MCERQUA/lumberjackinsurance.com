@@ -88,7 +88,7 @@ export default function ContactPage() {
               </FadeIn>
 
               {/* Form column — native Netlify Forms submission (no JS fetch) */}
-              <div className="lg:col-span-3">
+              <FadeIn direction="left" delay={0.1} className="lg:col-span-3">
                 <form
                   name="contact"
                   method="POST"
@@ -162,7 +162,7 @@ export default function ContactPage() {
                     <ArrowRight className="w-5 h-5" />
                   </button>
                 </form>
-              </div>
+              </FadeIn>
             </div>
           </div>
         </section>

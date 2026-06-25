@@ -127,7 +127,7 @@ export default function QuotePage() {
               </FadeIn>
 
               {/* Form — native Netlify Forms submission (no JS fetch) */}
-              <div className="lg:col-span-2">
+              <FadeIn direction="left" delay={0.1} className="lg:col-span-2">
                 <form
                   name="quote"
                   method="POST"
@@ -226,7 +226,7 @@ export default function QuotePage() {
                     No spam. No commitment. A local Flagstaff agent will reach out to discuss your needs.
                   </p>
                 </form>
-              </div>
+              </FadeIn>
             </div>
           </div>
         </section>
