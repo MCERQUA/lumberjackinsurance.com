@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { motion, useReducedMotion } from "motion/react";
 import { ChevronDown, Menu, X, Lock, CreditCard } from "lucide-react";
 import { SITE } from "@/lib/site";
 
@@ -16,6 +17,8 @@ const NAV = [
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const prefersReduced = useReducedMotion();
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -24,8 +27,20 @@ export function Navbar() {
     };
   }, [open]);
 
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 12);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-50">
+    <motion.header
+      className="sticky top-0 z-50"
+      initial={prefersReduced ? undefined : { y: -100 }}
+      animate={prefersReduced ? undefined : { y: 0 }}
+      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+    >
       {/* Top utility bar — dark navy, gold text */}
       <div className="bg-[#0F1C38] text-[#E8B923]">
         <div className="container-wide flex h-9 items-center justify-between gap-4">
@@ -55,11 +70,22 @@ export function Navbar() {
         </div>
       </div>
 
-      {/* Main nav — white, border-bottom */}
-      <nav className="border-b border-gray-200 bg-white">
+      {/* Main nav — white, border-bottom; gains shadow on scroll */}
+      <nav
+        className={[
+          "bg-white transition-shadow duration-300",
+          scrolled
+            ? "border-b-2 border-gray-200 shadow-md"
+            : "border-b border-gray-200 shadow-none",
+        ].join(" ")}
+      >
         <div className="container-wide flex h-20 items-center justify-between gap-6">
           {/* Logo */}
-          <Link href="/" aria-label={`${SITE.name} home`} className="flex items-center">
+          <Link
+            href="/"
+            aria-label={`${SITE.name} home`}
+            className="flex items-center transition-transform duration-200 hover:scale-105"
+          >
             <img
               src="/images/lumberjack-logo.png"
               alt={SITE.name}
@@ -75,12 +101,8 @@ export function Navbar() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={[
-                    "inline-flex items-center gap-1 font-display font-700 text-sm uppercase tracking-wide text-navy-dark transition-colors hover:text-gold-dark",
-                    active
-                      ? "border-b-2 border-gold pb-0.5"
-                      : "border-b-2 border-transparent pb-0.5",
-                  ].join(" ")}
+                  data-active={active ? "true" : undefined}
+                  className="lj-underline inline-flex items-center gap-1 font-display font-700 text-sm uppercase tracking-wide text-navy-dark transition-colors hover:text-gold-dark"
                 >
                   {item.label}
                   {item.dropdown && <ChevronDown className="h-4 w-4" />}
@@ -156,6 +178,6 @@ export function Navbar() {
           </div>
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 }
