@@ -19,11 +19,11 @@ const ICONS = {
 
 // Map each service to its hero image
 const SERVICE_IMAGES: Record<string, string> = {
-  "homeowners-insurance": "/images/hero.jpg",
-  "auto-insurance": "/images/log-truck.jpg",
-  "business-insurance": "/images/general-liability.jpg",
-  "landlord-insurance": "/images/forest-tract.jpg",
-  "renters-insurance": "/images/quote-cta.jpg",
+  "homeowners-insurance": "/images/home-insurance.jpg",
+  "auto-insurance": "/images/auto-insurance.jpg",
+  "business-insurance": "/images/business-insurance.jpg",
+  "landlord-insurance": "/images/landlord-insurance.jpg",
+  "renters-insurance": "/images/renters-insurance.jpg",
 };
 
 export function generateStaticParams() {
@@ -57,7 +57,7 @@ export default async function ServiceDetailPage({ params }: Props) {
 
   const detail = SERVICE_DETAIL[slug];
   const Icon = ICONS[service.icon as keyof typeof ICONS] ?? ShieldCheck;
-  const heroImage = SERVICE_IMAGES[slug] ?? "/images/hero.jpg";
+  const heroImage = SERVICE_IMAGES[slug] ?? "/images/home-insurance.jpg";
   const url = `${SITE.url}/services/${slug}`;
   const related = SERVICES.filter((s) => s.slug !== slug).slice(0, 3);
 
@@ -333,7 +333,7 @@ export default async function ServiceDetailPage({ params }: Props) {
 
         <CTABand
           title={`Ready to quote ${service.title.toLowerCase()}?`}
-          description="Tell us about your operation — we'll come back with real markets in about a day."
+          description="Tell us about your needs — we'll come back with real markets in about a day."
         />
       </main>
       <Footer />

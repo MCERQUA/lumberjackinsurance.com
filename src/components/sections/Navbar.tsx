@@ -3,15 +3,15 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, useReducedMotion } from "motion/react";
-import { ChevronDown, Menu, X, Lock, CreditCard } from "lucide-react";
+import { Menu, X, Lock, CreditCard } from "lucide-react";
 import { SITE } from "@/lib/site";
 
 const NAV = [
   { label: "HOME", href: "/" },
   { label: "ABOUT US", href: "/about" },
-  { label: "INSURANCE", href: "/services", dropdown: true },
+  { label: "INSURANCE", href: "/services" },
   { label: "CLAIMS", href: "/claims" },
-  { label: "RESOURCES", href: "/blog", dropdown: true },
+  { label: "RESOURCES", href: "/blog" },
   { label: "CONTACT", href: "/contact" },
 ];
 
@@ -53,14 +53,14 @@ export function Navbar() {
 
           <div className="flex items-center gap-5 text-[0.7rem] font-display font-700 uppercase tracking-widest">
             <Link
-              href="/client-login"
+              href="/contact"
               className="inline-flex items-center gap-1.5 transition-colors hover:text-gold-light"
             >
               <Lock className="h-3.5 w-3.5" />
               Client Login
             </Link>
             <Link
-              href="/pay"
+              href="/contact"
               className="inline-flex items-center gap-1.5 transition-colors hover:text-gold-light"
             >
               <CreditCard className="h-3.5 w-3.5" />
@@ -105,7 +105,6 @@ export function Navbar() {
                   className="lj-underline inline-flex items-center gap-1 font-display font-700 text-sm uppercase tracking-wide text-navy-dark transition-colors hover:text-gold-dark"
                 >
                   {item.label}
-                  {item.dropdown && <ChevronDown className="h-4 w-4" />}
                 </Link>
               );
             })}
@@ -154,13 +153,12 @@ export function Navbar() {
               className="inline-flex items-center gap-2 border-b border-white/10 py-4 font-display font-700 text-2xl uppercase tracking-wide text-[#E8B923] transition-colors hover:text-gold-light"
             >
               {item.label}
-              {item.dropdown && <ChevronDown className="h-5 w-5" />}
             </Link>
           ))}
 
           <div className="mt-6 flex flex-col gap-4 text-sm font-display font-700 uppercase tracking-widest text-[#E8B923]">
             <Link
-              href="/client-login"
+              href="/contact"
               onClick={() => setOpen(false)}
               className="inline-flex items-center gap-2"
             >
@@ -168,7 +166,7 @@ export function Navbar() {
               Client Login
             </Link>
             <Link
-              href="/pay"
+              href="/contact"
               onClick={() => setOpen(false)}
               className="inline-flex items-center gap-2"
             >
