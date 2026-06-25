@@ -39,17 +39,17 @@ export default function BlogPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <Navbar />
       <main>
-        <section className="relative bg-topo pt-32 pb-12 md:pt-40 md:pb-16">
+        <section className="relative bg-[#0F1C38] pt-32 pb-12 md:pt-40 md:pb-16">
           <div className="container-tight text-center">
             <FadeIn>
-              <span className="pill-accent">Blog &amp; insights</span>
-              <h1 className="mt-5 font-display font-semibold text-foreground text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight">
+              <span className="inline-block font-display font-700 uppercase tracking-widest text-sm text-[#E8B923]">Blog &amp; insights</span>
+              <h1 className="mt-5 font-display font-800 uppercase text-white text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight">
                 Logging insurance,{" "}
-                <span className="bg-gradient-to-r from-primary via-forest-500 to-accent bg-clip-text text-transparent">
+                <span className="text-[#E8B923]">
                   decoded
                 </span>
               </h1>
-              <p className="mt-5 lead max-w-2xl mx-auto">
+              <p className="mt-5 text-lg text-white/80 max-w-2xl mx-auto">
                 Plain-English guides on the coverage that matters for loggers — class
                 codes, EMOD strategy, log truck filings, equipment claims, and pollution.
               </p>
@@ -57,16 +57,16 @@ export default function BlogPage() {
           </div>
         </section>
 
-        <section className="bg-background py-12 md:py-16">
+        <section className="bg-[#F4F4F4] py-12 md:py-16">
           <div className="container-wide">
             {posts.length === 0 ? (
-              <p className="text-center text-muted-foreground py-16">Articles coming soon.</p>
+              <p className="text-center text-[#6B7280] py-16">Articles coming soon.</p>
             ) : (
               <>
                 {featured && (
                   <FadeIn className="mb-12">
                     <Link href={`/blog/${featured.slug}`} className="group block">
-                      <article className="grid md:grid-cols-2 gap-0 rounded-[2rem] overflow-hidden bg-white border border-border shadow-card hover:shadow-lift transition-all">
+                      <article className="grid md:grid-cols-2 gap-0 rounded-sm overflow-hidden bg-white border border-gray-200 hover:border-[#E8B923] shadow-card hover:shadow-lift transition-all">
                         <div className="relative overflow-hidden">
                           <img
                             src={featured.image || "/images/forest-tract.jpg"}
@@ -74,12 +74,12 @@ export default function BlogPage() {
                             className="w-full h-64 md:h-full object-cover group-hover:scale-105 transition-transform duration-500"
                           />
                           <div className="absolute top-4 left-4">
-                            <span className="pill !bg-accent !text-white !border-accent-light">Featured</span>
+                            <span className="px-3 py-1 rounded-sm bg-[#E8B923] text-[#0F1C38] font-display font-700 text-xs uppercase tracking-wider">Featured</span>
                           </div>
                         </div>
                         <div className="p-8 md:p-10 flex flex-col justify-center">
-                          <div className="flex items-center gap-3 text-xs text-muted-foreground mb-3">
-                            <span className="px-2.5 py-0.5 bg-primary/10 text-primary rounded-md font-body font-semibold">
+                          <div className="flex items-center gap-3 text-xs text-[#6B7280] mb-3">
+                            <span className="px-2.5 py-0.5 bg-[#0F1C38] text-white rounded-sm font-body font-semibold">
                               {featured.category}
                             </span>
                             <span className="flex items-center gap-1">
@@ -91,11 +91,11 @@ export default function BlogPage() {
                               {featured.readTime}
                             </span>
                           </div>
-                          <h2 className="font-display font-semibold text-foreground text-2xl md:text-3xl leading-tight group-hover:text-accent transition-colors">
+                          <h2 className="font-display font-700 uppercase text-[#0F1C38] text-2xl md:text-3xl leading-tight group-hover:text-[#E8B923] transition-colors">
                             {featured.title}
                           </h2>
-                          <p className="mt-3 text-muted-foreground leading-relaxed">{featured.description}</p>
-                          <span className="mt-5 inline-flex items-center gap-1 text-accent font-body font-bold group-hover:gap-2 transition-all">
+                          <p className="mt-3 text-[#6B7280] leading-relaxed">{featured.description}</p>
+                          <span className="mt-5 inline-flex items-center gap-1 text-[#E8B923] font-display font-700 uppercase tracking-wider text-sm group-hover:gap-2 transition-all">
                             Read article <ArrowRight className="h-4 w-4" />
                           </span>
                         </div>
@@ -108,24 +108,24 @@ export default function BlogPage() {
                   {rest.map((post, i) => (
                     <FadeIn key={post.slug} delay={i * 0.08}>
                       <Link href={`/blog/${post.slug}`} className="group block h-full">
-                        <article className="rounded-3xl overflow-hidden bg-white border border-border shadow-card hover:shadow-lift transition-all h-full flex flex-col">
-                          <div className="h-2 bg-forest-gradient" />
+                        <article className="rounded-sm overflow-hidden bg-white border border-gray-200 hover:border-[#E8B923] shadow-card hover:shadow-lift transition-all h-full flex flex-col">
+                          <div className="h-2 bg-[#E8B923]" />
                           <div className="p-6 flex-grow flex flex-col">
-                            <div className="flex items-center gap-3 text-xs text-muted-foreground mb-3">
-                              <span className="px-2.5 py-0.5 bg-primary/10 text-primary rounded-md font-body font-semibold">
+                            <div className="flex items-center gap-3 text-xs text-[#6B7280] mb-3">
+                              <span className="px-2.5 py-0.5 bg-[#0F1C38] text-white rounded-sm font-body font-semibold">
                                 {post.category}
                               </span>
                               <span className="flex items-center gap-1">
                                 <Clock className="h-3 w-3" />{post.readTime}
                               </span>
                             </div>
-                            <h3 className="font-display font-semibold text-foreground text-lg leading-tight group-hover:text-accent transition-colors line-clamp-2">
+                            <h3 className="font-display font-700 uppercase text-[#0F1C38] text-lg leading-tight group-hover:text-[#E8B923] transition-colors line-clamp-2">
                               {post.title}
                             </h3>
-                            <p className="mt-2 text-sm text-muted-foreground leading-relaxed line-clamp-3 flex-grow">
+                            <p className="mt-2 text-sm text-[#6B7280] leading-relaxed line-clamp-3 flex-grow">
                               {post.description}
                             </p>
-                            <span className="mt-4 inline-flex items-center gap-1 text-sm font-body font-bold text-accent group-hover:gap-2 transition-all">
+                            <span className="mt-4 inline-flex items-center gap-1 text-sm font-display font-700 uppercase tracking-wider text-[#E8B923] group-hover:gap-2 transition-all">
                               Read <ArrowRight className="h-4 w-4" />
                             </span>
                           </div>

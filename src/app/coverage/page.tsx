@@ -50,17 +50,17 @@ export default function CoveragePage() {
     <>
       <Navbar />
       <main>
-        <section className="relative bg-topo pt-32 pb-16 md:pt-40 md:pb-20">
+        <section className="relative bg-[#0F1C38] pt-32 pb-16 md:pt-40 md:pb-20">
           <div className="container-tight text-center">
             <FadeIn>
-              <span className="pill-accent">Service area</span>
-              <h1 className="mt-5 font-display font-semibold text-foreground text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight">
+              <span className="inline-block font-display font-700 uppercase tracking-widest text-sm text-[#E8B923]">Service area</span>
+              <h1 className="mt-5 font-display font-800 uppercase text-white text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight">
                 Local insurance for{" "}
-                <span className="bg-gradient-to-r from-primary via-forest-500 to-accent bg-clip-text text-transparent">
+                <span className="text-[#E8B923]">
                   Flagstaff &amp; Northern Arizona
                 </span>
               </h1>
-              <p className="mt-5 lead max-w-2xl mx-auto">
+              <p className="mt-5 text-lg text-white/80 max-w-2xl mx-auto">
                 We&apos;re a hometown agency, born and based in the mountains. From the pines of
                 Flagstaff to the red rocks of Sedona and the towns in between, we&apos;re your
                 neighbors — people who know what it takes to live, drive, and do business at 7,000
@@ -71,7 +71,7 @@ export default function CoveragePage() {
         </section>
 
         {/* Local scenery image */}
-        <section className="bg-background pb-16">
+        <section className="bg-[#F4F4F4] pb-16 pt-16">
           <div className="container-wide">
             <FadeIn direction="up">
               <div className="rounded-[2rem] overflow-hidden border-4 border-white shadow-lift">
@@ -86,18 +86,18 @@ export default function CoveragePage() {
         </section>
 
         {/* Local trust signals */}
-        <section className="bg-warm-radial-sand py-16 md:py-20">
+        <section className="bg-white py-16 md:py-20">
           <div className="container-wide">
             <FadeIn className="max-w-3xl mb-10">
-              <span className="eyebrow">
-                <span className="h-px w-8 bg-accent" />
+              <span className="inline-flex items-center gap-2 font-display font-700 uppercase tracking-widest text-sm text-[#E8B923]">
+                <span className="h-px w-8 bg-[#E8B923]" />
                 Neighbors who know the mountain
               </span>
-              <h2 className="mt-3 h-section">
+              <h2 className="mt-3 font-display font-800 uppercase text-[#0F1C38] text-3xl md:text-4xl leading-tight">
                 We don&apos;t just sell policies here.{" "}
-                <span className="text-primary">We live here.</span>
+                <span className="text-[#E8B923]">We live here.</span>
               </h2>
-              <p className="mt-4 lead">
+              <p className="mt-4 text-lg text-[#6B7280]">
                 Insurance is a lot easier when the person on the other end of the line knows your
                 town. We understand how homes are built for Flagstaff winters, what a college town
                 needs, and the real risks of life in Northern Arizona — because it&apos;s our home too.
@@ -107,10 +107,10 @@ export default function CoveragePage() {
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
               {TRUST_SIGNALS.map((t, i) => (
                 <FadeIn key={t.title} delay={(i % 4) * 0.05}>
-                  <div className="h-full rounded-3xl bg-white border border-border p-6 shadow-card">
-                    <MapPin className="h-7 w-7 text-accent mb-3" strokeWidth={2.2} />
-                    <p className="font-display font-semibold text-lg text-foreground">{t.title}</p>
-                    <p className="mt-1 text-sm text-muted-foreground leading-relaxed">{t.note}</p>
+                  <div className="h-full rounded-sm bg-white border border-gray-200 hover:border-[#E8B923] p-6 shadow-card transition-colors">
+                    <MapPin className="h-7 w-7 text-[#E8B923] mb-3" strokeWidth={2.2} />
+                    <p className="font-display font-700 uppercase text-lg text-[#0F1C38]">{t.title}</p>
+                    <p className="mt-1 text-sm text-[#6B7280] leading-relaxed">{t.note}</p>
                   </div>
                 </FadeIn>
               ))}
@@ -119,13 +119,13 @@ export default function CoveragePage() {
         </section>
 
         {/* Communities grid */}
-        <section className="bg-background py-16 md:py-20">
+        <section className="bg-[#F4F4F4] py-16 md:py-20">
           <div className="container-wide">
             <FadeIn className="max-w-3xl mb-8">
-              <h2 className="font-display font-semibold text-2xl md:text-3xl text-foreground">
+              <h2 className="font-display font-800 uppercase text-2xl md:text-3xl text-[#0F1C38]">
                 Communities we serve
               </h2>
-              <p className="mt-2 text-muted-foreground">
+              <p className="mt-2 text-[#6B7280]">
                 Proudly local across Northern Arizona — from Flagstaff and the surrounding high
                 country down through the Verde Valley. If your town is on the mountain, chances are
                 we&apos;re already here for it.
@@ -134,9 +134,9 @@ export default function CoveragePage() {
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
               {TOWNS.map((town, i) => (
                 <FadeIn key={town} delay={(i % 5) * 0.03}>
-                  <div className="flex items-center gap-2 p-3 rounded-xl bg-white border border-border">
-                    <MapPin className="h-4 w-4 text-accent flex-shrink-0" strokeWidth={2.4} />
-                    <span className="text-sm font-body font-semibold text-foreground">{town}</span>
+                  <div className="flex items-center gap-2 p-3 rounded-sm bg-white border border-gray-200 hover:border-[#E8B923] transition-colors">
+                    <MapPin className="h-4 w-4 text-[#E8B923] flex-shrink-0" strokeWidth={2.4} />
+                    <span className="text-sm font-body font-semibold text-[#0F1C38]">{town}</span>
                   </div>
                 </FadeIn>
               ))}
