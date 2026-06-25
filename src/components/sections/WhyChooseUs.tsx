@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Check, Phone } from "lucide-react";
+import { FadeIn } from "@/components/animations/FadeIn";
 
 const REASONS = [
   "Local agents who care",
@@ -21,15 +22,22 @@ export function WhyChooseUs() {
   return (
     <section id="why" className="grid md:grid-cols-3">
       {/* Left column — Why Choose */}
-      <div className="bg-[#F4F4F4] p-8 md:p-10">
+      <FadeIn direction="right" className="bg-[#F4F4F4] p-8 md:p-10">
         <h3 className="font-display font-extrabold uppercase text-2xl text-[#0F1C38] leading-tight">
           Why Choose Lumberjack?
         </h3>
         <ul className="mt-6 space-y-3">
-          {REASONS.map((reason) => (
-            <li key={reason} className="flex items-start gap-3">
-              <Check className="h-5 w-5 flex-shrink-0 text-[#E8B923] mt-0.5" strokeWidth={3} />
-              <span className="font-body text-[#0F1C38] text-base">{reason}</span>
+          {REASONS.map((reason, i) => (
+            <li key={reason}>
+              <FadeIn delay={0.15 + i * 0.08} direction="up">
+                <div className="group flex items-start gap-3">
+                  <Check
+                    className="h-5 w-5 flex-shrink-0 text-[#E8B923] mt-0.5 transition-transform duration-300 group-hover:scale-150"
+                    strokeWidth={3}
+                  />
+                  <span className="font-body text-[#0F1C38] text-base">{reason}</span>
+                </div>
+              </FadeIn>
             </li>
           ))}
         </ul>
@@ -39,10 +47,14 @@ export function WhyChooseUs() {
         >
           Learn More About Us
         </Link>
-      </div>
+      </FadeIn>
 
       {/* Center column — Quote form */}
-      <div className="bg-[#0F1C38] p-8 md:p-10">
+      <FadeIn
+        direction="up"
+        delay={0.1}
+        className="bg-[#0F1C38] p-8 md:p-10 border border-[#E8B923]/30 shadow-[0_0_40px_-8px_rgba(232,185,35,0.45)]"
+      >
         <h3 className="font-display font-extrabold uppercase text-2xl text-[#E8B923]">
           Get a Quote
         </h3>
@@ -53,7 +65,7 @@ export function WhyChooseUs() {
 
           <select
             name="coverage-type"
-            className="w-full py-3 px-4 bg-[#0F1C38] border border-white/40 text-white font-body focus:outline-none focus:border-[#E8B923]"
+            className="w-full py-3 px-4 bg-[#0F1C38] border border-white/40 text-white font-body transition focus:outline-none focus:border-[#E8B923] focus:ring-2 focus:ring-[#E8B923]/30"
             defaultValue=""
             required
           >
@@ -71,13 +83,13 @@ export function WhyChooseUs() {
             type="text"
             name="zip"
             placeholder="ZIP Code"
-            className="w-full py-3 px-4 bg-[#0F1C38] border border-white/40 text-white placeholder:text-white/50 font-body focus:outline-none focus:border-[#E8B923]"
+            className="w-full py-3 px-4 bg-[#0F1C38] border border-white/40 text-white placeholder:text-white/50 font-body transition focus:outline-none focus:border-[#E8B923] focus:ring-2 focus:ring-[#E8B923]/30"
             required
           />
 
           <button
             type="submit"
-            className="w-full py-3 bg-[#E8B923] text-[#0F1C38] font-display font-bold uppercase text-sm hover:brightness-95 transition"
+            className="lj-btn-shine w-full py-3 bg-[#E8B923] text-[#0F1C38] font-display font-bold uppercase text-sm transition-transform duration-200 hover:scale-[1.02] hover:brightness-95"
           >
             Get Started
           </button>
@@ -93,10 +105,10 @@ export function WhyChooseUs() {
             844-967-5247
           </a>
         </div>
-      </div>
+      </FadeIn>
 
       {/* Right column — Built on trust */}
-      <div className="bg-white p-8 md:p-10">
+      <FadeIn direction="left" delay={0.2} className="bg-white p-8 md:p-10">
         <h3 className="font-display font-extrabold uppercase text-2xl text-[#0F1C38] leading-tight">
           Built on Trust.
           <br />
@@ -106,10 +118,12 @@ export function WhyChooseUs() {
           We&apos;re here to protect what you&apos;ve built and help you keep moving forward
           with confidence.
         </p>
-        <p className="mt-6 font-display italic text-xl text-[#E8B923]">
-          – The LumberJack Team
-        </p>
-      </div>
+        <FadeIn delay={0.5} direction="up">
+          <p className="lj-shine-text mt-6 font-display italic text-xl">
+            – The LumberJack Team
+          </p>
+        </FadeIn>
+      </FadeIn>
     </section>
   );
 }
