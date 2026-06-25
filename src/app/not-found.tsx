@@ -20,8 +20,8 @@ export default function NotFound() {
               This trail runs cold.
             </h1>
             <p className="mt-4 lead max-w-lg mx-auto">
-              The page you&apos;re looking for isn&apos;t here — but the logging insurance you need
-              is. Head back to the homepage or start a quote.
+              The page you&apos;re looking for isn&apos;t here — but your Flagstaff insurance
+              coverage is. Head back to the homepage or start a quote.
             </p>
             <div className="mt-7 flex flex-col sm:flex-row gap-3 justify-center">
               <Link href="/" className="btn-primary">
