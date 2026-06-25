@@ -2,6 +2,8 @@
 deploy_key
 deploy_key.pub
 .next/
+out/
 node_modules/
+*.tsbuildinfo
 .env.local
 .env*.local
