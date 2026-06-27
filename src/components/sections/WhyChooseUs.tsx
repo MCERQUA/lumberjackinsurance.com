@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Check, Phone } from "lucide-react";
 import { FadeIn } from "@/components/animations/FadeIn";
+import { AeoFields } from "@/components/AeoFields";
 
 const REASONS = [
   "Local agents who care",
@@ -62,6 +63,7 @@ export function WhyChooseUs() {
 
         <form name="quote-quick" data-netlify="true" method="POST" action="/thank-you" className="mt-6 space-y-4">
           <input type="hidden" name="form-name" value="quote-quick" />
+          <AeoFields />
 
           <select
             name="coverage-type"
