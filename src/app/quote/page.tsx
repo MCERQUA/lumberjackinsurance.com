@@ -4,6 +4,7 @@ import { Footer } from "@/components/sections/Footer";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { CheckCircle, Shield, ArrowRight, Phone } from "lucide-react";
 import { SITE } from "@/lib/site";
+import { AeoFields } from "@/components/AeoFields";
 
 export const metadata: Metadata = {
   title: "Get a Free Quote — Flagstaff Home, Auto & Business Insurance",
@@ -137,6 +138,7 @@ export default function QuotePage() {
                   className="rounded-sm p-8 md:p-10 space-y-6 bg-white border border-gray-200 shadow-lift"
                 >
                   <input type="hidden" name="form-name" value="quote" />
+                  <AeoFields />
                   <p className="hidden">
                     <label>
                       Don&apos;t fill this out if you&apos;re human: <input name="bot-field" />
