@@ -3,15 +3,28 @@
 <head><meta charset="UTF-8"><title>Netlify Forms</title><meta name="robots" content="noindex, nofollow"></head>
 <body>
   <!-- Detection stubs — fields MUST mirror the real forms or Netlify drops unlisted fields. -->
-  <form name="quote" netlify netlify-honeypot="bot-field" hidden>
-    <input type="hidden" name="form-name" value="quote">
-    <input name="bot-field">
-    <input name="name"><input name="email" type="email"><input name="phone" type="tel">
-    <input name="town"><input name="coverage"><input name="currentCoverage">
-    <textarea name="message"></textarea>
-    <button type="submit">Submit</button>
-    <input name="traffic_source"><input name="landing_url">
-  </form>
+  <form name="quote" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input type="hidden" name="form-name" value="quote" />
+  <input name="bot-field" />
+  <input name="name" />
+  <input name="coverage" />
+  <input name="email" />
+  <input name="phone" />
+  <input name="town" />
+  <input name="currentCoverage" />
+  <input name="message" />
+  <input name="street_address" />
+  <input name="state" />
+  <input name="zip" />
+  <input name="fein" />
+  <input name="year_business_started" />
+  <input name="business_description" />
+  <input name="prior_carrier_name" />
+  <input name="prior_policy_number" />
+  <input name="prior_policy_expiration" />
+  <input name="traffic_source" />
+  <input name="landing_url" />
+</form>
   <form name="contact" netlify netlify-honeypot="bot-field" hidden>
     <input type="hidden" name="form-name" value="contact">
     <input name="bot-field">

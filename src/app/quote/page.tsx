@@ -227,7 +227,45 @@ export default function QuotePage() {
                   <p className="text-xs text-center text-[#6B7280]">
                     No spam. No commitment. A local Flagstaff agent will reach out to discuss your needs.
                   </p>
-                </form>
+                
+        {/* complete contractor field set — forms-required-fields.json */}
+        <div className="mb-4">
+          <label className={labelClass}>Street address</label>
+          <input type="text" name="street_address" className={inputClass} />
+        </div>
+        <div className="mb-4">
+          <label className={labelClass}>State</label>
+          <input type="text" name="state" className={inputClass} />
+        </div>
+        <div className="mb-4">
+          <label className={labelClass}>ZIP code</label>
+          <input type="text" name="zip" className={inputClass} />
+        </div>
+        <div className="mb-4">
+          <label className={labelClass}>Federal Employer ID Number (FEIN)</label>
+          <input type="text" name="fein" className={inputClass} />
+        </div>
+        <div className="mb-4">
+          <label className={labelClass}>Year business started</label>
+          <input type="number" name="year_business_started" className={inputClass} />
+        </div>
+        <div className="mb-4">
+          <label className={labelClass}>Description of business</label>
+          <textarea name="business_description" rows={3} className={inputClass}></textarea>
+        </div>
+        <div className="mb-4">
+          <label className={labelClass}>Prior insurance carrier name</label>
+          <input type="text" name="prior_carrier_name" className={inputClass} />
+        </div>
+        <div className="mb-4">
+          <label className={labelClass}>Prior policy number</label>
+          <input type="text" name="prior_policy_number" className={inputClass} />
+        </div>
+        <div className="mb-4">
+          <label className={labelClass}>Prior policy expiration date</label>
+          <input type="date" name="prior_policy_expiration" className={inputClass} />
+        </div>
+</form>
               </FadeIn>
             </div>
           </div>
