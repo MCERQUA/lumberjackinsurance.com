@@ -24,6 +24,22 @@
   <input name="prior_policy_expiration" />
   <input name="traffic_source" />
   <input name="landing_url" />
+
+  <!--
+    insurance-agency-multiline: /quote shows ONE detail section chosen by the
+    coverage select and disables the other, so a native POST carries only
+    what was on screen. Netlify stores only names it has seen declared, so
+    this declares the UNION of both sections.
+  -->
+  <input name="date_of_birth" />
+  <input name="mailing_address" />
+  <input name="city" />
+  <input name="property_street_address" />
+  <input name="drivers_license_number" />
+  <input name="current_carrier_name" />
+  <input name="current_policy_number" />
+  <input name="current_policy_expiration_date" />
+  <input name="requested_effective_date" />
 </form>
   <form name="contact" netlify netlify-honeypot="bot-field" hidden>
     <input type="hidden" name="form-name" value="contact">

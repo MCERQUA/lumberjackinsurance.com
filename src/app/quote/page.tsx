@@ -192,6 +192,13 @@ export default function QuotePage() {
                       </select>
                     </div>
                     <div>
+                      <label htmlFor="state" className={labelClass}>State</label>
+                      <input
+                        id="state" name="state" type="text"
+                        placeholder="AZ" className={inputClass}
+                      />
+                    </div>
+                    <div>
                       <label htmlFor="currentCoverage" className={labelClass}>Current Coverage Status</label>
                       <select id="currentCoverage" name="currentCoverage" defaultValue="" className={inputClass}>
                         <option value="">Select…</option>
@@ -216,6 +223,107 @@ export default function QuotePage() {
                     />
                   </div>
 
+                  {/*
+                    insurance-agency-multiline: ONE detail section is shown,
+                    chosen by the coverage select this form already had. Hidden
+                    sections are DISABLED as well as hidden, so this native
+                    Netlify POST carries only the section that was on screen —
+                    a renter is neither asked for a FEIN nor submits an empty
+                    one. public/__forms.html declares the union of both.
+                    No life section: this agency's coverage list offers no life
+                    product, so a life branch would invent a product line.
+                  */}
+                  <div data-branch="personal" hidden>
+                    <p className="text-sm font-body font-semibold text-[#0F1C38] mb-3">About you and the property</p>
+                    <div className="grid sm:grid-cols-2 gap-4">
+                    <div>
+                      <label htmlFor="date_of_birth" className={labelClass}>Date of Birth *</label>
+                      <input id="date_of_birth" name="date_of_birth" type="date" required className={inputClass} disabled />
+                    </div>
+                    <div>
+                      <label htmlFor="drivers_license_number" className={labelClass}>Driver License Number</label>
+                      <input id="drivers_license_number" name="drivers_license_number" type="text" className={inputClass} disabled />
+                    </div>
+                    <div>
+                      <label htmlFor="mailing_address" className={labelClass}>Current Mailing Address *</label>
+                      <input id="mailing_address" name="mailing_address" type="text" required className={inputClass} disabled />
+                    </div>
+                    <div>
+                      <label htmlFor="city" className={labelClass}>City *</label>
+                      <input id="city" name="city" type="text" required className={inputClass} disabled />
+                    </div>
+                    <div>
+                      <label htmlFor="zip" className={labelClass}>ZIP *</label>
+                      <input id="zip" name="zip" type="text" required className={inputClass} disabled />
+                    </div>
+                    <div>
+                      <label htmlFor="property_street_address" className={labelClass}>Property Street Address *</label>
+                      <input id="property_street_address" name="property_street_address" type="text" required className={inputClass} disabled />
+                    </div>
+                    <div>
+                      <label htmlFor="current_carrier_name" className={labelClass}>Current Carrier *</label>
+                      <input id="current_carrier_name" name="current_carrier_name" type="text" required className={inputClass} disabled />
+                    </div>
+                    <div>
+                      <label htmlFor="current_policy_number" className={labelClass}>Current Policy Number *</label>
+                      <input id="current_policy_number" name="current_policy_number" type="text" required className={inputClass} disabled />
+                    </div>
+                    <div>
+                      <label htmlFor="current_policy_expiration_date" className={labelClass}>Current Policy Expires *</label>
+                      <input id="current_policy_expiration_date" name="current_policy_expiration_date" type="date" required className={inputClass} disabled />
+                    </div>
+                    <div>
+                      <label htmlFor="requested_effective_date" className={labelClass}>Requested Effective Date</label>
+                      <input id="requested_effective_date" name="requested_effective_date" type="date" className={inputClass} disabled />
+                    </div>
+                    </div>
+                  </div>
+                  <div data-branch="business" hidden>
+                    <p className="text-sm font-body font-semibold text-[#0F1C38] mb-3">About the business</p>
+                    <div className="grid sm:grid-cols-2 gap-4">
+                    <div>
+                      <label htmlFor="street_address" className={labelClass}>Business Street Address *</label>
+                      <input id="street_address" name="street_address" type="text" required className={inputClass} disabled />
+                    </div>
+                    <div>
+                      <label htmlFor="city" className={labelClass}>City *</label>
+                      <input id="city" name="city" type="text" required className={inputClass} disabled />
+                    </div>
+                    <div>
+                      <label htmlFor="zip" className={labelClass}>ZIP *</label>
+                      <input id="zip" name="zip" type="text" required className={inputClass} disabled />
+                    </div>
+                    <div>
+                      <label htmlFor="fein" className={labelClass}>Federal Employer ID Number (FEIN) *</label>
+                      <input id="fein" name="fein" type="text" required className={inputClass} disabled />
+                    </div>
+                    <div>
+                      <label htmlFor="year_business_started" className={labelClass}>Year Business Started *</label>
+                      <input id="year_business_started" name="year_business_started" type="number" required className={inputClass} disabled />
+                    </div>
+                    <div className="sm:col-span-2">
+                      <label htmlFor="business_description" className={labelClass}>Description of Business *</label>
+                      <textarea id="business_description" name="business_description" rows={3} required className={`${inputClass} resize-none`} disabled />
+                    </div>
+                    <div>
+                      <label htmlFor="prior_carrier_name" className={labelClass}>Prior Insurance Carrier *</label>
+                      <input id="prior_carrier_name" name="prior_carrier_name" type="text" required className={inputClass} disabled />
+                    </div>
+                    <div>
+                      <label htmlFor="prior_policy_number" className={labelClass}>Prior Policy Number *</label>
+                      <input id="prior_policy_number" name="prior_policy_number" type="text" required className={inputClass} disabled />
+                    </div>
+                    <div>
+                      <label htmlFor="prior_policy_expiration" className={labelClass}>Prior Policy Expiration Date *</label>
+                      <input id="prior_policy_expiration" name="prior_policy_expiration" type="date" required className={inputClass} disabled />
+                    </div>
+                    </div>
+                  </div>
+
+                  <p className="text-xs text-center text-[#6B7280]">
+                    No spam. No commitment. A local Flagstaff agent will reach out to discuss your needs.
+                  </p>
+
                   <button
                     type="submit"
                     className="btn-primary w-full"
@@ -223,54 +331,20 @@ export default function QuotePage() {
                     Request My Free Quote
                     <ArrowRight className="w-5 h-5" />
                   </button>
-
-                  <p className="text-xs text-center text-[#6B7280]">
-                    No spam. No commitment. A local Flagstaff agent will reach out to discuss your needs.
-                  </p>
-                
-        {/* complete contractor field set — forms-required-fields.json */}
-        <div className="mb-4">
-          <label className={labelClass}>Street address</label>
-          <input type="text" name="street_address" className={inputClass} />
-        </div>
-        <div className="mb-4">
-          <label className={labelClass}>State</label>
-          <input type="text" name="state" className={inputClass} />
-        </div>
-        <div className="mb-4">
-          <label className={labelClass}>ZIP code</label>
-          <input type="text" name="zip" className={inputClass} />
-        </div>
-        <div className="mb-4">
-          <label className={labelClass}>Federal Employer ID Number (FEIN)</label>
-          <input type="text" name="fein" className={inputClass} />
-        </div>
-        <div className="mb-4">
-          <label className={labelClass}>Year business started</label>
-          <input type="number" name="year_business_started" className={inputClass} />
-        </div>
-        <div className="mb-4">
-          <label className={labelClass}>Description of business</label>
-          <textarea name="business_description" rows={3} className={inputClass}></textarea>
-        </div>
-        <div className="mb-4">
-          <label className={labelClass}>Prior insurance carrier name</label>
-          <input type="text" name="prior_carrier_name" className={inputClass} />
-        </div>
-        <div className="mb-4">
-          <label className={labelClass}>Prior policy number</label>
-          <input type="text" name="prior_policy_number" className={inputClass} />
-        </div>
-        <div className="mb-4">
-          <label className={labelClass}>Prior policy expiration date</label>
-          <input type="date" name="prior_policy_expiration" className={inputClass} />
-        </div>
 </form>
               </FadeIn>
             </div>
           </div>
         </section>
       </main>
+
+      {/* Branch switch. This page has no client state — a small inline script
+          keeps it a server component. */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `(function(){var B={"Home insurance":"personal","Auto insurance":"personal","Business insurance":"business","Landlord / rental property insurance":"personal","Renters insurance":"personal","Bundle / multiple policies":"personal","Not sure — help me figure it out":"personal"};document.querySelectorAll('form[name="quote"]').forEach(function(f){var s=f.querySelector('[name="coverage"]'),n=f.querySelectorAll('[data-branch]');if(!s||!n.length)return;function y(){var w=B[s.value]||"";n.forEach(function(d){var on=d.getAttribute("data-branch")===w;d.hidden=!on;d.querySelectorAll("input,select,textarea").forEach(function(e){e.disabled=!on;});});}s.addEventListener("change",y);y();});})();`,
+        }}
+      />
       <Footer />
     </>
   );
