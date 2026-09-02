@@ -1,5 +1,0 @@
-User-Agent: *
-Allow: /
-
-Host: https://lumberjackinsurance.com
-Sitemap: https://lumberjackinsurance.com/sitemap.xml
