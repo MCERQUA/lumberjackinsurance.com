@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Home, Car, Building2, KeyRound, ShieldCheck } from "lucide-react";
+import { Home, Car, Building2, KeyRound, ShieldCheck, ArrowRight } from "lucide-react";
 import { SERVICES } from "@/lib/site";
 import { FadeIn } from "@/components/animations/FadeIn";
 
@@ -54,7 +54,7 @@ export function ServicesGrid() {
                   >
                     LEARN MORE{" "}
                     <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
-                      →
+                      <ArrowRight className="inline w-4 h-4 align-[-2px]" aria-hidden="true" />
                     </span>
                   </Link>
                 </div>

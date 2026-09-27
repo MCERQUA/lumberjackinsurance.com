@@ -105,26 +105,4 @@ export const STATS = [
   { value: 1, suffix: "", label: "Local agent who shops for you", prefix: "" },
 ] as const;
 
-export const TESTIMONIALS = [
-  {
-    quote:
-      "After two carriers non-renewed us over wildfire risk, I figured we were stuck. Lumberjack shopped it around and found a policy that actually covered our place up by the Peaks — and explained snow-load coverage I didn't even know I was missing.",
-    name: "Sarah M.",
-    role: "Homeowner",
-    location: "Flagstaff, AZ",
-  },
-  {
-    quote:
-      "I hit an elk on 89 north of town in November. Total claim, but the comprehensive coverage Josh's team set me up with made it painless. They knew exactly what mountain driving up here actually puts you through.",
-    name: "Derek H.",
-    role: "Driver & NAU staff",
-    location: "Flagstaff, AZ",
-  },
-  {
-    quote:
-      "We run a little cafe near campus and a couple of student rentals. Having one local agent handle our BOP and the landlord policies — and bundle my home and auto on top — saved real money and a lot of phone tag.",
-    name: "Maria T.",
-    role: "Small business owner & landlord",
-    location: "Flagstaff, AZ",
-  },
-] as const;
+export const TESTIMONIALS: { quote: string; name: string; role: string; location: string }[] = [];
