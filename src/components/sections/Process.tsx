@@ -28,7 +28,7 @@ export function Process() {
     <section id="process" className="bg-[#F4F4F4] py-20">
       <div className="container-wide">
         <FadeIn>
-          <h2 className="text-center font-display text-4xl font-extrabold uppercase text-[#0F1C38]">
+          <h2 className="text-center font-display text-4xl font-extrabold uppercase text-[#2C180C]">
             Getting Covered Is Easy
           </h2>
         </FadeIn>
@@ -56,11 +56,11 @@ export function Process() {
                     viewport={{ once: true, margin: "-80px" }}
                     transition={{ type: "spring", stiffness: 260, damping: 15, delay: i * 0.15 + 0.2 }}
                   >
-                    <span className="font-display text-2xl font-extrabold text-[#0F1C38]">
+                    <span className="font-display text-2xl font-extrabold text-[#2C180C]">
                       {step.num}
                     </span>
                   </motion.div>
-                  <h3 className="mt-5 font-display text-lg font-bold uppercase text-[#0F1C38]">
+                  <h3 className="mt-5 font-display text-lg font-bold uppercase text-[#2C180C]">
                     {step.title}
                   </h3>
                   <p className="mt-2 font-body text-sm leading-relaxed text-gray-500">

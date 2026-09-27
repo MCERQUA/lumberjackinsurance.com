@@ -44,7 +44,7 @@ export function Hero() {
     <section
       className="relative overflow-hidden"
       style={{
-        background: "radial-gradient(ellipse at 60% 40%, #1B3A6B 0%, #0F1C38 60%)",
+        background: "radial-gradient(ellipse at 60% 40%, #5A3017 0%, #2C180C 60%)",
         backgroundSize: "160% 160%",
         animation: prefersReduced ? undefined : "lj-bg-pan 12s ease-in-out infinite",
       }}

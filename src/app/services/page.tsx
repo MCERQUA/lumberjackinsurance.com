@@ -44,7 +44,7 @@ export default function ServicesPage() {
       <main>
         <section
           className="relative pt-32 pb-12 md:pt-40 md:pb-16"
-          style={{ background: "radial-gradient(ellipse at 60% 30%, #1B3A6B 0%, #0F1C38 60%)" }}
+          style={{ background: "radial-gradient(ellipse at 60% 30%, #5A3017 0%, #2C180C 60%)" }}
         >
           <div className="container-tight text-center">
             <FadeIn>
@@ -73,8 +73,8 @@ export default function ServicesPage() {
                       href={`/services/${service.slug}`}
                       className={`group relative block h-full p-6 rounded-sm border transition-all duration-300 hover:-translate-y-1.5 ${
                         isFeatured
-                          ? "bg-[#0F1C38] text-white border-transparent shadow-lift"
-                          : "bg-white text-[#0F1C38] border-gray-200 hover:border-[#E8B923] shadow-card hover:shadow-lift"
+                          ? "bg-[#2C180C] text-white border-transparent shadow-lift"
+                          : "bg-white text-[#2C180C] border-gray-200 hover:border-[#E8B923] shadow-card hover:shadow-lift"
                       }`}
                     >
                       <div
@@ -84,7 +84,7 @@ export default function ServicesPage() {
                       >
                         <Icon className="h-6 w-6" strokeWidth={2.2} />
                       </div>
-                      <h2 className={`font-display font-700 uppercase tracking-wide text-lg leading-tight mb-1.5 ${isFeatured ? "text-white" : "text-[#0F1C38]"}`}>
+                      <h2 className={`font-display font-700 uppercase tracking-wide text-lg leading-tight mb-1.5 ${isFeatured ? "text-white" : "text-[#2C180C]"}`}>
                         {service.title}
                       </h2>
                       <p className={`text-sm leading-relaxed ${isFeatured ? "text-white/85" : "text-[#6B7280]"}`}>

@@ -11,7 +11,7 @@ const COVERAGES = [
 
 export function TrustBar() {
   return (
-    <section className="bg-[#0F1C38] py-4 border-y-2 border-[#E8B923]">
+    <section className="bg-[#2C180C] py-4 border-y-2 border-[#E8B923]">
       <div className="container-wide">
         <div className="flex flex-wrap justify-center sm:justify-evenly gap-x-6 gap-y-3">
           {COVERAGES.map(({ icon: Icon, label }, i) => (

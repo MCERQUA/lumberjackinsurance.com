@@ -12,13 +12,13 @@ export default function NotFound() {
         <section className="relative bg-[#F4F4F4] pt-32 pb-24 md:pt-40 md:pb-32">
           <div className="container-tight text-center">
             <FadeIn>
-              <div className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-[#0F1C38] text-[#E8B923] mb-6 shadow-card">
+              <div className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-[#2C180C] text-[#E8B923] mb-6 shadow-card">
                 <TreePine className="h-8 w-8" strokeWidth={2.2} />
               </div>
               <p className="font-display font-800 text-7xl md:text-8xl text-[#E8B923] leading-none drop-shadow-[0_0_22px_rgba(232,185,35,0.35)]">
                 404
               </p>
-              <h1 className="mt-5 font-display font-800 uppercase text-[#0F1C38] text-3xl md:text-4xl tracking-tight">
+              <h1 className="mt-5 font-display font-800 uppercase text-[#2C180C] text-3xl md:text-4xl tracking-tight">
                 This trail runs cold.
               </h1>
               <p className="mt-4 text-lg text-[#6B7280] max-w-lg mx-auto">

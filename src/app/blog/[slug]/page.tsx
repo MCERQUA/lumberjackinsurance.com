@@ -88,7 +88,7 @@ export default async function BlogPostPage({ params }: Props) {
               </Link>
 
               <div className="flex flex-wrap items-center gap-3 text-xs text-[#6B7280] mb-4">
-                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-[#0F1C38] text-white rounded-sm font-body font-semibold">
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-[#2C180C] text-white rounded-sm font-body font-semibold">
                   <Tag className="h-3 w-3" />
                   {post.category}
                 </span>
@@ -102,7 +102,7 @@ export default async function BlogPostPage({ params }: Props) {
                 </span>
               </div>
 
-              <h1 className="font-display font-800 uppercase text-[#0F1C38] text-3xl md:text-4xl lg:text-5xl leading-[1.1] tracking-tight">
+              <h1 className="font-display font-800 uppercase text-[#2C180C] text-3xl md:text-4xl lg:text-5xl leading-[1.1] tracking-tight">
                 {post.title}
               </h1>
               {post.author && <p className="mt-4 text-[#6B7280]">By {post.author}</p>}
@@ -115,7 +115,7 @@ export default async function BlogPostPage({ params }: Props) {
 
               <div className="prose max-w-none mt-10" dangerouslySetInnerHTML={{ __html: html }} />
 
-              <div className="mt-12 p-7 rounded-sm bg-[#0F1C38] text-white">
+              <div className="mt-12 p-7 rounded-sm bg-[#2C180C] text-white">
                 <p className="font-display font-800 uppercase text-[#E8B923] text-xl">Need this coverage in Flagstaff?</p>
                 <p className="text-white/80 mt-2 text-sm">
                   Get a real quote fast — we shop multiple carriers to protect Flagstaff &amp; Northern Arizona families and businesses.
@@ -134,15 +134,15 @@ export default async function BlogPostPage({ params }: Props) {
         {more.length > 0 && (
           <section className="bg-[#F4F4F4] py-16">
             <div className="container-wide">
-              <h2 className="font-display font-800 uppercase text-2xl md:text-3xl text-[#0F1C38] mb-8">Keep reading</h2>
+              <h2 className="font-display font-800 uppercase text-2xl md:text-3xl text-[#2C180C] mb-8">Keep reading</h2>
               <div className="grid md:grid-cols-3 gap-6">
                 {more.map((p) => (
                   <Link key={p.slug} href={`/blog/${p.slug}`} className="group block h-full">
                     <article className="rounded-sm bg-white border border-gray-200 hover:border-[#E8B923] shadow-card hover:shadow-lift transition-all h-full p-6 flex flex-col">
-                      <span className="px-2.5 py-0.5 bg-[#0F1C38] text-white rounded-sm text-xs font-body font-semibold w-fit mb-3">
+                      <span className="px-2.5 py-0.5 bg-[#2C180C] text-white rounded-sm text-xs font-body font-semibold w-fit mb-3">
                         {p.category}
                       </span>
-                      <h3 className="font-display font-700 uppercase text-[#0F1C38] group-hover:text-[#E8B923] transition-colors line-clamp-2">
+                      <h3 className="font-display font-700 uppercase text-[#2C180C] group-hover:text-[#E8B923] transition-colors line-clamp-2">
                         {p.title}
                       </h3>
                       <p className="mt-2 text-sm text-[#6B7280] line-clamp-2 flex-grow">{p.description}</p>

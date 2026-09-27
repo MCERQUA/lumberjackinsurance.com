@@ -13,7 +13,7 @@ const QUICK_LINKS = [
 
 export function Footer() {
   return (
-    <footer className="bg-[#0F1C38] py-14">
+    <footer className="bg-[#2C180C] py-14">
       <div className="container-wide">
         {/* Row 1 */}
         <div className="grid gap-10 md:grid-cols-3">

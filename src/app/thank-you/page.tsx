@@ -27,7 +27,7 @@ export default function ThankYouPage() {
                   <CheckCircle className="w-8 h-8 text-[#E8B923]" />
                 </div>
                 <span className="inline-block font-display font-700 uppercase tracking-widest text-sm text-[#E8B923]">Request received</span>
-                <h1 className="mt-5 font-display font-800 uppercase text-[#0F1C38] text-3xl md:text-4xl tracking-tight">
+                <h1 className="mt-5 font-display font-800 uppercase text-[#2C180C] text-3xl md:text-4xl tracking-tight">
                   Thanks — we&apos;ve got it.
                 </h1>
                 <p className="mt-4 text-lg text-[#6B7280]">

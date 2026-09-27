@@ -48,8 +48,8 @@ const COVERAGE_LINES = [
 ];
 
 const inputClass =
-  "w-full px-4 py-3 rounded-sm border border-gray-200 bg-white text-[#0F1C38] placeholder-gray-400 focus:outline-none focus:border-[#E8B923] focus:ring-2 focus:ring-[#E8B923]/30 transition-all text-sm";
-const labelClass = "block text-sm font-body font-semibold text-[#0F1C38] mb-1.5";
+  "w-full px-4 py-3 rounded-sm border border-gray-200 bg-white text-[#2C180C] placeholder-gray-400 focus:outline-none focus:border-[#E8B923] focus:ring-2 focus:ring-[#E8B923]/30 transition-all text-sm";
+const labelClass = "block text-sm font-body font-semibold text-[#2C180C] mb-1.5";
 
 export default function QuotePage() {
   return (
@@ -61,13 +61,13 @@ export default function QuotePage() {
             <FadeIn>
               {/* Header */}
               <div className="text-center mb-12">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-sm bg-[#0F1C38] mb-6">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-sm bg-[#2C180C] mb-6">
                   <Shield className="w-4 h-4 text-[#E8B923]" />
                   <span className="text-xs font-bold text-[#E8B923] uppercase tracking-wider">
                     Free Quote · Local Flagstaff Agents
                   </span>
                 </div>
-                <h1 className="font-display font-800 uppercase text-[#0F1C38] text-4xl md:text-5xl mb-4 tracking-tight">
+                <h1 className="font-display font-800 uppercase text-[#2C180C] text-4xl md:text-5xl mb-4 tracking-tight">
                   Get Your{" "}
                   <span className="text-[#E8B923]">
                     Free Insurance Quote
@@ -108,13 +108,13 @@ export default function QuotePage() {
                   >
                     <CheckCircle className="w-5 h-5 text-[#E8B923] flex-shrink-0 mt-0.5" />
                     <div>
-                      <p className="font-body font-bold text-[#0F1C38] text-sm">{item.title}</p>
+                      <p className="font-body font-bold text-[#2C180C] text-sm">{item.title}</p>
                       <p className="text-[#6B7280] text-xs leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
                 ))}
 
-                <div className="p-5 rounded-sm text-center bg-[#0F1C38] text-white">
+                <div className="p-5 rounded-sm text-center bg-[#2C180C] text-white">
                   <p className="text-xs font-bold uppercase tracking-wider text-[#E8B923] mb-2">Prefer to call?</p>
                   <a
                     href={SITE.phoneHref}
@@ -234,7 +234,7 @@ export default function QuotePage() {
                     product, so a life branch would invent a product line.
                   */}
                   <div data-branch="personal" hidden>
-                    <p className="text-sm font-body font-semibold text-[#0F1C38] mb-3">About you and the property</p>
+                    <p className="text-sm font-body font-semibold text-[#2C180C] mb-3">About you and the property</p>
                     <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="date_of_birth" className={labelClass}>Date of Birth *</label>
@@ -279,7 +279,7 @@ export default function QuotePage() {
                     </div>
                   </div>
                   <div data-branch="business" hidden>
-                    <p className="text-sm font-body font-semibold text-[#0F1C38] mb-3">About the business</p>
+                    <p className="text-sm font-body font-semibold text-[#2C180C] mb-3">About the business</p>
                     <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="street_address" className={labelClass}>Business Street Address *</label>

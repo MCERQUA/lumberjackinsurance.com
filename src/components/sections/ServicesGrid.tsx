@@ -18,7 +18,7 @@ export function ServicesGrid() {
           </span>
         </FadeIn>
         <FadeIn delay={0.1}>
-          <h2 className="mt-3 font-display text-4xl font-extrabold uppercase text-[#0F1C38]">
+          <h2 className="mt-3 font-display text-4xl font-extrabold uppercase text-[#2C180C]">
             What We Cover
           </h2>
         </FadeIn>
@@ -40,9 +40,9 @@ export function ServicesGrid() {
                   {/* gold accent bar grows on hover */}
                   <span className="absolute left-0 top-0 h-1 w-0 bg-[#E8B923] transition-all duration-300 group-hover:w-full" />
                   <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#E8B923]/10 transition-all duration-300 group-hover:scale-110 group-hover:bg-[#E8B923]">
-                    <Icon className="h-6 w-6 text-[#E8B923] transition-colors duration-300 group-hover:text-[#0F1C38]" />
+                    <Icon className="h-6 w-6 text-[#E8B923] transition-colors duration-300 group-hover:text-[#2C180C]" />
                   </div>
-                  <h3 className="mt-4 font-display text-lg font-bold uppercase text-[#0F1C38]">
+                  <h3 className="mt-4 font-display text-lg font-bold uppercase text-[#2C180C]">
                     {service.title}
                   </h3>
                   <p className="mt-2 font-body text-sm leading-relaxed text-gray-500">

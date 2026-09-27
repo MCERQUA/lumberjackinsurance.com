@@ -21,7 +21,7 @@ export function FinalCTA() {
       <div
         className="md:col-span-3 p-12 min-h-[320px] flex flex-col justify-center"
         style={{
-          backgroundImage: "linear-gradient(135deg, #0F1C38 0%, #1B2A4A 50%, #0F1C38 100%)",
+          backgroundImage: "linear-gradient(135deg, #2C180C 0%, #402313 50%, #2C180C 100%)",
           backgroundSize: "200% 200%",
           animation: prefersReduced ? undefined : "lj-bg-pan 16s ease-in-out infinite",
         }}
@@ -47,7 +47,7 @@ export function FinalCTA() {
           </p>
           <Link
             href="/about"
-            className="lj-btn-shine mt-6 inline-flex w-fit border-2 border-white text-white px-6 py-3 font-display font-bold uppercase text-sm transition hover:bg-white hover:text-[#0F1C38] hover:scale-105"
+            className="lj-btn-shine mt-6 inline-flex w-fit border-2 border-white text-white px-6 py-3 font-display font-bold uppercase text-sm transition hover:bg-white hover:text-[#2C180C] hover:scale-105"
           >
             See How We Give Back
           </Link>
@@ -57,7 +57,7 @@ export function FinalCTA() {
       {/* Right column — Latest News */}
       <div className="md:col-span-2 p-8 bg-[#F4F4F4]">
         <FadeIn>
-          <h3 className="font-display font-extrabold uppercase text-xl text-[#0F1C38] tracking-wider">
+          <h3 className="font-display font-extrabold uppercase text-xl text-[#2C180C] tracking-wider">
             Latest News
           </h3>
         </FadeIn>
@@ -80,7 +80,7 @@ export function FinalCTA() {
             >
               <Link
                 href="/blog"
-                className="inline-block font-display font-semibold text-[#0F1C38] transition-all hover:translate-x-1 hover:text-[#E8B923]"
+                className="inline-block font-display font-semibold text-[#2C180C] transition-all hover:translate-x-1 hover:text-[#E8B923]"
               >
                 {item.title}
               </Link>
@@ -91,7 +91,7 @@ export function FinalCTA() {
 
         <Link
           href="/blog"
-          className="lj-btn-shine mt-6 inline-block border-2 border-[#0F1C38] text-[#0F1C38] px-6 py-3 font-display font-bold uppercase text-sm transition hover:bg-[#0F1C38] hover:text-white hover:scale-105"
+          className="lj-btn-shine mt-6 inline-block border-2 border-[#2C180C] text-[#2C180C] px-6 py-3 font-display font-bold uppercase text-sm transition hover:bg-[#2C180C] hover:text-white hover:scale-105"
         >
           View All Articles
         </Link>

@@ -24,7 +24,7 @@ export function WhyChooseUs() {
     <section id="why" className="grid md:grid-cols-3">
       {/* Left column — Why Choose */}
       <FadeIn direction="right" className="bg-[#F4F4F4] p-8 md:p-10">
-        <h3 className="font-display font-extrabold uppercase text-2xl text-[#0F1C38] leading-tight">
+        <h3 className="font-display font-extrabold uppercase text-2xl text-[#2C180C] leading-tight">
           Why Choose Lumberjack?
         </h3>
         <ul className="mt-6 space-y-3">
@@ -36,7 +36,7 @@ export function WhyChooseUs() {
                     className="h-5 w-5 flex-shrink-0 text-[#E8B923] mt-0.5 transition-transform duration-300 group-hover:scale-150"
                     strokeWidth={3}
                   />
-                  <span className="font-body text-[#0F1C38] text-base">{reason}</span>
+                  <span className="font-body text-[#2C180C] text-base">{reason}</span>
                 </div>
               </FadeIn>
             </li>
@@ -44,7 +44,7 @@ export function WhyChooseUs() {
         </ul>
         <Link
           href="/about"
-          className="inline-block mt-8 border-2 border-[#0F1C38] text-[#0F1C38] px-6 py-3 font-display font-bold uppercase text-sm hover:bg-[#0F1C38] hover:text-white transition"
+          className="inline-block mt-8 border-2 border-[#2C180C] text-[#2C180C] px-6 py-3 font-display font-bold uppercase text-sm hover:bg-[#2C180C] hover:text-white transition"
         >
           Learn More About Us
         </Link>
@@ -54,7 +54,7 @@ export function WhyChooseUs() {
       <FadeIn
         direction="up"
         delay={0.1}
-        className="bg-[#0F1C38] p-8 md:p-10 border border-[#E8B923]/30 shadow-[0_0_40px_-8px_rgba(232,185,35,0.45)]"
+        className="bg-[#2C180C] p-8 md:p-10 border border-[#E8B923]/30 shadow-[0_0_40px_-8px_rgba(232,185,35,0.45)]"
       >
         <h3 className="font-display font-extrabold uppercase text-2xl text-[#E8B923]">
           Get a Quote
@@ -67,7 +67,7 @@ export function WhyChooseUs() {
 
           <select
             name="coverage-type"
-            className="w-full py-3 px-4 bg-[#0F1C38] border border-white/40 text-white font-body transition focus:outline-none focus:border-[#E8B923] focus:ring-2 focus:ring-[#E8B923]/30"
+            className="w-full py-3 px-4 bg-[#2C180C] border border-white/40 text-white font-body transition focus:outline-none focus:border-[#E8B923] focus:ring-2 focus:ring-[#E8B923]/30"
             defaultValue=""
             required
           >
@@ -85,13 +85,13 @@ export function WhyChooseUs() {
             type="text"
             name="zip"
             placeholder="ZIP Code"
-            className="w-full py-3 px-4 bg-[#0F1C38] border border-white/40 text-white placeholder:text-white/50 font-body transition focus:outline-none focus:border-[#E8B923] focus:ring-2 focus:ring-[#E8B923]/30"
+            className="w-full py-3 px-4 bg-[#2C180C] border border-white/40 text-white placeholder:text-white/50 font-body transition focus:outline-none focus:border-[#E8B923] focus:ring-2 focus:ring-[#E8B923]/30"
             required
           />
 
           <button
             type="submit"
-            className="lj-btn-shine w-full py-3 bg-[#E8B923] text-[#0F1C38] font-display font-bold uppercase text-sm transition-transform duration-200 hover:scale-[1.02] hover:brightness-95"
+            className="lj-btn-shine w-full py-3 bg-[#E8B923] text-[#2C180C] font-display font-bold uppercase text-sm transition-transform duration-200 hover:scale-[1.02] hover:brightness-95"
           >
             Get Started
           </button>
@@ -111,12 +111,12 @@ export function WhyChooseUs() {
 
       {/* Right column — Built on trust */}
       <FadeIn direction="left" delay={0.2} className="bg-white p-8 md:p-10">
-        <h3 className="font-display font-extrabold uppercase text-2xl text-[#0F1C38] leading-tight">
+        <h3 className="font-display font-extrabold uppercase text-2xl text-[#2C180C] leading-tight">
           Built on Trust.
           <br />
           Focused on You.
         </h3>
-        <p className="mt-4 font-body text-base text-[#0F1C38]/70">
+        <p className="mt-4 font-body text-base text-[#2C180C]/70">
           We&apos;re here to protect what you&apos;ve built and help you keep moving forward
           with confidence.
         </p>

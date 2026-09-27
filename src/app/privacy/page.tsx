@@ -17,7 +17,7 @@ export default function PrivacyPage() {
       <Navbar />
       <main>
         {/* Hero band */}
-        <section className="bg-[#0F1C38] pt-32 pb-16 md:pt-40 md:pb-20">
+        <section className="bg-[#2C180C] pt-32 pb-16 md:pt-40 md:pb-20">
           <div className="container-tight max-w-3xl">
             <FadeIn>
               <span className="inline-flex items-center gap-2 font-display font-bold uppercase tracking-widest text-sm text-[#E8B923]">

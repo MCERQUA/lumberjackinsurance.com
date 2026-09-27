@@ -117,7 +117,7 @@ export default async function ServiceDetailPage({ params }: Props) {
         {/* Hero */}
         <section
           className="relative pt-32 pb-16 md:pt-40 md:pb-20"
-          style={{ background: "radial-gradient(ellipse at 65% 30%, #1B3A6B 0%, #0F1C38 60%)" }}
+          style={{ background: "radial-gradient(ellipse at 65% 30%, #5A3017 0%, #2C180C 60%)" }}
         >
           <div className="container-wide">
             <FadeIn>

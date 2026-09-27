@@ -20,15 +20,15 @@ export const metadata: Metadata = {
 };
 
 const inputClass =
-  "w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-[#0F1C38] placeholder-[#0F1C38]/40 focus:outline-none focus:border-[#E8B923] focus:ring-2 focus:ring-[#E8B923]/30 transition-all text-sm";
-const labelClass = "block text-sm font-body font-semibold text-[#0F1C38] mb-1.5";
+  "w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-[#2C180C] placeholder-[#2C180C]/40 focus:outline-none focus:border-[#E8B923] focus:ring-2 focus:ring-[#E8B923]/30 transition-all text-sm";
+const labelClass = "block text-sm font-body font-semibold text-[#2C180C] mb-1.5";
 
 export default function ContactPage() {
   return (
     <>
       <Navbar />
       <main>
-        <section className="relative bg-[#0F1C38] pt-32 pb-20">
+        <section className="relative bg-[#2C180C] pt-32 pb-20">
           <div className="container-wide">
             <FadeIn className="text-center max-w-2xl mx-auto mb-12">
               <span className="inline-flex items-center gap-2 text-xs font-display font-bold uppercase tracking-widest text-[#E8B923]">
@@ -51,7 +51,7 @@ export default function ContactPage() {
               <FadeIn direction="right" className="lg:col-span-2 space-y-4">
                 <a
                   href={SITE.phoneHref}
-                  className="block p-6 rounded-3xl bg-[#0F1C38] text-white shadow-card hover:shadow-lift transition-all"
+                  className="block p-6 rounded-3xl bg-[#2C180C] text-white shadow-card hover:shadow-lift transition-all"
                 >
                   <Phone className="h-7 w-7 text-[#E8B923] mb-3" />
                   <p className="text-xs uppercase tracking-wider text-white/70 mb-1">Call or text</p>
@@ -64,17 +64,17 @@ export default function ContactPage() {
                   className="block p-6 rounded-3xl bg-white border border-gray-200 shadow-card hover:border-[#E8B923] hover:shadow-lift transition-all"
                 >
                   <Mail className="h-7 w-7 text-[#E8B923] mb-3" />
-                  <p className="text-xs uppercase tracking-wider text-[#0F1C38]/60 mb-1">Email</p>
-                  <p className="font-body font-semibold text-[#0F1C38] break-all">{SITE.email}</p>
+                  <p className="text-xs uppercase tracking-wider text-[#2C180C]/60 mb-1">Email</p>
+                  <p className="font-body font-semibold text-[#2C180C] break-all">{SITE.email}</p>
                 </a>
 
                 <div className="p-6 rounded-3xl bg-white border border-gray-200 shadow-card">
                   <MapPin className="h-7 w-7 text-[#E8B923] mb-3" />
-                  <p className="text-xs uppercase tracking-wider text-[#0F1C38]/60 mb-1">Service area</p>
-                  <p className="font-body font-semibold text-[#0F1C38]">
+                  <p className="text-xs uppercase tracking-wider text-[#2C180C]/60 mb-1">Service area</p>
+                  <p className="font-body font-semibold text-[#2C180C]">
                     Flagstaff &amp; Northern Arizona
                   </p>
-                  <p className="text-sm text-[#0F1C38]/70 mt-1">
+                  <p className="text-sm text-[#2C180C]/70 mt-1">
                     Sedona · Williams · Cottonwood · Camp Verde · Page · Munds Park · Doney Park &amp; the
                     surrounding communities
                   </p>
@@ -82,9 +82,9 @@ export default function ContactPage() {
 
                 <div className="p-6 rounded-3xl bg-white border border-gray-200 shadow-card">
                   <Clock className="h-7 w-7 text-[#E8B923] mb-3" />
-                  <p className="text-xs uppercase tracking-wider text-[#0F1C38]/60 mb-1">Hours</p>
-                  <p className="font-body font-semibold text-[#0F1C38]">{SITE.hours}</p>
-                  <p className="text-sm text-[#0F1C38]/70 mt-1">Claims help available 24/7</p>
+                  <p className="text-xs uppercase tracking-wider text-[#2C180C]/60 mb-1">Hours</p>
+                  <p className="font-body font-semibold text-[#2C180C]">{SITE.hours}</p>
+                  <p className="text-sm text-[#2C180C]/70 mt-1">Claims help available 24/7</p>
                 </div>
               </FadeIn>
 
@@ -158,7 +158,7 @@ export default function ContactPage() {
 
                   <button
                     type="submit"
-                    className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-[#E8B923] text-[#0F1C38] font-display font-bold uppercase tracking-widest rounded-xl shadow-card hover:bg-[#d4a91a] hover:shadow-lift transition-all"
+                    className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-[#E8B923] text-[#2C180C] font-display font-bold uppercase tracking-widest rounded-xl shadow-card hover:bg-[#d4a91a] hover:shadow-lift transition-all"
                   >
                     Send Message
                     <ArrowRight className="w-5 h-5" />

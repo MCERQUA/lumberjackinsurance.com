@@ -19,7 +19,7 @@ export function Stats() {
       className="py-14"
       style={{
         backgroundImage:
-          "linear-gradient(135deg, #0F1C38 0%, #1B2A4A 45%, #0F1C38 100%)",
+          "linear-gradient(135deg, #2C180C 0%, #402313 45%, #2C180C 100%)",
         backgroundSize: "200% 200%",
         animation: prefersReduced ? undefined : "lj-bg-pan 16s ease-in-out infinite",
       }}

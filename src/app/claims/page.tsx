@@ -58,7 +58,7 @@ export default function ClaimsPage() {
         {/* Navy hero */}
         <section
           className="relative pt-32 pb-16 md:pt-40 md:pb-20"
-          style={{ background: "radial-gradient(ellipse at 60% 30%, #1B3A6B 0%, #0F1C38 60%)" }}
+          style={{ background: "radial-gradient(ellipse at 60% 30%, #5A3017 0%, #2C180C 60%)" }}
         >
           <div className="container-tight text-center">
             <FadeIn>
@@ -90,7 +90,7 @@ export default function ClaimsPage() {
         <section className="bg-[#F4F4F4] py-20">
           <div className="container-wide">
             <FadeIn>
-              <h2 className="text-center font-display text-3xl md:text-4xl font-extrabold uppercase text-[#0F1C38]">
+              <h2 className="text-center font-display text-3xl md:text-4xl font-extrabold uppercase text-[#2C180C]">
                 How to File a Claim
               </h2>
               <p className="mt-3 text-center text-[#6B7280] max-w-2xl mx-auto">
@@ -103,11 +103,11 @@ export default function ClaimsPage() {
                 <FadeIn key={step.num} delay={i * 0.15} direction="up">
                   <div className="text-center transition-transform duration-300 hover:-translate-y-1.5">
                     <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#E8B923] shadow-lg shadow-[#E8B923]/30">
-                      <span className="font-display text-2xl font-extrabold text-[#0F1C38]">
+                      <span className="font-display text-2xl font-extrabold text-[#2C180C]">
                         {step.num}
                       </span>
                     </div>
-                    <h3 className="mt-5 font-display text-lg font-bold uppercase text-[#0F1C38]">
+                    <h3 className="mt-5 font-display text-lg font-bold uppercase text-[#2C180C]">
                       {step.title}
                     </h3>
                     <p className="mt-2 font-body text-sm leading-relaxed text-gray-500">
@@ -121,12 +121,12 @@ export default function ClaimsPage() {
         </section>
 
         {/* Claims help CTA */}
-        <section className="bg-[#0F1C38] py-16 md:py-20">
+        <section className="bg-[#2C180C] py-16 md:py-20">
           <div className="container-tight">
             <FadeIn>
               <div className="rounded-sm border border-white/10 bg-white/5 p-8 md:p-12 text-center">
                 <span className="mx-auto mb-5 inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#E8B923]">
-                  <ShieldCheck className="h-7 w-7 text-[#0F1C38]" strokeWidth={2.2} />
+                  <ShieldCheck className="h-7 w-7 text-[#2C180C]" strokeWidth={2.2} />
                 </span>
                 <h2 className="font-display font-800 uppercase text-white text-2xl md:text-3xl">
                   Need to File a Claim Now?

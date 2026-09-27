@@ -42,7 +42,7 @@ export function Navbar() {
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
     >
       {/* Top utility bar — dark navy, gold text */}
-      <div className="bg-[#0F1C38] text-[#E8B923]">
+      <div className="bg-[#2C180C] text-[#E8B923]">
         <div className="container-wide flex h-9 items-center justify-between gap-4">
           {/* spacer to balance the right links on desktop */}
           <span className="hidden lg:block w-[260px]" aria-hidden />
@@ -125,7 +125,7 @@ export function Navbar() {
       {/* Mobile full-screen overlay — dark navy, gold links */}
       <div
         className={[
-          "lg:hidden fixed inset-0 z-50 bg-[#0F1C38] transition-opacity duration-300",
+          "lg:hidden fixed inset-0 z-50 bg-[#2C180C] transition-opacity duration-300",
           open ? "opacity-100 visible" : "pointer-events-none invisible opacity-0",
         ].join(" ")}
       >

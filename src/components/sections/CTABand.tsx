@@ -18,7 +18,7 @@ export function CTABand({
     <section className="bg-[#F4F4F4] py-16 md:py-20">
       <div className="container-wide">
         <FadeIn>
-          <div className="rounded-sm bg-[#0F1C38] p-8 md:p-12 text-center shadow-lift">
+          <div className="rounded-sm bg-[#2C180C] p-8 md:p-12 text-center shadow-lift">
             <h2 className="font-display font-800 uppercase text-white text-2xl md:text-4xl leading-tight">
               {title}
             </h2>

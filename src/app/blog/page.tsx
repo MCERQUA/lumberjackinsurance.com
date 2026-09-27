@@ -39,7 +39,7 @@ export default function BlogPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <Navbar />
       <main>
-        <section className="relative bg-[#0F1C38] pt-32 pb-12 md:pt-40 md:pb-16">
+        <section className="relative bg-[#2C180C] pt-32 pb-12 md:pt-40 md:pb-16">
           <div className="container-tight text-center">
             <FadeIn>
               <span className="inline-block font-display font-700 uppercase tracking-widest text-sm text-[#E8B923]">Guides &amp; resources</span>
@@ -75,12 +75,12 @@ export default function BlogPage() {
                             className="w-full h-64 md:h-full object-cover group-hover:scale-105 transition-transform duration-500"
                           />
                           <div className="absolute top-4 left-4">
-                            <span className="px-3 py-1 rounded-sm bg-[#E8B923] text-[#0F1C38] font-display font-700 text-xs uppercase tracking-wider">Featured</span>
+                            <span className="px-3 py-1 rounded-sm bg-[#E8B923] text-[#2C180C] font-display font-700 text-xs uppercase tracking-wider">Featured</span>
                           </div>
                         </div>
                         <div className="p-8 md:p-10 flex flex-col justify-center">
                           <div className="flex items-center gap-3 text-xs text-[#6B7280] mb-3">
-                            <span className="px-2.5 py-0.5 bg-[#0F1C38] text-white rounded-sm font-body font-semibold">
+                            <span className="px-2.5 py-0.5 bg-[#2C180C] text-white rounded-sm font-body font-semibold">
                               {featured.category}
                             </span>
                             <span className="flex items-center gap-1">
@@ -92,7 +92,7 @@ export default function BlogPage() {
                               {featured.readTime}
                             </span>
                           </div>
-                          <h2 className="font-display font-700 uppercase text-[#0F1C38] text-2xl md:text-3xl leading-tight group-hover:text-[#E8B923] transition-colors">
+                          <h2 className="font-display font-700 uppercase text-[#2C180C] text-2xl md:text-3xl leading-tight group-hover:text-[#E8B923] transition-colors">
                             {featured.title}
                           </h2>
                           <p className="mt-3 text-[#6B7280] leading-relaxed">{featured.description}</p>
@@ -113,14 +113,14 @@ export default function BlogPage() {
                           <div className="h-2 bg-[#E8B923]" />
                           <div className="p-6 flex-grow flex flex-col">
                             <div className="flex items-center gap-3 text-xs text-[#6B7280] mb-3">
-                              <span className="px-2.5 py-0.5 bg-[#0F1C38] text-white rounded-sm font-body font-semibold">
+                              <span className="px-2.5 py-0.5 bg-[#2C180C] text-white rounded-sm font-body font-semibold">
                                 {post.category}
                               </span>
                               <span className="flex items-center gap-1">
                                 <Clock className="h-3 w-3" />{post.readTime}
                               </span>
                             </div>
-                            <h3 className="font-display font-700 uppercase text-[#0F1C38] text-lg leading-tight group-hover:text-[#E8B923] transition-colors line-clamp-2">
+                            <h3 className="font-display font-700 uppercase text-[#2C180C] text-lg leading-tight group-hover:text-[#E8B923] transition-colors line-clamp-2">
                               {post.title}
                             </h3>
                             <p className="mt-2 text-sm text-[#6B7280] leading-relaxed line-clamp-3 flex-grow">

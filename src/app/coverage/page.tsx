@@ -50,7 +50,7 @@ export default function CoveragePage() {
     <>
       <Navbar />
       <main>
-        <section className="relative bg-[#0F1C38] pt-32 pb-16 md:pt-40 md:pb-20">
+        <section className="relative bg-[#2C180C] pt-32 pb-16 md:pt-40 md:pb-20">
           <div className="container-tight text-center">
             <FadeIn>
               <span className="inline-block font-display font-700 uppercase tracking-widest text-sm text-[#E8B923]">Service area</span>
@@ -93,7 +93,7 @@ export default function CoveragePage() {
                 <span className="h-px w-8 bg-[#E8B923]" />
                 Neighbors who know the mountain
               </span>
-              <h2 className="mt-3 font-display font-800 uppercase text-[#0F1C38] text-3xl md:text-4xl leading-tight">
+              <h2 className="mt-3 font-display font-800 uppercase text-[#2C180C] text-3xl md:text-4xl leading-tight">
                 We don&apos;t just sell policies here.{" "}
                 <span className="text-[#E8B923]">We live here.</span>
               </h2>
@@ -109,7 +109,7 @@ export default function CoveragePage() {
                 <FadeIn key={t.title} delay={(i % 4) * 0.05}>
                   <div className="h-full rounded-sm bg-white border border-gray-200 hover:border-[#E8B923] p-6 shadow-card transition-colors">
                     <MapPin className="h-7 w-7 text-[#E8B923] mb-3" strokeWidth={2.2} />
-                    <p className="font-display font-700 uppercase text-lg text-[#0F1C38]">{t.title}</p>
+                    <p className="font-display font-700 uppercase text-lg text-[#2C180C]">{t.title}</p>
                     <p className="mt-1 text-sm text-[#6B7280] leading-relaxed">{t.note}</p>
                   </div>
                 </FadeIn>
@@ -122,7 +122,7 @@ export default function CoveragePage() {
         <section className="bg-[#F4F4F4] py-16 md:py-20">
           <div className="container-wide">
             <FadeIn className="max-w-3xl mb-8">
-              <h2 className="font-display font-800 uppercase text-2xl md:text-3xl text-[#0F1C38]">
+              <h2 className="font-display font-800 uppercase text-2xl md:text-3xl text-[#2C180C]">
                 Communities we serve
               </h2>
               <p className="mt-2 text-[#6B7280]">
@@ -136,7 +136,7 @@ export default function CoveragePage() {
                 <FadeIn key={town} delay={(i % 5) * 0.03}>
                   <div className="flex items-center gap-2 p-3 rounded-sm bg-white border border-gray-200 hover:border-[#E8B923] transition-colors">
                     <MapPin className="h-4 w-4 text-[#E8B923] flex-shrink-0" strokeWidth={2.4} />
-                    <span className="text-sm font-body font-semibold text-[#0F1C38]">{town}</span>
+                    <span className="text-sm font-body font-semibold text-[#2C180C]">{town}</span>
                   </div>
                 </FadeIn>
               ))}

@@ -49,7 +49,7 @@ export default function AboutPage() {
       <Navbar />
       <main>
         {/* Hero */}
-        <section className="relative bg-[#0F1C38] pt-32 pb-16 md:pt-40 md:pb-20">
+        <section className="relative bg-[#2C180C] pt-32 pb-16 md:pt-40 md:pb-20">
           <div className="container-wide">
             <div className="grid lg:grid-cols-12 gap-10 items-center">
               <FadeIn className="lg:col-span-7">
@@ -87,12 +87,12 @@ export default function AboutPage() {
                   </div>
                   <div className="absolute -bottom-5 -left-4 bg-white rounded-2xl shadow-lift border border-gray-200 p-5 max-w-[14rem]">
                     <div className="flex items-center gap-2.5">
-                      <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-[#0F1C38] text-[#E8B923]">
+                      <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-[#2C180C] text-[#E8B923]">
                         <TreePine className="h-5 w-5" />
                       </span>
                       <div>
-                        <p className="font-display font-bold text-[#0F1C38] text-lg leading-none">Est. 2005</p>
-                        <p className="text-xs text-[#0F1C38]/60 mt-1">Contractors Choice Agency</p>
+                        <p className="font-display font-bold text-[#2C180C] text-lg leading-none">Est. 2005</p>
+                        <p className="text-xs text-[#2C180C]/60 mt-1">Contractors Choice Agency</p>
                       </div>
                     </div>
                   </div>
@@ -110,11 +110,11 @@ export default function AboutPage() {
                 <span className="h-px w-8 bg-[#E8B923]" />
                 What makes us different
               </span>
-              <h2 className="mt-3 font-display font-bold uppercase text-[#0F1C38] text-3xl md:text-4xl leading-tight">
+              <h2 className="mt-3 font-display font-bold uppercase text-[#2C180C] text-3xl md:text-4xl leading-tight">
                 A big-company policy with{" "}
                 <span className="text-[#E8B923]">a hometown agent</span>.
               </h2>
-              <p className="mt-4 text-lg text-[#0F1C38]/70 leading-relaxed">
+              <p className="mt-4 text-lg text-[#2C180C]/70 leading-relaxed">
                 Most agencies treat Flagstaff like any other dot on the map. We don&apos;t —
                 we live here, we drive these roads, and we cover our own families against the
                 exact same Northern Arizona risks you face. When you call, you reach people who
@@ -126,11 +126,11 @@ export default function AboutPage() {
               {WHY_US.map((p, i) => (
                 <FadeIn key={p.title} delay={(i % 2) * 0.06}>
                   <div className="h-full rounded-3xl bg-white border border-gray-200 p-7 shadow-card hover:border-[#E8B923] hover:shadow-lift transition-all duration-300">
-                    <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#0F1C38] text-[#E8B923] mb-4">
+                    <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#2C180C] text-[#E8B923] mb-4">
                       <p.icon className="h-6 w-6" strokeWidth={2.2} />
                     </div>
-                    <h3 className="font-display font-bold uppercase text-lg text-[#0F1C38] leading-tight">{p.title}</h3>
-                    <p className="mt-2 text-[#0F1C38]/70 leading-relaxed">{p.body}</p>
+                    <h3 className="font-display font-bold uppercase text-lg text-[#2C180C] leading-tight">{p.title}</h3>
+                    <p className="mt-2 text-[#2C180C]/70 leading-relaxed">{p.body}</p>
                   </div>
                 </FadeIn>
               ))}
@@ -146,7 +146,7 @@ export default function AboutPage() {
                 <span className="h-px w-8 bg-[#E8B923]" />
                 From the founder
               </span>
-              <blockquote className="mt-5 font-display text-2xl md:text-3xl text-[#0F1C38] leading-snug italic">
+              <blockquote className="mt-5 font-display text-2xl md:text-3xl text-[#2C180C] leading-snug italic">
                 &ldquo;I built this agency to take care of my neighbors. Flagstaff and Northern
                 Arizona families work hard for what they have — the home up in the pines, the
                 truck that gets them through winter, the business on the corner. My job is making
@@ -154,12 +154,12 @@ export default function AboutPage() {
                 it always will be.&rdquo;
               </blockquote>
               <div className="mt-6 flex items-center gap-3">
-                <div className="h-12 w-12 rounded-full bg-[#0F1C38] flex items-center justify-center text-[#E8B923] font-display font-bold">
+                <div className="h-12 w-12 rounded-full bg-[#2C180C] flex items-center justify-center text-[#E8B923] font-display font-bold">
                   JC
                 </div>
                 <div>
-                  <p className="font-display font-bold text-[#0F1C38]">Josh Cotner</p>
-                  <p className="text-sm text-[#0F1C38]/60">Founder, Contractors Choice Agency · NPN #{SITE.npn}</p>
+                  <p className="font-display font-bold text-[#2C180C]">Josh Cotner</p>
+                  <p className="text-sm text-[#2C180C]/60">Founder, Contractors Choice Agency · NPN #{SITE.npn}</p>
                 </div>
               </div>
             </FadeIn>

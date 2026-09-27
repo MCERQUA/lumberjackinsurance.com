@@ -5,25 +5,25 @@ module.exports = {
     extend: {
       colors: {
         background: "#F4F4F4",
-        foreground: "#0F1C38",
+        foreground: "#2C180C",
         "muted-foreground": "#6B7280",
         border: "#E5E7EB",
         navy: {
-          dark: "#0F1C38",
-          DEFAULT: "#1B2A4A",
-          light: "#243558",
+          dark: "#2C180C",
+          DEFAULT: "#402313",
+          light: "#512C17",
         },
         gold: {
           DEFAULT: "#E8B923",
           dark: "#C9A020",
           light: "#F5CB50",
         },
-        primary: { DEFAULT: "#E8B923", foreground: "#0F1C38" },
-        accent: { DEFAULT: "#0F1C38", light: "#F5CB50", foreground: "#FFFFFF" },
+        primary: { DEFAULT: "#E8B923", foreground: "#2C180C" },
+        accent: { DEFAULT: "#2C180C", light: "#F5CB50", foreground: "#FFFFFF" },
         // Legacy "forest" alias remapped to the navy ramp so old gradient-text
         // spans (from-primary via-forest-500 to-accent) render gold→navy.
-        forest: { 100: "#243558", 500: "#1B2A4A", 700: "#0F1C38" },
-        paper: { warm: "#F4F4F4", ink: "#0F1C38" },
+        forest: { 100: "#512C17", 500: "#402313", 700: "#2C180C" },
+        paper: { warm: "#F4F4F4", ink: "#2C180C" },
       },
       fontFamily: {
         display: ["var(--font-display)", "Barlow Condensed", "Impact", "ui-sans-serif"],
