@@ -128,7 +128,7 @@ export default function ContactPage() {
                       <label htmlFor="phone" className={labelClass}>Phone</label>
                       <input
                         id="phone" name="phone" type="tel"
-                        placeholder="(928) 555-0100" className={inputClass}
+                        placeholder="Best number to reach you" className={inputClass}
                       />
                     </div>
                     <div>

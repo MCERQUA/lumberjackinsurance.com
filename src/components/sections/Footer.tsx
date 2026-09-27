@@ -55,7 +55,7 @@ export function Footer() {
               Contact
             </h4>
             <ul className="mt-4 space-y-2 font-body text-sm text-white/70">
-              <li>12220 E Riggs Road Suite #105, Chandler, AZ 85249</li>
+              <li>12220 E Riggs Road, Suite #104, Chandler, AZ 85249</li>
               <li>
                 <a href="tel:+18449675247" className="hover:text-[#E8B923] transition-colors">
                   844-967-5247
