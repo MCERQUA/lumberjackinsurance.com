@@ -5,6 +5,7 @@ import { FadeIn } from "@/components/animations/FadeIn";
 import { CheckCircle, Shield, ArrowRight, Phone } from "lucide-react";
 import { SITE } from "@/lib/site";
 import { AeoFields } from "@/components/AeoFields";
+import BusinessQuoteExtra from "@/components/BusinessQuoteExtra";
 
 export const metadata: Metadata = {
   title: "Get a Free Quote — Flagstaff Home, Auto & Business Insurance",
@@ -265,10 +266,6 @@ export default function QuotePage() {
                       <input id="current_carrier_name" name="current_carrier_name" type="text" required className={inputClass} disabled />
                     </div>
                     <div>
-                      <label htmlFor="current_policy_number" className={labelClass}>Current Policy Number *</label>
-                      <input id="current_policy_number" name="current_policy_number" type="text" required className={inputClass} disabled />
-                    </div>
-                    <div>
                       <label htmlFor="current_policy_expiration_date" className={labelClass}>Current Policy Expires *</label>
                       <input id="current_policy_expiration_date" name="current_policy_expiration_date" type="date" required className={inputClass} disabled />
                     </div>
@@ -310,14 +307,11 @@ export default function QuotePage() {
                       <input id="prior_carrier_name" name="prior_carrier_name" type="text" required className={inputClass} disabled />
                     </div>
                     <div>
-                      <label htmlFor="prior_policy_number" className={labelClass}>Prior Policy Number *</label>
-                      <input id="prior_policy_number" name="prior_policy_number" type="text" required className={inputClass} disabled />
-                    </div>
-                    <div>
                       <label htmlFor="prior_policy_expiration" className={labelClass}>Prior Policy Expiration Date *</label>
                       <input id="prior_policy_expiration" name="prior_policy_expiration" type="date" required className={inputClass} disabled />
                     </div>
                     </div>
+                    <BusinessQuoteExtra inputClass={inputClass} labelClass={labelClass} />
                   </div>
 
                   <p className="text-xs text-center text-[#6B7280]">
