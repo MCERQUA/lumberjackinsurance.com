@@ -195,7 +195,7 @@ export default function QuotePage() {
                     <div>
                       <label htmlFor="state" className={labelClass}>State</label>
                       <input
-                        id="state" name="state" type="text"
+                        id="state" name="state" type="text" maxLength={2} pattern="[A-Za-z]{2}" title="2-letter state, e.g. AZ"
                         placeholder="AZ" className={inputClass}
                       />
                     </div>
